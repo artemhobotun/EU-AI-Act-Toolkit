@@ -90,6 +90,20 @@ Selected public credentials and professional badges are available through Credly
   </tr>
 </table>
 
+## 📦 Package
+
+This project publishes a lightweight container image for running the static site locally:
+
+```
+ghcr.io/artemhobotun/eu-ai-act-toolkit-site
+```
+
+```bash
+docker run --rm -p 8080:80 ghcr.io/artemhobotun/eu-ai-act-toolkit-site:latest
+```
+
+Open **http://localhost:8080** — serves the full site via nginx. See [docs/packages.md](docs/packages.md) for details.
+
 ## 🌐 Live interactive mini-site
 
 Open the live GitHub Pages version of this toolkit for a visual overview, guided navigation, and professional presentation.
