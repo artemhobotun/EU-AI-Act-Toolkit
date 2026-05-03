@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Governance Self-Check — EU AI Act Toolkit</title>
+  <meta name="description" content="A free guided self-check to help your organisation understand whether you likely need structured AI governance readiness work under the EU AI Act.">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🇪🇺</text></svg>">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packs.html">Packs</a></li>
+        <li><a href="use-cases.html">Use Cases</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="official-sources.html">EU Sources</a></li>
+        <li><a href="maintainer.html">Maintainer</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="quiz.html" class="nav-cta active">Self-Check →</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom: var(--s-12);">
+    <div class="hero-eyebrow">✦ Free · 2 minutes · No sign-up</div>
+    <h1 class="gold-gradient">AI Governance Self-Check</h1>
+    <p class="hero-subtitle">
+      10 guided questions to help you understand whether your organisation likely needs structured AI governance readiness work under the EU AI Act.
+    </p>
+    <p class="hero-note">This is a practical educational tool, not a legal assessment. Results are indicative only.</p>
+  </section>
+
+  <!-- Quiz -->
+  <section style="padding-top: 0; padding-bottom: var(--s-24);">
+    <div class="quiz-wrapper">
+
+      <!-- Intro screen -->
+      <div id="quizIntro">
+        <div class="quiz-card" style="text-align: center;">
+          <div style="font-size: 56px; margin-bottom: var(--s-5);">🛡️</div>
+          <h2 style="font-size: var(--text-2xl); margin-bottom: var(--s-4);">Ready to check your readiness?</h2>
+          <p style="color: var(--text-muted); max-width: 440px; margin: 0 auto var(--s-8); font-size: var(--text-base); line-height: 1.7;">
+            This self-check covers key areas: AI tool use, vendor procurement, data handling, human oversight, and governance documentation.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--s-3); justify-content: center; margin-bottom: var(--s-8);">
+            <span class="badge badge-blue">🤖 AI Tool Use</span>
+            <span class="badge badge-muted">📦 Vendor Procurement</span>
+            <span class="badge badge-muted">🔒 Data &amp; Privacy</span>
+            <span class="badge badge-muted">👁 Human Oversight</span>
+            <span class="badge badge-muted">📋 Governance Docs</span>
+            <span class="badge badge-muted">⚠️ Risk Domains</span>
+          </div>
+          <button class="btn btn-gold btn-lg" onclick="startQuiz()">Begin Self-Check →</button>
+          <p style="font-size: var(--text-xs); color: var(--text-faint); margin-top: var(--s-5); font-style: italic;">Educational self-check only. Not legal advice or a compliance determination.</p>
+        </div>
+      </div>
+
+      <!-- Quiz progress + question -->
+      <div id="quizMain" style="display: none;">
+        <div class="quiz-progress-track">
+          <div class="quiz-progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+        <div class="quiz-step-info">
+          <span>Question <strong id="stepCurrent">1</strong> of <strong id="stepTotal">10</strong></span>
+          <span id="stepCategory" style="color: var(--blue-400);"></span>
+        </div>
+
+        <div class="quiz-card" id="questionCard">
+          <div class="quiz-category-tag" id="questionCategory"></div>
+          <p class="quiz-question-text" id="questionText"></p>
+          <div class="quiz-options" id="questionOptions"></div>
+        </div>
+
+        <div class="quiz-nav">
+          <button class="btn btn-ghost" id="prevBtn" onclick="prevQuestion()">← Back</button>
+          <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next →</button>
+        </div>
+      </div>
+
+      <!-- Results screen -->
+      <div id="quizResult" style="display: none;"></div>
+
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section style="padding-top: 0;">
+    <div class="callout callout-legal" style="max-width: 700px; margin: 0 auto;">
+      <div class="callout-icon">⚖️</div>
+      <div class="callout-body">
+        <h4>Important: Educational Tool Only</h4>
+        This self-check is a practical screening aid, not a legal assessment. It cannot determine legal compliance or obligation. Results are illustrative and based on common governance considerations. For legally significant decisions, consult qualified legal, privacy, or technical professionals.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo-footer">🇪🇺 EU AI Act Toolkit</span>
+        <p>Practical AI governance readiness for SMEs. Educational use only.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Toolkit</h4>
+        <ul>
+          <li><a href="packs.html">Toolkit Packs</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="quiz.html">Self-Check</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Sources</h4>
+        <ul>
+          <li><a href="official-sources.html">Official EU Sources</a></li>
+          <li><a href="../docs/10-source-notes.md">Source Notes</a></li>
+          <li><a href="../docs/23-faq.md">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="maintainer.html">Maintainer</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><strong>EU AI Act Toolkit</strong> — Self-check is educational only. Not legal advice.</p>
+      <p>© 2026. <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">View on GitHub</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const QUESTIONS = [
+  {
+    category: "AI Tool Use",
+    text: "Does your organisation use any AI-powered tools? (e.g. ChatGPT, Microsoft Copilot, AI-enabled SaaS, automated decision systems)",
+    weight: 1,
+    options: [
+      { label: "Yes — we regularly use AI tools",  value: "yes",   score: 1 },
+      { label: "Sometimes — occasional or informal use", value: "sometimes", score: 1 },
+      { label: "No / not sure",                    value: "no",    score: 0 },
+    ]
+  },
+  {
+    category: "Vendor Procurement",
+    text: "Do you procure, evaluate, or manage AI-enabled SaaS tools from third-party vendors?",
+    weight: 1,
+    options: [
+      { label: "Yes — we regularly buy or renew AI-enabled tools", value: "yes",  score: 1 },
+      { label: "Occasionally",                                      value: "occ",  score: 1 },
+      { label: "No",                                                value: "no",   score: 0 },
+    ]
+  },
+  {
+    category: "Impact on People",
+    text: "Does any AI system affect decisions about employees, job applicants, or customers?",
+    weight: 2,
+    options: [
+      { label: "Yes — AI informs HR, hiring, or customer decisions", value: "yes",  score: 2 },
+      { label: "Possibly — some indirect influence",                 value: "poss", score: 1 },
+      { label: "No",                                                 value: "no",   score: 0 },
+    ]
+  },
+  {
+    category: "Personal Data",
+    text: "Is personal data processed by any AI tool in your organisation? (names, behaviour, location, profiling data, etc.)",
+    weight: 2,
+    options: [
+      { label: "Yes — personal data is processed",    value: "yes",  score: 2 },
+      { label: "Possibly — we are not fully certain", value: "poss", score: 1 },
+      { label: "No",                                  value: "no",   score: 0 },
+    ]
+  },
+  {
+    category: "Human Oversight",
+    text: "Is there a formal human review process before acting on AI-generated outputs in key decisions?",
+    weight: 2,
+    options: [
+      { label: "No — outputs are used directly without formal review", value: "no",  score: 2 },
+      { label: "Partial — some review, but not consistently applied", value: "part", score: 1 },
+      { label: "Yes — all material outputs are reviewed by humans",   value: "yes",  score: 0 },
+    ]
+  },
+  {
+    category: "Governance Documentation",
+    text: "Does your organisation have a documented AI tool inventory or register?",
+    weight: 1,
+    options: [
+      { label: "No — there is no formal inventory",         value: "no",  score: 1 },
+      { label: "Partial — some tools are listed informally", value: "part", score: 1 },
+      { label: "Yes — we maintain a structured inventory",   value: "yes",  score: 0 },
+    ]
+  },
+  {
+    category: "Vendor Documentation",
+    text: "Are AI vendor data agreements (DPA, terms of service, AI usage terms) reviewed before procurement?",
+    weight: 2,
+    options: [
+      { label: "No — we rarely or never review vendor AI terms",   value: "no",  score: 2 },
+      { label: "Partially — only for some vendors or contracts",   value: "part", score: 1 },
+      { label: "Yes — we have a structured vendor review process", value: "yes",  score: 0 },
+    ]
+  },
+  {
+    category: "AI Literacy & Policy",
+    text: "Does your organisation have a staff AI usage policy or AI literacy training in place?",
+    weight: 1,
+    options: [
+      { label: "No — nothing formal is in place",                  value: "no",  score: 1 },
+      { label: "In progress — something is being developed",       value: "prog", score: 1 },
+      { label: "Yes — policy and/or training exists and is used",  value: "yes",  score: 0 },
+    ]
+  },
+  {
+    category: "Scoring & Profiling",
+    text: "Does any AI tool score, rank, profile, or make recommendations about individual people?",
+    weight: 3,
+    options: [
+      { label: "Yes — AI scores or ranks individuals (leads, candidates, customers, etc.)", value: "yes",  score: 3 },
+      { label: "Possibly — used in targeting or segmentation",                            value: "poss", score: 2 },
+      { label: "No",                                                                       value: "no",   score: 0 },
+    ]
+  },
+  {
+    category: "Risk Domain",
+    text: "Does your AI use touch any higher-sensitivity domains? (healthcare-adjacent, legal decisions, financial assessment, public services, children or vulnerable groups)",
+    weight: 3,
+    options: [
+      { label: "Yes — one or more of these apply to our AI use",        value: "yes",  score: 3 },
+      { label: "Possibly — borderline or adjacent cases",               value: "poss", score: 2 },
+      { label: "No — our AI use is in general internal or marketing contexts", value: "no", score: 0 },
+    ]
+  },
+];
+
+const RESULTS = {
+  low: {
+    icon: "🟢",
+    level: "Early-Stage or Lower Readiness Need",
+    title: "Your Organisation Appears at an Earlier Stage",
+    description: "Based on your answers, your organisation's AI use appears relatively limited or lower-risk at this stage. You may still benefit from basic governance documentation to build good habits early — before AI use expands.",
+    steps: [
+      "Create a basic AI tool inventory to track what you use",
+      "Review the Starter Pack for low-overhead governance templates",
+      "Bookmark the decision tree for future tool reviews",
+      "Check official EU sources to understand the broader regulatory context",
+    ],
+    links: [
+      { href: "../toolkit/starter-pack/README.md", label: "Starter Pack" },
+      { href: "../docs/19-sme-decision-tree.md", label: "Decision Tree" },
+      { href: "official-sources.html", label: "Official EU Sources" },
+    ]
+  },
+  moderate: {
+    icon: "🟡",
+    level: "Moderate Readiness Attention Recommended",
+    title: "Some Structured Governance Work Is Worth Considering",
+    description: "Your answers suggest a moderate level of AI-related activity or exposure. Building clearer governance documentation, vendor review processes, and human oversight practices would strengthen your readiness posture.",
+    steps: [
+      "Start an AI inventory using the provided CSV template",
+      "Run a risk screening on your key AI tools",
+      "Review vendor agreements — use the Vendor Assessment Pack",
+      "Consider a documented AI usage policy for staff",
+      "Use the decision tree to identify tools that may need escalation",
+    ],
+    links: [
+      { href: "../toolkit/templates/ai-system-inventory.csv", label: "AI Inventory Template" },
+      { href: "packs.html", label: "Vendor Assessment Pack" },
+      { href: "../docs/16-what-to-escalate-for-legal-review.md", label: "Escalation Guide" },
+    ]
+  },
+  high: {
+    icon: "🔵",
+    level: "Structured Readiness Work Recommended",
+    title: "Meaningful AI Governance Work Is Recommended",
+    description: "Based on your answers, your organisation has a combination of factors that make structured AI governance readiness work worthwhile. This may include human oversight gaps, sensitive data processing, scoring or profiling of individuals, or missing vendor documentation.",
+    steps: [
+      "Prioritise building an AI tool inventory and risk register",
+      "Review vendor AI terms for all active tools — use the Vendor Pack",
+      "Establish or formalise human review for high-output decisions",
+      "Consider an AI usage policy and staff literacy training",
+      "Consult the escalation guide to identify cases requiring legal or privacy review",
+      "Review the official EU AI Act regulation to understand obligations",
+    ],
+    links: [
+      { href: "packs.html", label: "Vendor Assessment Pack" },
+      { href: "../docs/16-what-to-escalate-for-legal-review.md", label: "Escalation Guide" },
+      { href: "official-sources.html", label: "Official EU Sources" },
+      { href: "../docs/20-sme-implementation-playbook.md", label: "Implementation Playbook" },
+    ]
+  }
+};
+
+let current = 0;
+let answers = new Array(QUESTIONS.length).fill(null);
+
+function startQuiz() {
+  document.getElementById('quizIntro').style.display = 'none';
+  document.getElementById('quizMain').style.display = 'block';
+  document.getElementById('stepTotal').textContent = QUESTIONS.length;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = QUESTIONS[current];
+  const total = QUESTIONS.length;
+
+  document.getElementById('progressFill').style.width = `${(current / total) * 100}%`;
+  document.getElementById('stepCurrent').textContent = current + 1;
+  document.getElementById('stepCategory').textContent = q.category;
+  document.getElementById('questionCategory').textContent = q.category;
+  document.getElementById('questionText').textContent = q.text;
+
+  const container = document.getElementById('questionOptions');
+  container.innerHTML = '';
+
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-option' + (answers[current] === i ? ' selected' : '');
+    btn.innerHTML = `
+      <span class="quiz-option-dot"></span>
+      <span class="quiz-option-text">${opt.label}</span>
+    `;
+    btn.onclick = () => selectOption(i);
+    container.appendChild(btn);
+  });
+
+  document.getElementById('prevBtn').disabled = current === 0;
+  document.getElementById('nextBtn').disabled = answers[current] === null;
+
+  const isLast = current === total - 1;
+  document.getElementById('nextBtn').textContent = isLast ? 'See Results →' : 'Next →';
+
+  // Animate card
+  const card = document.getElementById('questionCard');
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(10px)';
+  requestAnimationFrame(() => {
+    card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+    card.style.opacity = '1';
+    card.style.transform = 'translateY(0)';
+  });
+}
+
+function selectOption(index) {
+  answers[current] = index;
+  document.querySelectorAll('.quiz-option').forEach((el, i) => {
+    el.classList.toggle('selected', i === index);
+  });
+  document.getElementById('nextBtn').disabled = false;
+}
+
+function nextQuestion() {
+  if (answers[current] === null) return;
+  if (current < QUESTIONS.length - 1) {
+    current++;
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function prevQuestion() {
+  if (current > 0) {
+    current--;
+    renderQuestion();
+  }
+}
+
+function showResult() {
+  // Calculate score
+  let score = 0;
+  answers.forEach((ansIdx, qIdx) => {
+    if (ansIdx !== null) {
+      score += QUESTIONS[qIdx].options[ansIdx].score;
+    }
+  });
+
+  const maxScore = QUESTIONS.reduce((sum, q) => sum + Math.max(...q.options.map(o => o.score)), 0);
+
+  let tier;
+  if (score <= 4)       tier = 'low';
+  else if (score <= 11) tier = 'moderate';
+  else                  tier = 'high';
+
+  const r = RESULTS[tier];
+
+  document.getElementById('quizMain').style.display = 'none';
+
+  const resultEl = document.getElementById('quizResult');
+  resultEl.style.display = 'block';
+  resultEl.innerHTML = `
+    <div class="quiz-result result-${tier}">
+      <div class="quiz-result-header">
+        <span class="result-level-icon">${r.icon}</span>
+        <div class="result-level-badge">${r.level}</div>
+        <h2 class="result-title">${r.title}</h2>
+        <p class="result-description">${r.description}</p>
+      </div>
+      <div class="quiz-result-body">
+        <div class="result-steps">
+          <h4>Recommended Next Steps</h4>
+          ${r.steps.map((s, i) => `
+            <div class="result-step-item">
+              <span class="result-step-num">${i+1}</span>
+              <span>${s}</span>
+            </div>
+          `).join('')}
+        </div>
+        <div class="result-actions">
+          ${r.links.map(l => `<a href="${l.href}" class="btn btn-primary">${l.label}</a>`).join('')}
+          <button class="btn btn-ghost" onclick="resetQuiz()">Retake Quiz</button>
+        </div>
+        <p class="result-disclaimer">
+          This result is indicative only. It is based on your self-reported answers to a practical educational self-check.
+          It does not constitute legal advice, a compliance determination, or an official assessment under the EU AI Act or any other regulation.
+          For legally significant situations, consult a qualified legal or compliance professional.
+        </p>
+      </div>
+    </div>
+  `;
+}
+
+function resetQuiz() {
+  current = 0;
+  answers = new Array(QUESTIONS.length).fill(null);
+  document.getElementById('quizResult').style.display = 'none';
+  document.getElementById('quizIntro').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
