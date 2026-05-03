@@ -43,7 +43,7 @@ This document describes a practical maintenance process for keeping the toolkit 
    - prefer "readiness", "screening", "starting point", "documentation support"
    - avoid "compliant" unless it is clearly qualified and contextual
 4. Add a changelog entry for notable updates:
-   - CHANGELOG.md
+   - [CHANGELOG.md](project/CHANGELOG.md)
 
 ## Change Management
 

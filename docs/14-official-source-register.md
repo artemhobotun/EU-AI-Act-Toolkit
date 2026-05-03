@@ -36,4 +36,4 @@ SMEs should check national competent authority information, local enforcement gu
 - Do not overstate obligations
 - Prefer "may require review" over categorical claims
 - Update [docs/10-source-notes.md](10-source-notes.md) when source assumptions change
-- Record updates in [CHANGELOG.md](../CHANGELOG.md)
+- Record updates in [CHANGELOG.md](project/CHANGELOG.md)

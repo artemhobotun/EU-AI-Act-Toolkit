@@ -2,7 +2,7 @@
 
 This toolkit is a practical starting point for EU AI Act readiness work in small organizations.
 
-Before using anything here, read: [../DISCLAIMER.md](../DISCLAIMER.md)
+Before using anything here, read: [DISCLAIMER.md](DISCLAIMER.md)
 
 ## 30-Minute Setup
 

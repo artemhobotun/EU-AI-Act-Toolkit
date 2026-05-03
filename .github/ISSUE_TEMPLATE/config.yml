@@ -1,13 +1,13 @@
 blank_issues_enabled: true
 contact_links:
   - name: Disclaimer
-    url: https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/DISCLAIMER.md
+    url: https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/DISCLAIMER.md
     about: Read the disclaimer before relying on this toolkit.
   - name: GitHub Pages mini-site
     url: https://artemhobotun.github.io/EU-AI-Act-Toolkit/
     about: Open the visual toolkit front page and readiness self-check.
   - name: Security policy
-    url: https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/SECURITY.md
+    url: https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/SECURITY.md
     about: Use this for privacy or security concerns, not public sensitive details.
   - name: Starter Pack release
     url: https://github.com/artemhobotun/EU-AI-Act-Toolkit/releases/tag/v0.2.0-starter-pack

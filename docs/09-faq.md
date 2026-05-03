@@ -2,7 +2,7 @@
 
 ## Is this legal advice?
 
-No. This repository is educational and informational only. See [../DISCLAIMER.md](../DISCLAIMER.md).
+No. This repository is educational and informational only. See [DISCLAIMER.md](DISCLAIMER.md).
 
 ## Will using this toolkit make us compliant with the EU AI Act?
 

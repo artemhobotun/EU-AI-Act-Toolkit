@@ -4,7 +4,7 @@ Owner:
 Effective date:
 Last updated:
 
-This template is a starting point. Adapt it to your tools, risks, and sector. See [../DISCLAIMER.md](../DISCLAIMER.md).
+This template is a starting point. Adapt it to your tools, risks, and sector. See [../../docs/DISCLAIMER.md](../../docs/DISCLAIMER.md).
 
 ## 1. Purpose
 

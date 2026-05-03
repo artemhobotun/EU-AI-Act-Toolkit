@@ -55,7 +55,7 @@ Use wording such as:
 <summary><strong>📢 Reporting concerns</strong></summary>
 
 - **Public content issues:** open a GitHub issue
-- **Sensitive concerns:** use [SECURITY.md](../SECURITY.md) for security, privacy, or confidentiality concerns
+- **Sensitive concerns:** use [SECURITY.md](SECURITY.md) for security, privacy, or confidentiality concerns
 - **Data safety:** do not publish confidential or personal data in GitHub issues
 
 </details>

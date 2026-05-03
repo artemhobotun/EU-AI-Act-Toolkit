@@ -18,7 +18,7 @@ rm -f "$ZIP_PATH"
   toolkit/templates \
   toolkit/checklists \
   README.md \
-  DISCLAIMER.md \
+  docs/DISCLAIMER.md \
   docs/10-source-notes.md \
   docs/16-what-to-escalate-for-legal-review.md \
   docs/17-downloadable-toolkit-pack.md)

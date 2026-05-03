@@ -2,7 +2,7 @@
 
 Use this questionnaire when procuring or renewing an AI tool, model API, or AI-enabled SaaS feature.
 
-This is a practical checklist, not a legal determination. See [../DISCLAIMER.md](../DISCLAIMER.md).
+This is a practical checklist, not a legal determination. See [../../docs/DISCLAIMER.md](../../docs/DISCLAIMER.md).
 
 Vendor:
 Product / service:
