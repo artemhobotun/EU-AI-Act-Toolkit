@@ -25,6 +25,7 @@ Use this pack before buying, renewing, or expanding an AI-enabled SaaS tool. It 
 | [vendor-decision-record.md](templates/vendor-decision-record.md) | Record the decision | Business owner | After evaluation |
 | [vendor-document-request-list.md](templates/vendor-document-request-list.md) | Ask for the right documents | Vendor owner | Before approval |
 | [vendor-contract-review-notes.md](templates/vendor-contract-review-notes.md) | Flag points for qualified review | Privacy / legal reviewer | When contract terms matter |
+| [vendor-scoring-worksheet.md](templates/vendor-scoring-worksheet.md) | Lightweight scoring framework | Procurement lead | When comparing multiple vendors |
 | [vendor-red-flags-checklist.md](checklists/vendor-red-flags-checklist.md) | Red flags and next steps | Vendor owner | During due diligence |
 | [vendor-procurement-workflow.md](checklists/vendor-procurement-workflow.md) | Step-by-step review flow | Procurement lead | Before purchase |
 | [vendor-meeting-checklist.md](checklists/vendor-meeting-checklist.md) | Prep for vendor calls | Vendor owner | Before or during meetings |
