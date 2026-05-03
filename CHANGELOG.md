@@ -6,6 +6,15 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+### v1.3.0 — Site Container Package
+
+- Added a GitHub Packages container workflow for the static Pages site.
+- Added Dockerfile (nginx:alpine serving docs/) for the `ghcr.io/artemhobotun/eu-ai-act-toolkit-site` image.
+- Added `.github/workflows/publish-site-container.yml` — builds and pushes on main changes to Dockerfile or docs/.
+- Added `docs/packages.md` with package documentation and local run instructions.
+- Updated README with compact Package section and `docker run` command.
+- Updated quality checks to verify Dockerfile, .dockerignore, workflow, and package docs presence.
+
 ### v1.2.0 — Premium Pages Redesign with Quiz and Official Source Layer
 
 - Full second-generation redesign of all GitHub Pages pages using a premium v3.0 design system.

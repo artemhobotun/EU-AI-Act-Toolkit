@@ -1,0 +1,7 @@
+.git
+dist
+github-backups
+.DS_Store
+*.bundle
+*.tar.gz
+node_modules
