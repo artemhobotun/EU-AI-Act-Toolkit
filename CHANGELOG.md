@@ -6,6 +6,15 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+### README Restructuring — Mini-site, Technical Sections, and Navigation
+
+- Reordered the README mini-site section so the mini-site overview appears before the main CTA.
+- Improved the visibility of the live mini-site CTA with enhanced styling.
+- Refactored the structured technical layer to remove duplicated visible lists.
+- Split repository navigation into a dedicated "Explore toolkit content" section.
+- Removed inline community-link clutter from the README.
+- Updated quality check script to validate new README structure.
+
 ### README Restructuring — Mini-site and Package Sections
 
 - Simplified the README live mini-site section into a cleaner call-to-action block.
