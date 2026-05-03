@@ -6,6 +6,8 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+- Fixed GitHub Pages project-site navigation by replacing root-relative internal links with relative links.
+- Added quality checks to prevent broken project-site links on GitHub Pages.
 - Redesigned the GitHub Pages mini-site into a multi-page static toolkit portal.
 - Added separate Pages sections for Toolkit Packs, Use Cases, Resources, Maintainer, and Community.
 - Improved navigation, layout, card system, and overall visual polish.
