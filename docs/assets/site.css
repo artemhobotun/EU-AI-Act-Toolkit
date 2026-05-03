@@ -413,6 +413,15 @@ nav a.nav-cta:hover { background: var(--blue-500); }
   gap: var(--s-4);
 }
 
+.cards-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s-4);
+}
+
+@media (max-width: 900px) { .cards-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .cards-grid-4 { grid-template-columns: 1fr; } }
+
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
