@@ -92,7 +92,7 @@ Selected public credentials and professional badges are available through Credly
 
 ## 🌐 Live interactive mini-site
 
-Open the live GitHub Pages version of this toolkit for a visual overview, guided navigation, and a lightweight readiness self-check.
+Open the live GitHub Pages version of this toolkit for a visual overview, guided navigation, and professional presentation.
 
 <p align="center">
   <a href="https://artemhobotun.github.io/EU-AI-Act-Toolkit/">
@@ -100,10 +100,13 @@ Open the live GitHub Pages version of this toolkit for a visual overview, guided
   </a>
 </p>
 
-- 🧭 Browse Starter Pack, Vendor Pack, Sector Packs, and Evidence Pack
-- 🧪 Run a lightweight readiness self-check
-- 🎓 View selected credentials and maintainer profile links
-- 📦 Find downloadable starter pack materials
+Multi-page site structure:
+- **[Home](https://artemhobotun.github.io/EU-AI-Act-Toolkit/)** — Overview and quick navigation
+- **[Toolkit Packs](https://artemhobotun.github.io/EU-AI-Act-Toolkit/packs.html)** — Starter Pack, Vendor Pack, Sector Packs, Templates, Checklists
+- **[Use Cases](https://artemhobotun.github.io/EU-AI-Act-Toolkit/use-cases.html)** — Realistic examples and scenarios
+- **[Resources](https://artemhobotun.github.io/EU-AI-Act-Toolkit/resources.html)** — FAQ, Decision Tree, Glossary, Guides
+- **[Maintainer](https://artemhobotun.github.io/EU-AI-Act-Toolkit/maintainer.html)** — Artem Nazarko and project philosophy
+- **[Community](https://artemhobotun.github.io/EU-AI-Act-Toolkit/community.html)** — Contributing, governance, code of conduct
 
 ## 🚀 Start here
 
