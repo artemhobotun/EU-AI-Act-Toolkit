@@ -64,7 +64,7 @@ use_cases:
     pack_reference: toolkit/sector-packs/customer-support-chatbots.md
 
   - id: hr-candidate-screening
-    title: HR & Recruitment: AI Candidate Screening
+    title: "HR & Recruitment: AI Candidate Screening"
     sector_or_function: HR / Recruitment
     likely_attention_level: high
     description: AI tools screening job applications, ranking candidates, or evaluating interview responses.
@@ -85,7 +85,7 @@ use_cases:
     pack_reference: toolkit/sector-packs/hr-and-recruitment.md
 
   - id: marketing-content-generation
-    title: Marketing & Sales: Content Generation
+    title: "Marketing & Sales: Content Generation"
     sector_or_function: Marketing
     likely_attention_level: low
     description: AI generating marketing copy, email content, social media posts, or sales collateral.
@@ -105,7 +105,7 @@ use_cases:
     pack_reference: toolkit/sector-packs/marketing-and-sales.md
 
   - id: document-review-assistant
-    title: Legal & Document Review: AI Document Analysis
+    title: "Legal & Document Review: AI Document Analysis"
     sector_or_function: Legal / Compliance
     likely_attention_level: moderate
     description: AI-assisted review of contracts, policies, compliance documents, or legal text analysis.
@@ -125,7 +125,7 @@ use_cases:
     pack_reference: toolkit/sector-packs/legal-and-document-review.md
 
   - id: ai-enabled-crm-scoring
-    title: Sales & CRM: AI Lead Scoring or Customer Valuation
+    title: "Sales & CRM: AI Lead Scoring or Customer Valuation"
     sector_or_function: Sales / CRM
     likely_attention_level: moderate
     description: AI scoring leads, predicting customer lifetime value, or ranking sales opportunities.

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/schemas/use-cases.document.schema.json",
+  "title": "Use cases registry document",
+  "description": "Root structure for data/use-cases.yml",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["use_cases"],
+  "properties": {
+    "use_cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/useCase" }
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "$defs": {
+    "useCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "sector_or_function",
+        "likely_attention_level",
+        "description",
+        "key_concerns",
+        "recommended_starting_points",
+        "escalation_triggers",
+        "pack_reference"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sector_or_function": {
+          "type": "string",
+          "minLength": 1
+        },
+        "likely_attention_level": {
+          "type": "string",
+          "enum": ["low", "moderate", "high"]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "key_concerns": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "recommended_starting_points": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "escalation_triggers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "pack_reference": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

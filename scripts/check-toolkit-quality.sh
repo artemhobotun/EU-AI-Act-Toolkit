@@ -196,6 +196,17 @@ required_files=(
   "schemas/risk-screening.schema.json"
   "schemas/vendor-review.schema.json"
   "schemas/README.md"
+  "schemas/toolkit-registry.document.schema.json"
+  "schemas/official-sources.document.schema.json"
+  "schemas/use-cases.document.schema.json"
+  "package.json"
+  "package-lock.json"
+  "tsconfig.json"
+  "vitest.config.ts"
+  "src/quiz-engine.test.ts"
+  "tools/validate_data_registries.py"
+  "tools/requirements-ci.txt"
+  ".github/dependabot.yml"
 )
 
 for file in "${required_files[@]}"; do
@@ -557,6 +568,24 @@ if command -v python3 &> /dev/null; then
   else
     fail "vendor-review.schema.json is not valid JSON"
   fi
+
+  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/toolkit-registry.document.schema.json'))" 2>/dev/null; then
+    pass "toolkit-registry.document.schema.json is valid JSON"
+  else
+    fail "toolkit-registry.document.schema.json is not valid JSON"
+  fi
+
+  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/official-sources.document.schema.json'))" 2>/dev/null; then
+    pass "official-sources.document.schema.json is valid JSON"
+  else
+    fail "official-sources.document.schema.json is not valid JSON"
+  fi
+
+  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/use-cases.document.schema.json'))" 2>/dev/null; then
+    pass "use-cases.document.schema.json is valid JSON"
+  else
+    fail "use-cases.document.schema.json is not valid JSON"
+  fi
 fi
 
 # Quality tooling checks (added in v1.4.0)
@@ -605,6 +634,19 @@ if command -v python3 &> /dev/null; then
   fi
 else
   pass "Python3 not available (link validation and manifest generation skipped)"
+fi
+
+# Data registry YAML vs JSON Schema (optional locally if PyYAML + jsonschema installed)
+if command -v python3 &> /dev/null; then
+  if python3 -c "import yaml, jsonschema" 2>/dev/null; then
+    if python3 "$ROOT_DIR/tools/validate_data_registries.py"; then
+      pass "Data registries validated against document JSON Schemas"
+    else
+      fail "Data registry validation failed"
+    fi
+  else
+    pass "PyYAML/jsonschema not installed (install tools/requirements-ci.txt to validate data registries locally)"
+  fi
 fi
 
 if [[ "$FAILURES" -gt 0 ]]; then

@@ -11,7 +11,7 @@ Structured registry of all toolkit packs, templates, checklists, and guidance ma
 **Fields per entry:**
 - `id` — machine-readable identifier
 - `title` — human-readable name
-- `type` — pack, reference, guidance, template
+- `type` — pack, reference, or guidance
 - `path` — location in the repository
 - `purpose` — what this resource is for
 - `description` — longer explanation
@@ -72,7 +72,16 @@ These YAML files can be:
 5. **Cross-referenced** to validate consistency across toolkit materials
 
 ### For Validation
-Quality checks can verify:
+Each registry file is checked in CI against a **document-level** JSON Schema in `schemas/` (`*.document.schema.json`). To run the same check locally:
+
+```bash
+python3 -m pip install -r tools/requirements-ci.txt
+python3 tools/validate_data_registries.py
+```
+
+If you add or rename fields in a registry entry, update the matching document schema so the contract stays explicit.
+
+Quality checks can also verify over time:
 - That all `path` entries reference files that actually exist
 - That `recommended_starting_points` point to real toolkit materials
 - That use cases are consistent with sector packs

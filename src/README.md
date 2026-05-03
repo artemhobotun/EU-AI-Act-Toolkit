@@ -32,6 +32,18 @@ This TypeScript engine can support:
 4. **Testing** — unit tests can validate scoring logic independently of the Pages UI
 5. **Audit Trail** — log scores and recommendations for organisations tracking readiness over time
 
+## Local checks (Node.js)
+
+From the repository root (after [installing Node.js](https://nodejs.org/)):
+
+```bash
+npm ci
+npm run typecheck
+npm test
+```
+
+These commands run in GitHub Actions on every push and pull request.
+
 ## Key Exports
 
 - `ReadinessLevel` — enum of three result tiers

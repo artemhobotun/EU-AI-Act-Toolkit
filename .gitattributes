@@ -14,6 +14,7 @@ schemas/**/*.json -linguist-documentation
 dist/** linguist-generated
 *.zip linguist-generated
 docs/assets/toolkit-manifest.json linguist-generated
+package-lock.json linguist-generated
 
 # Keep Markdown toolkit materials as documentation.
 toolkit/**/*.md linguist-documentation
