@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: EU AI Act Toolkit
+authors:
+  - family-names: Hobotun
+    given-names: Artem
+  - family-names: Ahenobarbus
+    given-names: Lucius Domitius
+license: MIT
+repository-code: https://github.com/artemhobotun/EU-AI-Act-Toolkit
+abstract: Practical EU AI Act readiness toolkit for SMEs.

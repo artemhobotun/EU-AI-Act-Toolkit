@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 768" role="img" aria-label="EU AI Act Toolkit hero banner">
+  <defs>
+    <linearGradient id="centerShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#061126" stop-opacity="0.10"/>
+      <stop offset="44%" stop-color="#061126" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#061126" stop-opacity="0.36"/>
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="54%" r="42%">
+      <stop offset="0%" stop-color="#f2c94c" stop-opacity="0.14"/>
+      <stop offset="58%" stop-color="#69a7ff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#061126" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f2c94c" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#69a7ff" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="textShadow" x="-20%" y="-40%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000814" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <image href="readme-hero-bg.png" width="2048" height="768" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="2048" height="768" fill="url(#centerShade)"/>
+  <rect width="2048" height="768" fill="url(#goldGlow)"/>
+
+  <g filter="url(#textShadow)" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="1024" y="380" fill="#f3f7ff" font-size="96" font-weight="850">EU AI Act Toolkit</text>
+    <text x="1024" y="448" fill="#c7d8f6" font-size="36" font-weight="550">Templates • Checklists • Risk Screening • AI Governance</text>
+  </g>
+
+  <g transform="translate(1024 524)" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif">
+    <rect x="-270" y="-30" width="540" height="60" rx="30" fill="url(#pill)" stroke="#f2c94c" stroke-opacity="0.32"/>
+    <text x="0" y="11" fill="#ffe6a1" font-size="24" font-weight="760">Practical readiness support for SMEs</text>
+  </g>
+
+  <line x1="612" y1="612" x2="1436" y2="612" stroke="#f2c94c" stroke-opacity="0.18"/>
+  <text x="1024" y="656" fill="#dce9ff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" text-anchor="middle">github.com/artemhobotun/EU-AI-Act-Toolkit</text>
+</svg>

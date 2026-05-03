@@ -1,0 +1,40 @@
+name: Documentation improvement
+description: Suggest a clear improvement to a documentation page or file
+title: "Documentation improvement: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page_file
+    attributes:
+      label: Page or file
+      placeholder: README.md, docs/index.html, or similar
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Explain what is unclear, missing, or hard to use.
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested improvement
+      description: Keep it practical and SME-friendly.
+    validations:
+      required: true
+  - type: checkboxes
+    id: plain_language
+    attributes:
+      label: Plain-language check
+      options:
+        - label: This suggestion keeps the content practical and easy to scan.
+          required: true
+  - type: checkboxes
+    id: no_overclaiming
+    attributes:
+      label: No legal overclaiming
+      options:
+        - label: This change does not claim guaranteed compliance.
+          required: true

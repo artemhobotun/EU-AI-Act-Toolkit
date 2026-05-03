@@ -1,0 +1,38 @@
+name: Question
+description: Ask a general question about the toolkit
+title: "Question: "
+labels: ["help wanted"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context without confidential data
+      description: Share only public or non-sensitive context.
+    validations:
+      required: true
+  - type: input
+    id: toolkit_area
+    attributes:
+      label: Which part of the toolkit
+      placeholder: README, starter pack, templates, Pages site, and so on
+    validations:
+      required: true
+  - type: textarea
+    id: checked
+    attributes:
+      label: What you already checked
+    validations:
+      required: false
+  - type: checkboxes
+    id: no_confidential
+    attributes:
+      label: No confidential data
+      options:
+        - label: I did not include confidential or personal data.
+          required: true

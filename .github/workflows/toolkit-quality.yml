@@ -1,0 +1,16 @@
+name: Toolkit quality checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run toolkit quality checks
+        run: ./scripts/check-toolkit-quality.sh

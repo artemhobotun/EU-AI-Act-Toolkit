@@ -1,0 +1,120 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The project follows a lightweight approach to versioning while the toolkit stabilizes.
+
+## Unreleased
+
+- Restructured community policy files for improved readability with quick reference tables and collapsible details blocks.
+- Updated CODE_OF_CONDUCT.md with Quick standard table and 5 collapsible sections.
+- Updated CONTRIBUTING.md with Quick contribution paths table and 6 collapsible sections.
+- Updated SECURITY.md with Quick rules table and 7 collapsible sections.
+- Enhanced quality checks to verify presence of details blocks in policy files.
+- Expanded and balanced the Selected Credentials table layout.
+- Increased Credly badge image size while keeping all six badges in one row.
+- Prevented issuer and verification labels from wrapping.
+- Shortened the Selected Credentials intro sentence.
+- Replaced the maintainer note with a fuller professional author note and links.
+- Kept all six Credly badges in a single compact row.
+- Prevented credential issuer and verification labels from wrapping using non-breaking spaces.
+- Moved the live interactive mini-site section above Start here.
+- Updated Start here heading with emoji and removed duplicate mini-site link from that section.
+- Refreshed the README / Pages hero image using the updated `test.png` asset.
+- Moved practical toolkit content into a unified `toolkit/` folder.
+- Moved checklists, templates, starter pack, vendor pack, sector packs, and examples under `toolkit/`.
+- Updated README, GitHub Pages, scripts, and quality checks for the new compact root structure.
+- Added `toolkit/README.md` as an index for practical working materials.
+- Kept LICENSE, CITATION.cff, README, DISCLAIMER, SECURITY, .github, docs, scripts, and toolkit in the repository root.
+- Simplified the README top section by removing the post-hero navigation link row.
+- Reworked the opening README text into a clearer, more polished introduction.
+- Switched the README hero to use the refreshed `test.png` image.
+- Restored the Google AI Essentials Credly badge to the Selected Credentials display.
+- Adjusted Selected Credentials to show six badges in a single compact row.
+- Fixed the Community resources table in the contributing guide.
+- Prepared repository links for the `EU-AI-Act-Toolkit` repository name.
+- Kept the Maintainer section immediately below the opening/disclaimer block.
+- Added emoji labeling and helper text for collapsible README sections.
+- Updated the Core toolkit packs heading with icon treatment.
+- Fixed the Credly profile button icon color to use the requested dark green accent.
+- Switched the README hero to a flattened PNG version for reliable GitHub rendering.
+- Added two new Credly badges to the selected credentials section.
+- Simplified the maintainer section by removing the external-verification sentence from README.
+- Compact the repository root by moving community health files into `.github/` and project meta files into `docs/project/`.
+- Added a `docs/project/` index to keep the relocated documentation easy to find.
+- Updated maintainer name to Artem Nazarko while keeping @artemhobotun as GitHub username.
+- Improved the live mini-site section to make the GitHub Pages entry point clearer.
+- Reworked profile buttons into compact, colorful GitHub, LinkedIn, Credly, and ORCID buttons.
+- Fixed Credly badge rendering in README by using direct PNG badge images.
+- Simplified Selected Credentials captions.
+- Updated GitHub Pages credentials section to show real badge images.
+- Updated quality checks for maintainer name and credential image rendering.
+- Renamed visible project title to “EU AI Act Toolkit” while keeping SME focus in the description.
+- Reorganized README into a cleaner landing-page structure.
+- Moved large sections into collapsible details blocks.
+- Moved community resource table out of the main README body.
+- Improved maintainer section placement and profile links.
+- Added more colorful profile icon buttons for GitHub, LinkedIn, Credly, and ORCID.
+- Normalized Credly credential cards and simplified badge captions.
+- Updated GitHub Pages to match the cleaner branding and credentials layout.
+- Expanded quality checks for branding and credential assets.
+- Redesigned the README hero banner with an EU-inspired star motif.
+- Removed cluttered shields badge row from the README.
+- Added selected Credly credentials gallery with clickable badge verification links.
+- Added maintainer profile links for GitHub, LinkedIn, Credly, and ORCID.
+- Updated GitHub Pages with maintainer and credentials sections.
+- Expanded quality checks for credential assets and README badge hygiene.
+- Added Vendor Assessment Pack.
+- Added AI vendor due diligence questionnaire.
+- Added vendor comparison matrix and vendor risk register.
+- Added vendor red flags, procurement workflow, meeting checklist, and approval checklist.
+- Added vendor email templates.
+- Added fictional vendor review examples.
+- Added vendor decision records.
+- Updated README, starter pack, templates/checklists indexes, GitHub Pages, and quality checks.
+- Polished community health files: Code of Conduct, Contributing, Security, Support, Governance, Maintainers, and License Notes.
+- Added structured GitHub issue forms.
+- Improved pull request template.
+- Added GitHub Pages community page.
+- Updated README community navigation.
+- Expanded quality checks for community files.
+- Added SME Starter Pack.
+- Added 30-minute readiness self-assessment.
+- Added one-page executive checklist.
+- Added printable starter templates.
+- Added internal rollout materials.
+- Added management briefing and quarterly review templates.
+- Added local ZIP build script.
+- Updated README and GitHub Pages with starter pack navigation.
+- Expanded quality checks for starter pack files.
+- Added sector packs for common SME AI use cases.
+- Added SME decision tree, glossary, implementation playbook, and common mistakes guide.
+- Added fictional sample evidence pack.
+- Added template, checklist, and examples indexes.
+- Improved GitHub Pages interactive readiness experience.
+- Updated quality checks for new content.
+- Added toolkit quality check script and GitHub Actions workflow.
+- Added official source register.
+- Added versioning and maintenance policy.
+- Added escalation guide for legal review.
+- Added evidence pack index CSV and maintenance review log.
+- Added downloadable toolkit pack guide.
+- Updated README with quality, trust, and evidence pack sections.
+- Updated GitHub Pages mini-site with trust and maintenance resources.
+- Added maintenance and review process documentation.
+- Added Lucius Domitius Ahenobarbus as a contributor.
+- Polished public README presentation.
+- Added GitHub Pages mini-site.
+- Added maintainer credentials page.
+- Added social preview asset.
+- Added roadmap, security policy, citation metadata, PR template, and issue templates.
+- Added SME use-case examples.
+- Added 4-week small-company implementation guide.
+- Added evidence pack index.
+- Improved README project status and start-here sections.
+- Improved GitHub Pages mini-site with use-case examples and implementation path.
+
+## 0.1.0 - 2026-05-02
+
+- Converted repository into the **EU AI Act SME Toolkit**.
+- Added practical docs, checklists, and templates for AI inventory, screening, procurement, literacy, and internal governance.

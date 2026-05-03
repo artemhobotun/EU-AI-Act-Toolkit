@@ -1,0 +1,61 @@
+name: SME use-case example
+description: Suggest a fictional or sample use-case example for SMEs
+title: "Use-case example: "
+labels: ["SME-use-case", "examples"]
+body:
+  - type: input
+    id: sector
+    attributes:
+      label: Sector or use case
+      placeholder: HR, customer support, marketing, procurement, and so on
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Typical SME scenario
+      placeholder: Describe a realistic small-company workflow
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Data involved
+      placeholder: Personal data, internal notes, customer messages, documents, and so on
+    validations:
+      required: true
+  - type: checkboxes
+    id: people_affected
+    attributes:
+      label: People affected?
+      options:
+        - label: The use case may affect people directly.
+          required: false
+  - type: checkboxes
+    id: vendor
+    attributes:
+      label: Vendor involved?
+      options:
+        - label: A vendor tool is involved.
+          required: false
+  - type: checkboxes
+    id: human_review
+    attributes:
+      label: Human review?
+      options:
+        - label: Human review is part of the workflow.
+          required: false
+  - type: textarea
+    id: escalation
+    attributes:
+      label: Escalation concerns?
+      description: Note anything that may require deeper review.
+    validations:
+      required: false
+  - type: checkboxes
+    id: fictional_only
+    attributes:
+      label: Fictional/sample only
+      options:
+        - label: This example is fictional or sample only and does not contain confidential data.
+          required: true

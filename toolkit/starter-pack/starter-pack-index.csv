@@ -1,0 +1,13 @@
+Document,Path,Purpose,Recommended owner,Review cadence,Notes
+30-minute self-assessment,starter-pack/printable/30-minute-readiness-self-assessment.md,Quick first-pass readiness check,Founder or AI owner,Quarterly or after major change,Use before wider rollout
+one-page executive checklist,starter-pack/printable/one-page-executive-checklist.md,Management summary checklist,Management sponsor,Quarterly,Keep it short
+AI tool inventory starter,starter-pack/printable/ai-tool-inventory-starter.md,Basic AI tool register,AI owner,Monthly,Store internally
+basic risk screening starter,starter-pack/printable/basic-risk-screening-starter.md,First-pass screening form,AI owner or privacy reviewer,Monthly or on change,Escalate uncertain cases
+vendor review starter,starter-pack/printable/vendor-review-starter.md,Vendor question set,Vendor owner,Before purchase and renewal,Keep answers with evidence
+evidence folder structure,starter-pack/printable/evidence-folder-structure.md,Suggested internal folder layout,Operations lead,As needed,Adapt to your storage system
+internal AI use announcement email,starter-pack/internal-rollout/internal-ai-use-announcement-email.md,Staff announcement template,Management sponsor,As needed,Send with policy launch
+employee AI use quick guide,starter-pack/internal-rollout/employee-ai-use-quick-guide.md,Short employee rules,AI owner,Quarterly,Keep easy to read
+AI literacy session outline,starter-pack/internal-rollout/ai-literacy-session-outline.md,Quick training outline,AI owner or trainer,Quarterly,Use for refreshers
+management briefing template,starter-pack/management/management-briefing-template.md,Briefing note for leadership,Management sponsor,Quarterly,Use for status updates
+AI governance owner role,starter-pack/management/ai-governance-owner-role.md,Lightweight role definition,Management sponsor,Annual or on change,Keep ownership clear
+quarterly AI review agenda,starter-pack/management/quarterly-ai-review-agenda.md,Recurring review agenda,AI owner,Quarterly,Use in review meetings

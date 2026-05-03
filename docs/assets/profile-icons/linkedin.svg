@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 38" role="img" aria-label="LinkedIn">
+  <rect x="1" y="1" width="158" height="36" rx="12" fill="#0a66c2" stroke="#75b6ff"/>
+  <circle cx="22" cy="19" r="12" fill="#ffffff" fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.28"/>
+  <text x="22" y="24" text-anchor="middle" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="900" fill="#ffffff">in</text>
+  <text x="44" y="24" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" font-weight="800" fill="#ffffff">LinkedIn</text>
+</svg>

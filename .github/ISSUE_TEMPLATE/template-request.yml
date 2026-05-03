@@ -1,0 +1,47 @@
+name: Template request
+description: Suggest a new template or improve an existing one
+title: "Template request: "
+labels: ["template"]
+body:
+  - type: input
+    id: template_name
+    attributes:
+      label: Template name
+      placeholder: AI use policy, checklist, form, or similar
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem it solves
+      description: Explain the SME problem this template should help with.
+    validations:
+      required: true
+  - type: input
+    id: sme_user
+    attributes:
+      label: SME user
+      placeholder: Founder, operations lead, vendor owner, and so on
+    validations:
+      required: true
+  - type: textarea
+    id: suggested_sections
+    attributes:
+      label: Suggested sections
+      placeholder: List the sections or fields you would like
+    validations:
+      required: true
+  - type: textarea
+    id: sensitive_areas
+    attributes:
+      label: Sensitive or legal areas?
+      description: Note any privacy, security, or legal-sensitive parts.
+    validations:
+      required: false
+  - type: checkboxes
+    id: disclaimer
+    attributes:
+      label: Disclaimer
+      options:
+        - label: I understand this repository is educational and informational only.
+          required: true

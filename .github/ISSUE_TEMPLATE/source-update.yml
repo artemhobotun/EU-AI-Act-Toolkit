@@ -1,0 +1,52 @@
+name: Source update
+description: Suggest an update to source notes or official guidance references
+title: "Source update: "
+labels: ["source-note"]
+body:
+  - type: input
+    id: source_reference
+    attributes:
+      label: Source or guidance reference
+      placeholder: Regulation, official guidance, or implementation note
+    validations:
+      required: true
+  - type: input
+    id: file_to_update
+    attributes:
+      label: What file may need update
+      placeholder: docs/10-source-notes.md or similar
+    validations:
+      required: true
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: Type of change
+      options:
+        - wording update
+        - link update
+        - new source note
+        - clarification
+        - other
+    validations:
+      required: true
+  - type: checkboxes
+    id: official_source
+    attributes:
+      label: Official source
+      options:
+        - label: This is based on an official source.
+          required: true
+  - type: textarea
+    id: suggested_wording
+    attributes:
+      label: Suggested wording
+      description: Use cautious wording and avoid overclaiming.
+    validations:
+      required: true
+  - type: checkboxes
+    id: disclaimer
+    attributes:
+      label: Disclaimer
+      options:
+        - label: I understand this repository is educational and informational only.
+          required: true

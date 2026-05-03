@@ -1,0 +1,12 @@
+Evidence item,Related file/template,Owner,Storage location,Review cadence,Last reviewed,Notes
+AI system inventory,templates/ai-system-inventory.csv,,,,,
+Risk screening form,templates/ai-risk-screening-form.md,,,,,
+Vendor questionnaire,templates/vendor-ai-questionnaire.md,,,,,
+AI use policy,templates/ai-use-policy-template.md,,,,,
+AI literacy records,templates/employee-ai-literacy-record.md,,,,,
+Incident log,templates/ai-incident-log.md,,,,,
+Human review notes,Internal record,,,,,
+Procurement approval,Internal record,,,,,
+Source notes,docs/10-source-notes.md,,,,,
+Maintenance review log,templates/maintenance-review-log.md,,,,,
+Decision log,Internal record,,,,,
