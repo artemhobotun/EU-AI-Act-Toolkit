@@ -284,6 +284,7 @@ This toolkit should be reviewed regularly because EU AI Act implementation guida
 - SME decision tree: [docs/19-sme-decision-tree.md](docs/19-sme-decision-tree.md)
 - SME implementation playbook: [docs/20-sme-implementation-playbook.md](docs/20-sme-implementation-playbook.md)
 - Common mistakes: [docs/21-common-mistakes.md](docs/21-common-mistakes.md)
+- Frequently asked questions: [docs/23-faq.md](docs/23-faq.md)
 - Maintainer content style guide: [docs/22-maintainer-content-style-guide.md](docs/22-maintainer-content-style-guide.md)
 - Source notes: [docs/10-source-notes.md](docs/10-source-notes.md)
 - Maintenance process: [docs/11-maintenance-and-review-process.md](docs/11-maintenance-and-review-process.md)

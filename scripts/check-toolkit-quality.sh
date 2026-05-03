@@ -140,6 +140,7 @@ required_files=(
   "docs/20-sme-implementation-playbook.md"
   "docs/21-common-mistakes.md"
   "docs/22-maintainer-content-style-guide.md"
+  "docs/23-faq.md"
   "docs/community.html"
   "docs/assets/branding/readme-hero.svg"
   "docs/assets/branding/readme-hero-bg.png"
@@ -216,6 +217,7 @@ check_contains "README.md" "legal professional, researcher, and legal-tech build
 check_contains "README.md" "## 🌐 Live interactive mini-site"
 check_contains "README.md" "## 🚀 Start here"
 check_contains "README.md" "https://artemhobotun.github.io/EU-AI-Act-Toolkit/"
+check_contains "README.md" "docs/23-faq.md"
 # Old lowercase URL should not appear (case-sensitive check needed)
 if grep -F "https://artemhobotun.github.io/EU-AI-Act-toolkit/" README.md >/dev/null 2>&1; then
   fail "Old lowercase Pages URL found in README.md"
