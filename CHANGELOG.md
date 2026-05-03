@@ -6,6 +6,25 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+### v1.2.0 — Premium Pages Redesign with Quiz and Official Source Layer
+
+- Full second-generation redesign of all GitHub Pages pages using a premium v3.0 design system.
+- Added interactive AI governance self-check quiz (docs/quiz.html) with 10 guided questions, weighted scoring, and three result tiers.
+- Added dedicated official EU AI Act sources page (docs/official-sources.html) with links to EUR-Lex, European Commission, and EU AI Office.
+- Redesigned docs/index.html as a flagship portal page with stronger hero, stats row, guided paths, and quiz CTA.
+- Upgraded docs/packs.html with premium card layout, sector pack attention badges, and consistent design system.
+- Upgraded docs/use-cases.html with scenario cards including category and attention-level badges.
+- Upgraded docs/resources.html with FAQ accordion, learning path steps, and official sources teaser.
+- Upgraded docs/maintainer.html with premium profile hero, "Why I built this" narrative, and refined credentials grid.
+- Upgraded docs/community.html with resource-row layout, cleaner governance section, and consistent design.
+- Applied consistent sticky nav with EU Sources and Self-Check links across all eight pages.
+- Applied consistent premium footer (footer-top, footer-brand) across all pages.
+- Established deep navy / midnight base with EU-blue and gold accents as design system tokens.
+- Added subtle background grid, card hover lift, progress bar, and badge components to design system.
+- Added quiz progress indicator, animated question transitions, and polished result panel.
+- Updated quality checks to verify quiz.html and official-sources.html presence, content, and relative link correctness.
+- Updated CHANGELOG with full v1.2.0 entry.
+
 - Fixed GitHub Pages project-site navigation by replacing root-relative internal links with relative links.
 - Added quality checks to prevent broken project-site links on GitHub Pages.
 - Redesigned the GitHub Pages mini-site into a multi-page static toolkit portal.

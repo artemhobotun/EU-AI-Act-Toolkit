@@ -3,263 +3,398 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EU AI Act Toolkit — Practical Readiness for SMEs</title>
-  <meta name="description" content="Practical templates, checklists, and documentation for SMEs working toward EU AI Act readiness. Start with inventory, screening, and governance support.">
+  <title>EU AI Act Toolkit — AI Governance Readiness for SMEs</title>
+  <meta name="description" content="Practical templates, checklists, and documentation tools for organisations working toward EU AI Act readiness. Built by a legal professional for real teams.">
   <link rel="stylesheet" href="assets/site.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%230a2463'>🇪🇺</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🇪🇺</text></svg>">
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
-      <nav>
+
+<header>
+  <div class="header-container">
+    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="packs.html">Packs</a></li>
+        <li><a href="use-cases.html">Use Cases</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="official-sources.html">EU Sources</a></li>
+        <li><a href="maintainer.html">Maintainer</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="quiz.html" class="nav-cta">Self-Check →</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-eyebrow">⚖️ AI Governance Readiness Resource</div>
+    <h1>Navigate AI Compliance<br>with Confidence</h1>
+    <p class="hero-subtitle">
+      Practical templates, checklists, and documentation tools for SMEs
+      working toward EU AI Act readiness. Built by a legal professional
+      for teams without dedicated compliance staff.
+    </p>
+    <div class="hero-buttons">
+      <a href="quiz.html" class="btn btn-gold btn-lg">Take the Self-Check →</a>
+      <a href="packs.html" class="btn btn-secondary btn-lg">Explore Toolkit Packs</a>
+    </div>
+    <p class="hero-note">Educational and informational only — not legal advice.</p>
+  </section>
+
+  <!-- Stats row -->
+  <section style="padding-top: 0; padding-bottom: var(--s-20);">
+    <div style="display: flex; gap: var(--s-8); flex-wrap: wrap; justify-content: center; padding: var(--s-8) 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+      <div style="text-align: center;">
+        <span style="display: block; font-size: var(--text-2xl); font-weight: 800; color: var(--blue-400); letter-spacing: -0.02em;">6</span>
+        <span style="font-size: var(--text-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;">Toolkit Packs</span>
+      </div>
+      <div style="text-align: center;">
+        <span style="display: block; font-size: var(--text-2xl); font-weight: 800; color: var(--blue-400); letter-spacing: -0.02em;">40+</span>
+        <span style="font-size: var(--text-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;">Templates &amp; Checklists</span>
+      </div>
+      <div style="text-align: center;">
+        <span style="display: block; font-size: var(--text-2xl); font-weight: 800; color: var(--blue-400); letter-spacing: -0.02em;">6</span>
+        <span style="font-size: var(--text-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;">Sector Scenarios</span>
+      </div>
+      <div style="text-align: center;">
+        <span style="display: block; font-size: var(--text-2xl); font-weight: 800; color: var(--gold-400); letter-spacing: -0.02em;">0</span>
+        <span style="font-size: var(--text-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em;">Cost to use</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- What this helps with -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Core Capabilities</span>
+      <h2>What This Toolkit Helps You Do</h2>
+      <p>Four practical pillars to build AI governance readiness in your organisation.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card card-featured">
+        <div class="card-icon">📋</div>
+        <h3>AI Inventory</h3>
+        <p>Track all AI tools your organisation uses — who manages them, what data they process, and when they need review.</p>
+        <div class="card-buttons">
+          <a href="../toolkit/templates/ai-system-inventory.csv" class="btn btn-sm btn-primary">Download Template</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚠️</div>
+        <h3>Risk Screening</h3>
+        <p>Screen AI tools for readiness gaps: human oversight, data processing, vendor documentation, and escalation triggers.</p>
+        <div class="card-buttons">
+          <a href="../toolkit/templates/ai-risk-screening-form.md" class="btn btn-sm btn-secondary">Run Screening</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📄</div>
+        <h3>Governance Documentation</h3>
+        <p>Document AI policies, tool ownership, incident processes, and review schedules in a consistent, auditable format.</p>
+        <div class="card-buttons">
+          <a href="../toolkit/checklists/ai-tool-owner-checklist.md" class="btn btn-sm btn-secondary">View Checklist</a>
+        </div>
+      </div>
+      <div class="card card-gold">
+        <div class="card-icon">🤝</div>
+        <h3>Vendor Assessment</h3>
+        <p>Ask the right questions before procuring, renewing, or expanding AI-enabled SaaS tools — with structured due diligence.</p>
+        <div class="card-buttons">
+          <a href="packs.html" class="btn btn-sm btn-primary">Vendor Pack</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz CTA -->
+  <section>
+    <div style="background: linear-gradient(135deg, var(--bg-card) 0%, rgba(47,107,255,0.08) 100%); border: 1px solid var(--border-blue); border-radius: var(--r-xl); padding: var(--s-12) var(--s-10); text-align: center; position: relative; overflow: hidden;">
+      <div style="position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(var(--blue-glow), transparent); pointer-events: none;"></div>
+      <div class="hero-eyebrow" style="margin-bottom: var(--s-5);">✦ 2 minutes</div>
+      <h2 style="font-size: var(--text-3xl); margin-bottom: var(--s-4);">Does Your Organisation Need AI Governance Attention?</h2>
+      <p style="font-size: var(--text-lg); color: var(--text-muted); max-width: 520px; margin: 0 auto var(--s-8); line-height: 1.6;">
+        Take the free AI governance self-check to understand your readiness level and get personalised recommendations.
+      </p>
+      <div style="display: flex; gap: var(--s-3); justify-content: center; flex-wrap: wrap;">
+        <a href="quiz.html" class="btn btn-gold btn-lg">Start the Self-Check →</a>
+        <a href="resources.html" class="btn btn-secondary btn-lg">Browse Resources</a>
+      </div>
+      <p style="font-size: var(--text-xs); color: var(--text-faint); margin-top: var(--s-5); font-style: italic;">No sign-up required. 10 guided questions. Practical result.</p>
+    </div>
+  </section>
+
+  <!-- Choose your path -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Where to Start</span>
+      <h2>Choose Your Starting Point</h2>
+      <p>Different entry points depending on your role and immediate need.</p>
+    </div>
+    <div class="cards-grid-3">
+      <div class="card">
+        <div class="card-icon">🆕</div>
+        <h3>New to AI governance?</h3>
+        <p>Start with the 30-minute readiness self-assessment to understand your current maturity level and priorities.</p>
+        <div class="card-buttons">
+          <a href="../toolkit/starter-pack/printable/30-minute-readiness-self-assessment.md" class="btn btn-sm btn-primary">Starter Pack</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛒</div>
+        <h3>Buying or renewing AI SaaS?</h3>
+        <p>Use the Vendor Assessment Pack to evaluate AI-enabled tools systematically and document procurement decisions.</p>
+        <div class="card-buttons">
+          <a href="packs.html" class="btn btn-sm btn-primary">Vendor Pack</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏭</div>
+        <h3>Specific industry or use case?</h3>
+        <p>Explore sector-specific guidance for HR, marketing, customer support, legal review, and internal GenAI use.</p>
+        <div class="card-buttons">
+          <a href="use-cases.html" class="btn btn-sm btn-primary">Use Cases</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>Need templates fast?</h3>
+        <p>Browse ready-to-use templates for inventory, risk screening, vendor due diligence, policy, and more.</p>
+        <div class="card-buttons">
+          <a href="packs.html" class="btn btn-sm btn-secondary">Templates</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏛️</div>
+        <h3>Want official EU sources?</h3>
+        <p>Access direct links to the official EU AI Act regulation, EUR-Lex, European Commission, and EU AI Office.</p>
+        <div class="card-buttons">
+          <a href="official-sources.html" class="btn btn-sm btn-secondary">Official Sources</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚖️</div>
+        <h3>High-risk or complex case?</h3>
+        <p>Use the escalation guide to understand when to involve legal, privacy, security, or technical specialists.</p>
+        <div class="card-buttons">
+          <a href="../docs/16-what-to-escalate-for-legal-review.md" class="btn btn-sm btn-secondary">Escalation Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to use it -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Process</span>
+      <h2>How to Use This Toolkit</h2>
+      <p>A practical four-step readiness workflow for any organisation.</p>
+    </div>
+    <div style="max-width: 640px; margin: 0 auto;">
+      <div class="path-steps">
+        <div class="path-step">
+          <div class="path-step-line">
+            <div class="path-step-num">1</div>
+            <div class="path-step-connector"></div>
+          </div>
+          <div class="path-step-body">
+            <h4>Define your AI inventory</h4>
+            <p>List the AI tools in use, who manages each one, what data they process, and what decisions they inform.</p>
+            <a href="../toolkit/templates/ai-system-inventory.csv" class="btn btn-sm btn-outline">Inventory Template</a>
+          </div>
+        </div>
+        <div class="path-step">
+          <div class="path-step-line">
+            <div class="path-step-num">2</div>
+            <div class="path-step-connector"></div>
+          </div>
+          <div class="path-step-body">
+            <h4>Run a readiness check</h4>
+            <p>Screen each tool for documentation gaps, data processing concerns, vendor clarity, and human oversight.</p>
+            <a href="quiz.html" class="btn btn-sm btn-outline">Start Self-Check</a>
+          </div>
+        </div>
+        <div class="path-step">
+          <div class="path-step-line">
+            <div class="path-step-num">3</div>
+            <div class="path-step-connector"></div>
+          </div>
+          <div class="path-step-body">
+            <h4>Document internally</h4>
+            <p>Create governance records: AI policy, tool ownership, incident processes, and review schedules.</p>
+            <a href="../toolkit/starter-pack/README.md" class="btn btn-sm btn-outline">Starter Pack</a>
+          </div>
+        </div>
+        <div class="path-step">
+          <div class="path-step-line">
+            <div class="path-step-num">4</div>
+            <div class="path-step-connector"></div>
+          </div>
+          <div class="path-step-body">
+            <h4>Escalate where needed</h4>
+            <p>For high-risk cases, sensitive data, or unclear vendor practices, escalate to qualified legal or privacy experts.</p>
+            <a href="../docs/16-what-to-escalate-for-legal-review.md" class="btn btn-sm btn-outline">Escalation Guide</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official sources teaser -->
+  <section>
+    <div style="background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--r-xl); padding: var(--s-10) var(--s-8); display: flex; gap: var(--s-8); align-items: center; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 260px;">
+        <div class="section-label" style="display: block; margin-bottom: var(--s-3);">Official EU Sources</div>
+        <h3 style="font-size: var(--text-2xl); margin-bottom: var(--s-3);">Regulation (EU) 2024/1689 and official EU guidance</h3>
+        <p style="color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin-bottom: var(--s-5);">
+          This toolkit links directly to the official EU AI Act regulation on EUR-Lex, the European Commission, and the EU AI Office. All guidance is rooted in official sources.
+        </p>
+        <a href="official-sources.html" class="btn btn-outline">Explore Official Sources →</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: var(--s-3); min-width: 280px; flex: 1;">
+        <div class="source-card">
+          <div class="source-card-badge">🏛️</div>
+          <div class="source-card-body">
+            <h4>EUR-Lex — Full Regulation Text</h4>
+            <p>Regulation (EU) 2024/1689 — the complete official AI Act text</p>
+            <a href="official-sources.html" class="btn btn-sm btn-secondary">View sources →</a>
+          </div>
+        </div>
+        <div class="source-card">
+          <div class="source-card-badge">🇪🇺</div>
+          <div class="source-card-body">
+            <h4>European AI Office</h4>
+            <p>Official European Commission AI governance and implementation body</p>
+            <a href="official-sources.html" class="btn btn-sm btn-secondary">View sources →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick resources -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Quick Access</span>
+      <h2>Essential Resources</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--s-2); max-width: 680px; margin: 0 auto;">
+      <a href="../docs/23-faq.md" class="resource-row">
+        <div class="resource-row-icon">❓</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Frequently Asked Questions</div>
+          <div class="resource-row-desc">Common questions about the toolkit, readiness, and escalation</div>
+        </div>
+        <div class="resource-row-arrow">→</div>
+      </a>
+      <a href="../docs/19-sme-decision-tree.md" class="resource-row">
+        <div class="resource-row-icon">🌳</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Decision Tree</div>
+          <div class="resource-row-desc">When does an AI tool need escalation or specialist review?</div>
+        </div>
+        <div class="resource-row-arrow">→</div>
+      </a>
+      <a href="../docs/18-glossary.md" class="resource-row">
+        <div class="resource-row-icon">📚</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Glossary</div>
+          <div class="resource-row-desc">Plain-language definitions of AI governance and compliance terms</div>
+        </div>
+        <div class="resource-row-arrow">→</div>
+      </a>
+      <a href="../docs/16-what-to-escalate-for-legal-review.md" class="resource-row">
+        <div class="resource-row-icon">⚖️</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Escalation Guide</div>
+          <div class="resource-row-desc">When and how to involve qualified legal or privacy specialists</div>
+        </div>
+        <div class="resource-row-arrow">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section>
+    <div class="callout callout-legal">
+      <div class="callout-icon">⚖️</div>
+      <div class="callout-body">
+        <h4>Important Disclaimer</h4>
+        This toolkit is educational and informational only. It does not constitute legal advice and does not guarantee compliance with any regulation. Always escalate sensitive, high-impact, or legally complex questions to qualified legal, privacy, or technical professionals.
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="text-align: center; padding-top: 0;">
+    <h2>Ready to Start?</h2>
+    <p style="color: var(--text-muted); margin-bottom: var(--s-8);">Take the self-check, explore the packs, or browse the official EU sources.</p>
+    <div class="hero-buttons">
+      <a href="quiz.html" class="btn btn-gold btn-lg">AI Governance Self-Check</a>
+      <a href="packs.html" class="btn btn-secondary btn-lg">Explore Toolkit Packs</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo-footer">🇪🇺 EU AI Act Toolkit</span>
+        <p>Practical AI governance readiness for SMEs. Templates, checklists, and documentation tools rooted in official EU sources.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Toolkit</h4>
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="packs.html">Toolkit Packs</a></li>
           <li><a href="use-cases.html">Use Cases</a></li>
           <li><a href="resources.html">Resources</a></li>
-          <li><a href="maintainer.html">Maintainer</a></li>
-          <li><a href="community.html">Community</a></li>
+          <li><a href="quiz.html">Self-Check Quiz</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>EU AI Act Toolkit</h1>
-      <p class="hero-subtitle">Practical templates, checklists, and documentation tools for SMEs working toward EU AI Act readiness.</p>
-      <div class="hero-buttons">
-        <a href="packs.html" class="btn btn-primary">Explore Toolkit Packs</a>
-        <a href="resources.html" class="btn btn-secondary">Browse Resources</a>
       </div>
-    </section>
-
-    <!-- What This Toolkit Helps With -->
-    <section>
-      <div class="section-header">
-        <h2>What This Toolkit Helps With</h2>
-        <p>Four practical starting points to build readiness in your organization.</p>
+      <div class="footer-section">
+        <h4>Sources</h4>
+        <ul>
+          <li><a href="official-sources.html">Official EU Sources</a></li>
+          <li><a href="../docs/10-source-notes.md">Source Notes</a></li>
+          <li><a href="../docs/18-glossary.md">Glossary</a></li>
+          <li><a href="../docs/23-faq.md">FAQ</a></li>
+        </ul>
       </div>
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-icon">📋</div>
-          <h3>AI Inventory</h3>
-          <p>Track which AI tools your organization uses, who manages them, and when they need review.</p>
-          <div class="card-buttons">
-            <a href="../toolkit/templates/ai-system-inventory.csv" class="btn btn-sm btn-primary">Start Inventory</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-icon">⚠️</div>
-          <h3>Risk Screening</h3>
-          <p>Screen AI tools for readiness gaps, human oversight, data processing, and vendor documentation.</p>
-          <div class="card-buttons">
-            <a href="../toolkit/templates/ai-risk-screening-form.md" class="btn btn-sm btn-primary">Run Screening</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-icon">📄</div>
-          <h3>Governance Documentation</h3>
-          <p>Document your AI policies, tool ownership, incident processes, and review schedules internally.</p>
-          <div class="card-buttons">
-            <a href="../toolkit/checklists/ai-tool-owner-checklist.md" class="btn btn-sm btn-primary">Create Policy</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-icon">🤝</div>
-          <h3>Vendor Review</h3>
-          <p>Ask better questions before buying, renewing, or expanding an AI-enabled SaaS tool.</p>
-          <div class="card-buttons">
-            <a href="packs.html" class="btn btn-sm btn-primary">Vendor Assessment</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Choose Your Path -->
-    <section>
-      <div class="section-header">
-        <h2>Choose Your Path</h2>
-        <p>Different starting points depending on your role and immediate needs.</p>
-      </div>
-      <div class="cards-grid">
-        <div class="card">
-          <h3>New to AI governance?</h3>
-          <p>Start with the Starter Pack to understand readiness basics and run a quick self-assessment.</p>
-          <div class="card-buttons">
-            <a href="../toolkit/starter-pack/START-HERE.md" class="btn btn-sm btn-primary">Starter Pack</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Buying or renewing AI SaaS?</h3>
-          <p>Use the Vendor Assessment Pack to evaluate AI tools and document procurement decisions.</p>
-          <div class="card-buttons">
-            <a href="packs.html" class="btn btn-sm btn-primary">Vendor Pack</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Specific industry or use case?</h3>
-          <p>Explore sector-specific packs and examples tailored to your business context.</p>
-          <div class="card-buttons">
-            <a href="use-cases.html" class="btn btn-sm btn-primary">See Examples</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Need templates and checklists?</h3>
-          <p>Browse ready-to-use templates for inventory, risk screening, policy, and vendor review.</p>
-          <div class="card-buttons">
-            <a href="packs.html" class="btn btn-sm btn-primary">Templates</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How to Use -->
-    <section>
-      <div class="section-header">
-        <h2>How to Use This Toolkit</h2>
-      </div>
-      <div style="max-width: 800px; margin: 0 auto;">
-        <ol style="line-height: 1.8; color: var(--text-muted);">
-          <li style="margin-bottom: var(--spacing-lg);"><strong>Define your AI inventory:</strong> List the AI tools you use and who manages each one.</li>
-          <li style="margin-bottom: var(--spacing-lg);"><strong>Run a readiness check:</strong> Screen each tool for documentation gaps, data processing concerns, and vendor clarity.</li>
-          <li style="margin-bottom: var(--spacing-lg);"><strong>Document internally:</strong> Create simple governance records (policies, owner checklists, incident processes).</li>
-          <li><strong>Escalate where needed:</strong> For high-risk cases or unclear vendor practices, escalate to qualified legal, privacy, or security review.</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Trust & Maintenance -->
-    <section>
-      <div class="section-header">
-        <h2>About This Toolkit</h2>
-      </div>
-      <div class="cards-grid">
-        <div class="card">
-          <h3>Educational & Practical</h3>
-          <p>This toolkit is educational and informational only. It is not legal advice and does not provide compliance assurance. Always escalate sensitive questions to qualified experts.</p>
-        </div>
-        <div class="card">
-          <h3>Regular Review</h3>
-          <p>EU AI Act implementation guidance and standards may change. Review the toolkit regularly and check the source notes for current regulatory context.</p>
-        </div>
-        <div class="card">
-          <h3>SME-Focused</h3>
-          <p>Designed for small and medium enterprises. Practical, concise, and built on real-world readiness workflows, not academic theory.</p>
-        </div>
-        <div class="card">
-          <h3>Source Aware</h3>
-          <p>All guidance is rooted in <a href="../docs/10-source-notes.md">official EU sources</a> and conservative interpretation. See the source register for detailed references.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resources Preview -->
-    <section>
-      <div class="section-header">
-        <h2>Quick Resources</h2>
-        <p>Essential guidance, tools, and documentation in one place.</p>
-      </div>
-      <div class="cards-grid">
-        <div class="card">
-          <h3>❓ FAQ</h3>
-          <p>Common questions about the toolkit, readiness, compliance, and how to escalate concerns.</p>
-          <div class="card-buttons">
-            <a href="../docs/23-faq.md" class="btn btn-sm btn-secondary">Read FAQ</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>🌳 Decision Tree</h3>
-          <p>A guided flowchart to help you decide when an AI tool needs escalation or specialist review.</p>
-          <div class="card-buttons">
-            <a href="../docs/19-sme-decision-tree.md" class="btn btn-sm btn-secondary">Explore Tree</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>📚 Glossary</h3>
-          <p>SME-friendly definitions of key AI governance and compliance terms.</p>
-          <div class="card-buttons">
-            <a href="../docs/18-glossary.md" class="btn btn-sm btn-secondary">View Glossary</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>⚖️ Escalation Guide</h3>
-          <p>When and how to involve legal, privacy, security, or technical specialists.</p>
-          <div class="card-buttons">
-            <a href="../docs/16-what-to-escalate-for-legal-review.md" class="btn btn-sm btn-secondary">Read Guide</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr>
-
-    <!-- Call to Action -->
-    <section style="text-align: center; padding: var(--spacing-2xl) 0;">
-      <h2>Ready to Start?</h2>
-      <p>Choose your first step: explore toolkit packs, review use cases, or check the FAQ.</p>
-      <div class="hero-buttons">
-        <a href="packs.html" class="btn btn-primary">Explore Packs</a>
-        <a href="use-cases.html" class="btn btn-secondary">View Examples</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>About</h3>
-          <p>A practical readiness toolkit for SMEs working toward EU AI Act compliance and governance maturity.</p>
-        </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="packs.html">Toolkit Packs</a></li>
-            <li><a href="use-cases.html">Use Cases</a></li>
-            <li><a href="resources.html">Resources</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Community</h3>
-          <ul>
-            <li><a href="community.html">Contributing</a></li>
-            <li><a href="../.github/CONTRIBUTING.md">How to Contribute</a></li>
-            <li><a href="../SECURITY.md">Security & Privacy</a></li>
-            <li><a href="../LICENSE">License</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Maintainer</h3>
-          <ul>
-            <li><a href="maintainer.html">Artem Nazarko</a></li>
-            <li><a href="https://github.com/artemhobotun">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/artem-nazarko/">LinkedIn</a></li>
-            <li><a href="https://orcid.org/0000-0002-4190-7288">ORCID</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p><strong>EU AI Act Toolkit</strong> — Practical readiness and documentation support.</p>
-        <p>This toolkit is educational and informational only. It is not legal advice. <a href="../DISCLAIMER.md">Read the disclaimer.</a></p>
-        <p>© 2026. <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">View on GitHub</a></p>
+      <div class="footer-section">
+        <h4>Project</h4>
+        <ul>
+          <li><a href="maintainer.html">Artem Nazarko</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
+          <li><a href="../DISCLAIMER.md">Disclaimer</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p><strong>EU AI Act Toolkit</strong> — Maintained by <a href="maintainer.html">Artem Nazarko</a>. Educational use only, not legal advice.</p>
+      <p>© 2026. <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">View on GitHub</a></p>
+    </div>
+  </div>
+</footer>
 
-  <script>
-    // Simple active nav indicator
-    document.querySelectorAll('nav a').forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === window.location.pathname ||
-          (window.location.pathname === '/' && link.getAttribute('href') === 'index.html') ||
-          window.location.pathname.endsWith(link.getAttribute('href'))) {
-        link.classList.add('active');
-      }
-    });
-  </script>
+<script>
+  // Sticky nav scroll effect
+  window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  // Active nav
+  document.querySelectorAll('nav a').forEach(link => {
+    if (window.location.pathname.endsWith(link.getAttribute('href')) ||
+        window.location.pathname.endsWith('index.html') && link.getAttribute('href') === 'index.html') {
+      link.classList.add('active');
+    }
+  });
+</script>
 </body>
 </html>
