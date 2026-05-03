@@ -90,37 +90,27 @@ Selected public credentials and professional badges are available through Credly
   </tr>
 </table>
 
-## 📦 Package
+## 🌐 Live mini-site
 
-This project publishes a lightweight container image for running the static site locally:
-
-```
-ghcr.io/artemhobotun/eu-ai-act-toolkit-site
-```
-
-```bash
-docker run --rm -p 8080:80 ghcr.io/artemhobotun/eu-ai-act-toolkit-site:latest
-```
-
-Open **http://localhost:8080** — serves the full site via nginx. See [docs/packages.md](docs/packages.md) for details.
-
-## 🌐 Live interactive mini-site
-
-Open the live GitHub Pages version of this toolkit for a visual overview, guided navigation, and professional presentation.
+The public mini-site gives a guided version of the toolkit with visual navigation, readiness self-checks, toolkit packs, official sources, and maintainer information.
 
 <p align="center">
   <a href="https://artemhobotun.github.io/EU-AI-Act-Toolkit/">
-    <strong>🚀 Open the interactive EU AI Act Toolkit mini-site →</strong>
+    <strong>🚀 Open the EU AI Act Toolkit mini-site →</strong>
   </a>
 </p>
 
-Multi-page site structure:
-- **[Home](https://artemhobotun.github.io/EU-AI-Act-Toolkit/)** — Overview and quick navigation
-- **[Toolkit Packs](https://artemhobotun.github.io/EU-AI-Act-Toolkit/packs.html)** — Starter Pack, Vendor Pack, Sector Packs, Templates, Checklists
-- **[Use Cases](https://artemhobotun.github.io/EU-AI-Act-Toolkit/use-cases.html)** — Realistic examples and scenarios
-- **[Resources](https://artemhobotun.github.io/EU-AI-Act-Toolkit/resources.html)** — FAQ, Decision Tree, Glossary, Guides
-- **[Maintainer](https://artemhobotun.github.io/EU-AI-Act-Toolkit/maintainer.html)** — Artem Nazarko and project philosophy
-- **[Community](https://artemhobotun.github.io/EU-AI-Act-Toolkit/community.html)** — Contributing, governance, code of conduct
+<details>
+<summary><strong>🧭 What is inside the mini-site?</strong></summary>
+
+- **Home** — overview, quick navigation, and main entry points
+- **Toolkit Packs** — starter pack, vendor pack, sector packs, templates, and checklists
+- **Use Cases** — realistic AI governance and compliance-readiness scenarios
+- **Resources** — FAQ, decision tree, glossary, guides, and official source links
+- **Maintainer** — Artem Nazarko, credentials, and project philosophy
+- **Community** — contributing, governance, code of conduct, security, and support
+
+</details>
 
 ## 🚀 Start here
 
@@ -155,16 +145,80 @@ The practical working materials live in `toolkit/` so the repository root stays 
 
 ## 📊 Structured technical layer
 
-The toolkit includes machine-readable registries, schemas, and a TypeScript scoring engine to make AI governance data more useful and programmatically accessible:
+The toolkit includes optional structured data and automation helpers for teams that want to reuse the materials programmatically.
 
-- **TypeScript quiz engine** ([src/](src/)) — Fully typed readiness assessment scoring logic
-- **SQLite schema** ([database/](database/)) — Optional evidence pack database structure for tracking AI systems, risk screenings, vendors, and incidents
-- **YAML registries** ([data/](data/)) — Machine-readable toolkit resource inventory, official EU sources, and use-case scenarios
-- **JSON Schemas** ([schemas/](schemas/)) — Validation schemas for AI system inventory, risk screening, and vendor assessment data
+Included technical components:
 
-These are informational and optional; they support automation, validation, and tool integration without being required for toolkit use. See [data/README.md](data/README.md) and [schemas/README.md](schemas/README.md) for details.
+- 🧠 TypeScript quiz engine — readiness scoring logic
+- 🗄 SQLite schema — optional evidence-pack database structure
+- 🧩 YAML registries — machine-readable toolkit, source, and use-case inventories
+- ✅ JSON Schemas — validation helpers for key toolkit data
+- 🐳 Container package — static site preview via GHCR/nginx
 
 🔎 Expand the sections below to explore more detailed resources, examples, and supporting documentation.
+
+<details>
+<summary><strong>🧠 TypeScript quiz engine</strong></summary>
+
+The quiz engine provides fully typed readiness assessment scoring logic for AI governance assessments.
+
+**Location:** [src/](src/)
+
+Supports programmatic scoring, validation, and tool integration. See [src/README.md](src/README.md) for implementation details.
+
+</details>
+
+<details>
+<summary><strong>🗄 SQLite schema</strong></summary>
+
+Optional evidence pack database structure for tracking AI systems, risk screenings, vendors, and incidents.
+
+**Location:** [database/](database/)
+
+Use this schema if you want to manage toolkit data in a structured database. Supports queries for audit trails, compliance documentation, and risk management workflows. See [database/README.md](database/README.md) for schema documentation.
+
+</details>
+
+<details>
+<summary><strong>🧩 YAML registries</strong></summary>
+
+Machine-readable toolkit resource inventory, official EU sources, and use-case scenarios.
+
+**Location:** [data/](data/)
+
+Includes toolkit registry, official EU AI Act sources, and compliance readiness use cases. Useful for automation, site generation, and tool integration. See [data/README.md](data/README.md) for details.
+
+</details>
+
+<details>
+<summary><strong>✅ JSON Schemas</strong></summary>
+
+Validation schemas for AI system inventory, risk screening, and vendor assessment data.
+
+**Location:** [schemas/](schemas/)
+
+Use these schemas to validate structured data, integrate with third-party tools, or build custom automation. See [schemas/README.md](schemas/README.md) for schema details and examples.
+
+</details>
+
+<details>
+<summary><strong>🐳 Container package / run locally</strong></summary>
+
+This project publishes a lightweight container image for running the static site locally:
+
+```bash
+docker run --rm -p 8080:80 ghcr.io/artemhobotun/eu-ai-act-toolkit-site:latest
+```
+
+Then open:
+
+```
+http://localhost:8080
+```
+
+The image serves the static GitHub Pages site through nginx. See [docs/packages.md](docs/packages.md) for details.
+
+</details>
 
 <details>
 <summary><strong>🗺️ Full toolkit map</strong></summary>

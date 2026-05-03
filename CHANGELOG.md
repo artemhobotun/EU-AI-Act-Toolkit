@@ -6,6 +6,14 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+### README Restructuring — Mini-site and Package Sections
+
+- Simplified the README live mini-site section into a cleaner call-to-action block.
+- Moved the mini-site page structure into a collapsible details section.
+- Moved package/container usage information into the structured technical layer as a hidden details block.
+- Reduced visible README clutter while keeping package documentation available.
+- Updated quality check script to validate new README structure.
+
 ### v1.5.0 — Structured Toolkit Data Layer
 
 - Added TypeScript quiz scoring engine (src/quiz-engine.ts) with fully typed readiness assessment logic, 10 example questions, and three readiness levels.
