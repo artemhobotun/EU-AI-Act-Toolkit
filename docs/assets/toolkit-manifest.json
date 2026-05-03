@@ -1,0 +1,73 @@
+{
+  "title": "EU AI Act Toolkit",
+  "version": "1.4.0",
+  "description": "Practical AI governance readiness for SMEs",
+  "repository": {
+    "url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit",
+    "type": "public"
+  },
+  "site": {
+    "url": "https://artemhobotun.github.io/EU-AI-Act-Toolkit/",
+    "type": "GitHub Pages"
+  },
+  "maintainer": {
+    "name": "Artem Nazarko",
+    "role": "Legal professional, researcher, legal-tech builder"
+  },
+  "pages": {
+    "index": "index.html",
+    "packs": "packs.html",
+    "use_cases": "use-cases.html",
+    "resources": "resources.html",
+    "quiz": "quiz.html",
+    "official_sources": "official-sources.html",
+    "maintainer": "maintainer.html",
+    "community": "community.html"
+  },
+  "toolkit_packs": [
+    {
+      "name": "Starter Pack",
+      "description": "Foundation for AI governance readiness",
+      "path": "toolkit/starter-pack/"
+    },
+    {
+      "name": "Vendor Assessment Pack",
+      "description": "Evaluate AI-enabled SaaS tools",
+      "path": "toolkit/vendor-pack/"
+    },
+    {
+      "name": "Sector Packs",
+      "description": "Context-specific guidance for 6 sectors",
+      "path": "toolkit/sector-packs/"
+    },
+    {
+      "name": "Templates",
+      "description": "Ready-to-use governance documents",
+      "path": "toolkit/templates/"
+    },
+    {
+      "name": "Checklists",
+      "description": "Readiness and assessment checklists",
+      "path": "toolkit/checklists/"
+    }
+  ],
+  "official_sources": [
+    {
+      "title": "Regulation (EU) 2024/1689",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "type": "regulation"
+    },
+    {
+      "title": "European Commission AI Regulatory Framework",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "type": "policy"
+    },
+    {
+      "title": "EU AI Office",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+      "type": "agency"
+    }
+  ],
+  "generated": "2026-05-03T21:26:39.257227Z",
+  "license": "CC0 1.0 Universal (Public Domain Dedication)"
+}
