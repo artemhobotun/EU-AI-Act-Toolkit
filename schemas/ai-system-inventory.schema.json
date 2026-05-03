@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/schemas/ai-system-inventory.schema.json",
+  "title": "AI System Inventory",
+  "description": "Schema for tracking AI tools and systems in use within an organisation",
+  "type": "object",
+  "properties": {
+    "system_id": {
+      "type": "string",
+      "description": "Unique identifier for this AI system (e.g., AI-001)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name or product name of the AI tool",
+      "minLength": 1
+    },
+    "vendor": {
+      "type": "string",
+      "description": "Vendor or provider of the tool"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "internal_genai",
+        "customer_chatbot",
+        "hr_recruitment",
+        "marketing",
+        "vendor_saas",
+        "document_review",
+        "crm_scoring",
+        "data_analytics",
+        "other"
+      ],
+      "description": "Category of AI use"
+    },
+    "description": {
+      "type": "string",
+      "description": "What this tool does and how it is used"
+    },
+    "owner_name": {
+      "type": "string",
+      "description": "Person or team responsible for this tool"
+    },
+    "owner_email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email for the tool owner"
+    },
+    "data_processed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Types of data processed by this tool (e.g., customer names, transaction history, employment data)",
+      "examples": [
+        "customer_names",
+        "transaction_data",
+        "employment_records"
+      ]
+    },
+    "data_classification": {
+      "type": "string",
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted"
+      ],
+      "description": "Sensitivity classification of data processed"
+    },
+    "people_affected": {
+      "type": "string",
+      "enum": [
+        "employees",
+        "customers",
+        "applicants",
+        "vendors",
+        "public",
+        "none"
+      ],
+      "description": "Who is affected by this tool's decisions or processing"
+    },
+    "contract_signed_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date vendor contract was signed"
+    },
+    "renewal_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When the tool or subscription needs renewal"
+    },
+    "last_reviewed_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Most recent governance review date"
+    },
+    "next_review_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Scheduled next review date"
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "in_progress",
+        "completed",
+        "escalated"
+      ],
+      "description": "Current readiness review status"
+    },
+    "dpa_in_place": {
+      "type": "boolean",
+      "description": "Whether a Data Processing Agreement is signed with the vendor"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Any additional notes or considerations"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "owner_name"
+  ],
+  "additionalProperties": false
+}

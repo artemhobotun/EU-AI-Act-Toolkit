@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/schemas/vendor-review.schema.json",
+  "title": "Vendor AI Assessment",
+  "description": "Schema for documenting an assessment of a vendor's AI practices and tool",
+  "type": "object",
+  "properties": {
+    "review_id": {
+      "type": "string",
+      "description": "Unique identifier for this vendor assessment"
+    },
+    "vendor_name": {
+      "type": "string",
+      "description": "Name of the vendor being assessed"
+    },
+    "product_name": {
+      "type": "string",
+      "description": "Name of the AI-enabled product or service"
+    },
+    "review_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the assessment was conducted"
+    },
+    "reviewer_name": {
+      "type": "string",
+      "description": "Person conducting the assessment"
+    },
+    "reviewer_email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email of the reviewer"
+    },
+    "contract_signed_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When the vendor contract was signed"
+    },
+    "ai_features_description": {
+      "type": "string",
+      "description": "What AI features and capabilities the product has"
+    },
+    "ai_transparency": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high"
+      ],
+      "description": "How transparent is the vendor about AI capabilities and limitations"
+    },
+    "model_traceability": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high"
+      ],
+      "description": "Can the vendor explain how the model makes decisions"
+    },
+    "training_data_clarity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high"
+      ],
+      "description": "How clearly does vendor disclose training data sources"
+    },
+    "bias_mitigation": {
+      "type": "boolean",
+      "description": "Does vendor address bias and fairness concerns"
+    },
+    "bias_mitigation_details": {
+      "type": "string",
+      "description": "How the vendor addresses bias"
+    },
+    "human_override_capability": {
+      "type": "boolean",
+      "description": "Can users override or disable AI recommendations"
+    },
+    "data_processing_transparency": {
+      "type": "boolean",
+      "description": "Is vendor clear about how customer data is used"
+    },
+    "dpa_in_place": {
+      "type": "boolean",
+      "description": "Is a Data Processing Agreement signed"
+    },
+    "dpa_adequacy": {
+      "type": "string",
+      "enum": [
+        "adequate",
+        "needs_revision",
+        "inadequate"
+      ],
+      "description": "Does the DPA adequately cover AI data processing"
+    },
+    "escalation_required": {
+      "type": "boolean",
+      "description": "Whether specialist escalation is needed"
+    },
+    "escalation_reason": {
+      "type": "string",
+      "description": "Why escalation is needed"
+    },
+    "overall_assessment": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "approved_with_conditions",
+        "needs_further_review",
+        "not_recommended"
+      ],
+      "description": "Overall assessment of vendor suitability"
+    },
+    "conditions_or_mitigations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Conditions or mitigations if approved with conditions"
+    },
+    "decision_record_link": {
+      "type": "string",
+      "description": "Reference to the formal decision record (e.g., toolkit template reference)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional observations and recommendations"
+    }
+  },
+  "required": [
+    "vendor_name",
+    "product_name",
+    "review_date",
+    "reviewer_name",
+    "overall_assessment"
+  ],
+  "additionalProperties": false
+}

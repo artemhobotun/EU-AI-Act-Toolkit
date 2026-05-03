@@ -184,6 +184,18 @@ required_files=(
   ".github/ISSUE_TEMPLATE/use-case-example.yml"
   ".github/ISSUE_TEMPLATE/documentation-improvement.yml"
   ".github/ISSUE_TEMPLATE/question.yml"
+  "src/quiz-engine.ts"
+  "src/README.md"
+  "database/evidence-pack-schema.sql"
+  "database/README.md"
+  "data/toolkit-registry.yml"
+  "data/official-sources.yml"
+  "data/use-cases.yml"
+  "data/README.md"
+  "schemas/ai-system-inventory.schema.json"
+  "schemas/risk-screening.schema.json"
+  "schemas/vendor-review.schema.json"
+  "schemas/README.md"
 )
 
 for file in "${required_files[@]}"; do
@@ -469,6 +481,67 @@ if [[ -x "$ROOT_DIR/scripts/check-common-links.sh" ]]; then
   pass "Link audit script is executable"
 else
   fail "Link audit script is not executable"
+fi
+
+# Structured data layer validation (added in v1.5.0)
+# TypeScript quiz engine
+if grep -q "export enum ReadinessLevel" "$ROOT_DIR/src/quiz-engine.ts"; then
+  pass "TypeScript export types found in src/quiz-engine.ts"
+else
+  fail "TypeScript export types missing in src/quiz-engine.ts"
+fi
+
+if grep -q "calculateReadinessScore" "$ROOT_DIR/src/quiz-engine.ts"; then
+  pass "Quiz scoring function found in src/quiz-engine.ts"
+else
+  fail "Quiz scoring function missing in src/quiz-engine.ts"
+fi
+
+# SQL evidence schema
+if grep -q "CREATE TABLE.*ai_systems" "$ROOT_DIR/database/evidence-pack-schema.sql"; then
+  pass "AI systems table found in evidence-pack-schema.sql"
+else
+  fail "AI systems table missing in evidence-pack-schema.sql"
+fi
+
+# YAML registries validation (check for expected keys without requiring PyYAML)
+if grep -q "^  - id:" "$ROOT_DIR/data/toolkit-registry.yml"; then
+  pass "toolkit-registry.yml has expected structure (id: entries)"
+else
+  fail "toolkit-registry.yml missing expected structure"
+fi
+
+if grep -q "^  - id:" "$ROOT_DIR/data/official-sources.yml"; then
+  pass "official-sources.yml has expected structure (id: entries)"
+else
+  fail "official-sources.yml missing expected structure"
+fi
+
+if grep -q "^  - id:" "$ROOT_DIR/data/use-cases.yml"; then
+  pass "use-cases.yml has expected structure (id: entries)"
+else
+  fail "use-cases.yml missing expected structure"
+fi
+
+# JSON Schema validation (parse as JSON)
+if command -v python3 &> /dev/null; then
+  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/ai-system-inventory.schema.json'))" 2>/dev/null; then
+    pass "ai-system-inventory.schema.json is valid JSON"
+  else
+    fail "ai-system-inventory.schema.json is not valid JSON"
+  fi
+
+  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/risk-screening.schema.json'))" 2>/dev/null; then
+    pass "risk-screening.schema.json is valid JSON"
+  else
+    fail "risk-screening.schema.json is not valid JSON"
+  fi
+
+  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/vendor-review.schema.json'))" 2>/dev/null; then
+    pass "vendor-review.schema.json is valid JSON"
+  else
+    fail "vendor-review.schema.json is not valid JSON"
+  fi
 fi
 
 # Quality tooling checks (added in v1.4.0)

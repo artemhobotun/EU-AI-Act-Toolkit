@@ -153,6 +153,17 @@ The practical working materials live in `toolkit/` so the repository root stays 
 | Sector Packs | You need context-specific examples | [toolkit/sector-packs/README.md](toolkit/sector-packs/README.md) |
 | Evidence Pack | You need documentation structure | [docs/13-evidence-pack-index.md](docs/13-evidence-pack-index.md) |
 
+## 📊 Structured technical layer
+
+The toolkit includes machine-readable registries, schemas, and a TypeScript scoring engine to make AI governance data more useful and programmatically accessible:
+
+- **TypeScript quiz engine** ([src/](src/)) — Fully typed readiness assessment scoring logic
+- **SQLite schema** ([database/](database/)) — Optional evidence pack database structure for tracking AI systems, risk screenings, vendors, and incidents
+- **YAML registries** ([data/](data/)) — Machine-readable toolkit resource inventory, official EU sources, and use-case scenarios
+- **JSON Schemas** ([schemas/](schemas/)) — Validation schemas for AI system inventory, risk screening, and vendor assessment data
+
+These are informational and optional; they support automation, validation, and tool integration without being required for toolkit use. See [data/README.md](data/README.md) and [schemas/README.md](schemas/README.md) for details.
+
 🔎 Expand the sections below to explore more detailed resources, examples, and supporting documentation.
 
 <details>

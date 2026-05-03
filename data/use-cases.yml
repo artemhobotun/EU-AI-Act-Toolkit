@@ -1,0 +1,154 @@
+# EU AI Act Toolkit — Use Cases Registry
+#
+# Common AI tool use case scenarios with readiness guidance.
+
+use_cases:
+  - id: internal-genai-use
+    title: Internal GenAI Use (ChatGPT, Microsoft Copilot, etc.)
+    sector_or_function: Internal Productivity
+    likely_attention_level: low
+    description: Team members using large language models for content drafting, research, brainstorming, and internal document generation.
+    key_concerns:
+      - data_handling_and_privacy
+      - training_data_use
+      - policy_enforcement
+      - tool_selection_and_versioning
+    recommended_starting_points:
+      - ai_usage_policy
+      - data_classification_guide
+      - vendor_data_handling
+    escalation_triggers:
+      - processing_sensitive_personal_data
+      - external_data_sharing_to_vendor
+      - high_stakes_decision_making
+    pack_reference: toolkit/sector-packs/internal-productivity-and-genai.md
+
+  - id: vendor-ai-tool-procurement
+    title: Vendor AI Tool Procurement & SaaS Evaluation
+    sector_or_function: Procurement
+    likely_attention_level: moderate
+    description: Evaluating, selecting, and managing AI-enabled SaaS tools from vendors before purchase or renewal.
+    key_concerns:
+      - vendor_ai_capabilities
+      - data_processing_practices
+      - contract_terms_and_dpa
+      - vendor_track_record
+    recommended_starting_points:
+      - vendor_assessment_pack
+      - due_diligence_questionnaire
+      - vendor_decision_record
+    escalation_triggers:
+      - unclear_vendor_ai_practices
+      - missing_or_inadequate_dpa
+      - high_risk_data_processing
+    pack_reference: toolkit/vendor-pack/
+
+  - id: customer-support-chatbot
+    title: Customer Support Chatbot
+    sector_or_function: Customer Service
+    likely_attention_level: moderate
+    description: AI chatbot handling customer inquiries, basic problem-solving, and service requests.
+    key_concerns:
+      - customer_data_processing
+      - accuracy_and_service_quality
+      - human_escalation_paths
+      - customer_communication_about_ai
+    recommended_starting_points:
+      - risk_screening_form
+      - human_oversight_checklist
+      - incident_logging
+    escalation_triggers:
+      - handling_sensitive_customer_data
+      - systematic_accuracy_issues
+      - customer_complaints_about_ai_decisions
+    pack_reference: toolkit/sector-packs/customer-support-chatbots.md
+
+  - id: hr-candidate-screening
+    title: HR & Recruitment: AI Candidate Screening
+    sector_or_function: HR / Recruitment
+    likely_attention_level: high
+    description: AI tools screening job applications, ranking candidates, or evaluating interview responses.
+    key_concerns:
+      - algorithmic_bias_and_fairness
+      - applicant_rights_and_transparency
+      - human_review_requirements
+      - discrimination_risk
+    recommended_starting_points:
+      - red_flags_checklist
+      - bias_assessment_guide
+      - human_review_workflow
+    escalation_triggers:
+      - concerns_about_bias
+      - applicants_requesting_explanation
+      - systemic_fairness_issues
+      - high_volume_of_rejections
+    pack_reference: toolkit/sector-packs/hr-and-recruitment.md
+
+  - id: marketing-content-generation
+    title: Marketing & Sales: Content Generation
+    sector_or_function: Marketing
+    likely_attention_level: low
+    description: AI generating marketing copy, email content, social media posts, or sales collateral.
+    key_concerns:
+      - accuracy_and_brand_voice
+      - data_privacy_in_training
+      - ai_disclosure_to_audience
+      - intellectual_property_concerns
+    recommended_starting_points:
+      - usage_policy
+      - accuracy_review_checklist
+      - disclosure_guidance
+    escalation_triggers:
+      - systemic_accuracy_problems
+      - complaints_about_misleading_content
+      - copyright_or_ip_concerns
+    pack_reference: toolkit/sector-packs/marketing-and-sales.md
+
+  - id: document-review-assistant
+    title: Legal & Document Review: AI Document Analysis
+    sector_or_function: Legal / Compliance
+    likely_attention_level: moderate
+    description: AI-assisted review of contracts, policies, compliance documents, or legal text analysis.
+    key_concerns:
+      - accuracy_and_reliability
+      - sensitive_data_handling
+      - human_review_requirements
+      - accountability_for_analysis
+    recommended_starting_points:
+      - accuracy_testing_protocol
+      - human_review_workflow
+      - sensitive_data_policy
+    escalation_triggers:
+      - accuracy_concerns
+      - high_stakes_legal_decisions
+      - sensitive_data_exposure_risk
+    pack_reference: toolkit/sector-packs/legal-and-document-review.md
+
+  - id: ai-enabled-crm-scoring
+    title: Sales & CRM: AI Lead Scoring or Customer Valuation
+    sector_or_function: Sales / CRM
+    likely_attention_level: moderate
+    description: AI scoring leads, predicting customer lifetime value, or ranking sales opportunities.
+    key_concerns:
+      - scoring_logic_transparency
+      - customer_data_processing
+      - decision_override_capability
+      - bias_and_fairness
+    recommended_starting_points:
+      - vendor_review_questionnaire
+      - decision_transparency_checklist
+      - human_override_workflow
+    escalation_triggers:
+      - unclear_scoring_logic
+      - customer_impact_concerns
+      - fairness_or_bias_issues
+    pack_reference: toolkit/sector-packs/vendor-procurement-and-saas.md
+
+notes: |
+  Attention levels are indicative and based on common governance considerations.
+
+  Your specific context, data types, and decision impacts determine the appropriate response.
+
+  Use the toolkit's decision tree and escalation guide for a personalised assessment.
+
+  These are examples, not exhaustive. Many more use cases exist.
