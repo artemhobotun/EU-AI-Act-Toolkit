@@ -2,7 +2,7 @@
 
 Use this checklist before buying, renewing, or enabling a new AI tool or AI feature.
 
-This checklist is a practical control for SMEs. It does not provide compliance assurance. See [../DISCLAIMER.md](../DISCLAIMER.md).
+This checklist is a practical control for SMEs. It does not provide compliance assurance. See [../../docs/DISCLAIMER.md](../../docs/DISCLAIMER.md).
 
 ## 1. Use Case Clarity
 

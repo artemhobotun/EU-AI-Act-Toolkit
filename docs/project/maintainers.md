@@ -16,7 +16,7 @@
 ## Review expectations
 
 - check public content for clarity and caution
-- route sensitive concerns to [SECURITY.md](../../SECURITY.md)
+- route sensitive concerns to [.github/SECURITY.md](../../.github/SECURITY.md) or the [GitHub Security page](https://github.com/artemhobotun/EU-AI-Act-Toolkit/security)
 - keep issues and PRs focused on project improvements
 
 ## Credentials

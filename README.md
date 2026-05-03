@@ -114,7 +114,7 @@ The public mini-site gives a guided version of the toolkit with visual navigatio
 
 ## 🚀 Start here
 
-- Read the disclaimer: [DISCLAIMER.md](DISCLAIMER.md)
+- Read the disclaimer: [docs/DISCLAIMER.md](docs/DISCLAIMER.md)
 - Start the inventory: [toolkit/templates/ai-system-inventory.csv](toolkit/templates/ai-system-inventory.csv)
 - Run risk screening: [toolkit/templates/ai-risk-screening-form.md](toolkit/templates/ai-risk-screening-form.md)
 - Review vendors: [toolkit/templates/vendor-ai-questionnaire.md](toolkit/templates/vendor-ai-questionnaire.md)
@@ -386,7 +386,7 @@ Community resources are maintained outside the main README body to keep the proj
 - Community page: [docs/community.html](docs/community.html)
 - Contribution guide: [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md)
 - Code of conduct: [.github/CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md)
-- Security and privacy reporting: [SECURITY.md](SECURITY.md)
+- Security and privacy reporting: [Security policy](.github/SECURITY.md)
 - Support: [.github/SUPPORT.md](.github/SUPPORT.md)
 - Governance: [docs/project/governance.md](docs/project/governance.md)
 - Maintainers: [docs/project/maintainers.md](docs/project/maintainers.md)
@@ -399,25 +399,19 @@ Contributors are listed in [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) an
 
 ```text
 README.md
-DISCLAIMER.md
-SECURITY.md
+LICENSE
 CITATION.cff
-.github/
-docs/project/
-docs/
-templates/
-checklists/
-starter-pack/
-vendor-pack/
-sector-packs/
-examples/
-scripts/
+.github/          (contributing, conduct, security policy, CI, Node toolchain)
+docker/           (site container image)
+docs/             (Pages site, disclaimer, project notes)
+data/ schemas/ src/ database/
+toolkit/ scripts/ tools/
 ```
 
 </details>
 
 ## ⚠️ Disclaimer
 
-See [DISCLAIMER.md](DISCLAIMER.md) for the full disclaimer.
+See [docs/DISCLAIMER.md](docs/DISCLAIMER.md) for the full disclaimer.
 
 This repository is for educational and informational purposes only. It is not legal advice.

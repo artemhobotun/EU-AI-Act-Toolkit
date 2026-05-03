@@ -23,4 +23,4 @@ This toolkit is not:
 - a guarantee of compliance
 - a complete implementation of all EU AI Act obligations
 
-Read the disclaimer: [../DISCLAIMER.md](../DISCLAIMER.md)
+Read the disclaimer: [DISCLAIMER.md](DISCLAIMER.md)

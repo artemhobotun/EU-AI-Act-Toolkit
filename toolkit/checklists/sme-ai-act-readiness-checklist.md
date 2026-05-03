@@ -1,6 +1,6 @@
 # SME EU AI Act Readiness Checklist
 
-This checklist is a practical starting point for small organizations. It is not a guarantee of compliance. See [../DISCLAIMER.md](../DISCLAIMER.md).
+This checklist is a practical starting point for small organizations. It is not a guarantee of compliance. See [../../docs/DISCLAIMER.md](../../docs/DISCLAIMER.md).
 
 ## 1. Basics
 

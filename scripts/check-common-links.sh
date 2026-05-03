@@ -16,8 +16,8 @@ fail() {
 # Core files
 echo "=== Checking core project files ==="
 test -f "$ROOT_DIR/README.md" && pass "README.md" || fail "README.md missing"
-test -f "$ROOT_DIR/DISCLAIMER.md" && pass "DISCLAIMER.md" || fail "DISCLAIMER.md missing"
-test -f "$ROOT_DIR/SECURITY.md" && pass "SECURITY.md" || fail "SECURITY.md missing"
+test -f "$ROOT_DIR/docs/DISCLAIMER.md" && pass "docs/DISCLAIMER.md" || fail "docs/DISCLAIMER.md missing"
+test -f "$ROOT_DIR/.github/SECURITY.md" && pass ".github/SECURITY.md" || fail ".github/SECURITY.md missing"
 test -f "$ROOT_DIR/LICENSE" && pass "LICENSE" || fail "LICENSE missing"
 
 # HTML pages

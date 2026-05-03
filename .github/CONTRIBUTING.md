@@ -2,7 +2,7 @@
 
 Thanks for improving the EU AI Act Toolkit.
 
-This repository is practical, SME-friendly, source-aware, and not legal advice. See [DISCLAIMER.md](../DISCLAIMER.md).
+This repository is practical, SME-friendly, source-aware, and not legal advice. See [DISCLAIMER.md](../docs/DISCLAIMER.md).
 
 ## Quick contribution paths
 
@@ -13,7 +13,7 @@ This repository is practical, SME-friendly, source-aware, and not legal advice. 
 | Add a sector example | SME use-case issue |
 | Update source notes | Source update issue |
 | Improve Pages site | Website/Docs PR |
-| Report privacy/security concern | [SECURITY.md](../SECURITY.md) |
+| Report privacy/security concern | [SECURITY.md](SECURITY.md) |
 
 <details>
 <summary><strong>📋 Contribution principles</strong></summary>
@@ -57,7 +57,7 @@ This repository is practical, SME-friendly, source-aware, and not legal advice. 
 GitHub Actions also runs **Node.js** checks (`npm ci`, `npm run typecheck`, `npm test`) for the TypeScript quiz engine, and **Python** validation of `data/*.yml` against JSON Schema. To mirror that locally:
 
 ```bash
-cd dev/typescript-toolchain
+cd .github/node-toolchain
 npm ci
 npm run typecheck
 npm test
@@ -102,7 +102,7 @@ See [docs/22-maintainer-content-style-guide.md](../docs/22-maintainer-content-st
 |---|---|
 | [Code of Conduct](CODE_OF_CONDUCT.md) | Community standard |
 | [Contributing Guide](CONTRIBUTING.md) | How to contribute |
-| [Security Policy](../SECURITY.md) | Security and privacy reporting |
+| [Security Policy](SECURITY.md) | Security and privacy reporting |
 | [Support](SUPPORT.md) | Where to ask for help |
 | [Governance](../docs/project/governance.md) | How the project is maintained |
 | [Maintainers](../docs/project/maintainers.md) | Maintainer information |
@@ -114,6 +114,6 @@ See [docs/22-maintainer-content-style-guide.md](../docs/22-maintainer-content-st
 - GitHub Discussions, if enabled
 
 **Contributor recognition:**
-Contributors may appear in [CONTRIBUTORS.md](../CONTRIBUTORS.md) and in the GitHub contributor graph when commits are properly attributed.
+Contributors may appear in [CONTRIBUTORS.md](../docs/project/CONTRIBUTORS.md) and in the GitHub contributor graph when commits are properly attributed.
 
 </details>

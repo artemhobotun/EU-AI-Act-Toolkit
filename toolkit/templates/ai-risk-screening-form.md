@@ -1,6 +1,6 @@
 # AI Risk Screening Form (Template)
 
-This form is a lightweight starting point to identify where deeper review may be needed. It is not a legal determination. See [../DISCLAIMER.md](../DISCLAIMER.md).
+This form is a lightweight starting point to identify where deeper review may be needed. It is not a legal determination. See [../../docs/DISCLAIMER.md](../../docs/DISCLAIMER.md).
 
 System / Use case name:
 System ID (from inventory):

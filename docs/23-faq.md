@@ -43,7 +43,7 @@ Do not share in public GitHub issues:
 - Security architecture or API keys
 - Screenshots containing sensitive information
 
-For security or privacy concerns, use [SECURITY.md](../SECURITY.md).
+For security or privacy concerns, use the [repository security policy](https://github.com/artemhobotun/EU-AI-Act-Toolkit/security).
 
 ## When should a use case be escalated for legal or technical review?
 

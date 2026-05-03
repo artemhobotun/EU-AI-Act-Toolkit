@@ -2,7 +2,7 @@
 
 Use this checklist when enabling or expanding internal use of AI tools (including genAI).
 
-This is a practical starting point and does not provide compliance assurance. See [../DISCLAIMER.md](../DISCLAIMER.md).
+This is a practical starting point and does not provide compliance assurance. See [../../docs/DISCLAIMER.md](../../docs/DISCLAIMER.md).
 
 ## 1. Tools and Access
 
