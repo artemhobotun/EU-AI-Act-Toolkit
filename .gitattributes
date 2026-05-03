@@ -1,0 +1,18 @@
+# GitHub Linguist configuration
+# Count the GitHub Pages site as project source, not only documentation.
+docs/**/*.html -linguist-documentation
+docs/assets/**/*.css -linguist-documentation
+docs/assets/**/*.js -linguist-documentation
+
+# Treat release/build outputs as generated.
+dist/** linguist-generated
+*.zip linguist-generated
+docs/assets/toolkit-manifest.json linguist-generated
+
+# Keep Markdown toolkit materials as documentation.
+toolkit/**/*.md linguist-documentation
+docs/**/*.md linguist-documentation
+
+# Keep common generated/local files out of meaningful stats.
+*.bundle linguist-generated
+*.tar.gz linguist-generated
