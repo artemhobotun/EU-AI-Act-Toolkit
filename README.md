@@ -295,6 +295,7 @@ Run local quality checks:
 
 ```bash
 ./scripts/check-toolkit-quality.sh
+./scripts/check-common-links.sh
 ```
 
 See also: [roadmap](docs/project/roadmap.md)

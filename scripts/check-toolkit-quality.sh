@@ -353,6 +353,18 @@ else
   pass "No committed ZIP files under dist/"
 fi
 
+if [[ -f "$ROOT_DIR/scripts/check-common-links.sh" ]]; then
+  pass "Link audit script present"
+else
+  fail "Link audit script missing"
+fi
+
+if [[ -x "$ROOT_DIR/scripts/check-common-links.sh" ]]; then
+  pass "Link audit script is executable"
+else
+  fail "Link audit script is not executable"
+fi
+
 if [[ "$FAILURES" -gt 0 ]]; then
   printf 'Quality checks failed: %s\n' "$FAILURES"
   exit 1
