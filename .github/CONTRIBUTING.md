@@ -54,6 +54,18 @@ This repository is practical, SME-friendly, source-aware, and not legal advice. 
 ./scripts/check-toolkit-quality.sh
 ```
 
+GitHub Actions also runs **Node.js** checks (`npm ci`, `npm run typecheck`, `npm test`) for the TypeScript quiz engine, and **Python** validation of `data/*.yml` against JSON Schema. To mirror that locally:
+
+```bash
+npm ci
+npm run typecheck
+npm test
+python3 -m pip install -r tools/requirements-ci.txt
+python3 tools/validate_data_registries.py
+```
+
+If `PyYAML` and `jsonschema` are installed, `./scripts/check-toolkit-quality.sh` runs the data registry validation as part of the same script.
+
 </details>
 
 <details>

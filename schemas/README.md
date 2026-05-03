@@ -62,6 +62,18 @@ Validates vendor AI assessment documentation.
 
 **Use case:** Validating vendor assessment data from toolkit/vendor-pack/ templates and tools
 
+### Document schemas for YAML registries (`*.document.schema.json`)
+
+These validate the **root structure** of the machine-readable files under `data/`:
+
+- `toolkit-registry.document.schema.json` — `data/toolkit-registry.yml`
+- `official-sources.document.schema.json` — `data/official-sources.yml`
+- `use-cases.document.schema.json` — `data/use-cases.yml`
+
+They are separate from the instance schemas above (inventory / screening / vendor review rows). Document schemas use `additionalProperties: false` on each registry entry: adding a new field requires updating the schema deliberately, which keeps CI catches meaningful.
+
+**Validate in CI or locally:** see [data/README.md](../data/README.md) and run `python3 tools/validate_data_registries.py` after installing [tools/requirements-ci.txt](../tools/requirements-ci.txt).
+
 ## How to Use
 
 ### Validation
