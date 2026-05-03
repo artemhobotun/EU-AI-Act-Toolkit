@@ -1,783 +1,264 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EU AI Act Toolkit</title>
-  <meta name="description" content="Practical templates, checklists, and readiness tools for SMEs preparing for the EU AI Act." />
-  <style>
-    :root {
-      --bg: #061126;
-      --bg-2: #081a35;
-      --surface: rgba(8, 26, 53, 0.82);
-      --surface-2: rgba(255, 255, 255, 0.045);
-      --border: rgba(255, 255, 255, 0.10);
-      --text: #f3f7ff;
-      --muted: #b8c7e8;
-      --gold: #f2c94c;
-      --blue: #69a7ff;
-      --green: #62d6a0;
-      --warn: #ffd166;
-      --high: #ff7d6d;
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-      --radius: 14px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      background:
-        radial-gradient(circle at top left, rgba(105, 167, 255, 0.16), transparent 32%),
-        radial-gradient(circle at 82% 12%, rgba(242, 201, 76, 0.12), transparent 28%),
-        linear-gradient(180deg, var(--bg), #040a14 100%);
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.55;
-    }
-
-    body { overflow-x: hidden; }
-
-    a { color: #dbe9ff; }
-
-    .wrap {
-      width: min(1160px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 24px 0 56px;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      align-items: center;
-      margin-bottom: 24px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--text);
-      text-decoration: none;
-      min-width: 260px;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(242, 201, 76, 0.22), rgba(105, 167, 255, 0.18));
-      border: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-      box-shadow: var(--shadow);
-      font-weight: 900;
-      color: var(--gold);
-    }
-
-    .brand strong,
-    .brand span {
-      display: block;
-    }
-
-    .brand strong {
-      font-size: 1rem;
-    }
-
-    .brand span {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .links,
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .links {
-      justify-content: flex-end;
-    }
-
-    .button,
-    .links a,
-    button.button {
-      appearance: none;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.045);
-      color: var(--text);
-      text-decoration: none;
-      border-radius: 999px;
-      padding: 10px 14px;
-      font: inherit;
-      font-size: 0.94rem;
-      cursor: pointer;
-      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-    }
-
-    .button:hover,
-    .links a:hover,
-    button.button:hover {
-      transform: translateY(-1px);
-      border-color: rgba(242, 201, 76, 0.52);
-      background: rgba(242, 201, 76, 0.10);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.16fr) minmax(300px, 0.84fr);
-      gap: 24px;
-      align-items: stretch;
-      margin-bottom: 38px;
-    }
-
-    .hero-main,
-    .hero-side,
-    .tool {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(16px);
-    }
-
-    .hero-main {
-      padding: 26px;
-      display: grid;
-      gap: 18px;
-    }
-
-    .hero-banner {
-      width: 100%;
-      display: block;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      width: fit-content;
-      padding: 7px 11px;
-      border-radius: 999px;
-      background: rgba(242, 201, 76, 0.12);
-      border: 1px solid rgba(242, 201, 76, 0.24);
-      color: #ffe6a1;
-      font-weight: 800;
-      font-size: 0.88rem;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.3rem, 6vw, 5rem);
-      line-height: 0.96;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: clamp(1.55rem, 2.5vw, 2.15rem);
-      line-height: 1.12;
-    }
-
-    h3 {
-      margin: 0 0 8px;
-      font-size: 1.04rem;
-    }
-
-    p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .lede {
-      max-width: 70ch;
-      font-size: 1.08rem;
-    }
-
-    .disclaimer {
-      padding: 14px 16px;
-      border-radius: 12px;
-      border: 1px solid rgba(242, 201, 76, 0.24);
-      background: rgba(242, 201, 76, 0.09);
-      color: #f8e9b6;
-    }
-
-    .hero-side {
-      padding: 22px;
-      display: grid;
-      gap: 14px;
-      align-content: start;
-    }
-
-    .signal {
-      padding: 16px;
-      border-radius: 12px;
-      background: var(--surface-2);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .signal label {
-      display: block;
-      color: var(--muted);
-      font-size: 0.88rem;
-      margin-bottom: 7px;
-    }
-
-    .signal strong {
-      display: block;
-      color: var(--text);
-      font-size: 1.05rem;
-    }
-
-    section {
-      margin: 44px 0;
-    }
-
-    .section-head {
-      max-width: 760px;
-      margin-bottom: 18px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .grid.two {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .tile {
-      min-height: 154px;
-      padding: 18px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .tile p {
-      margin-top: 6px;
-    }
-
-    .maintainer {
-      display: grid;
-      grid-template-columns: minmax(0, 0.86fr) minmax(360px, 1.14fr);
-      gap: 22px;
-      align-items: start;
-    }
-
-    .profile-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .profile-links img {
-      display: block;
-      height: 34px;
-      width: auto;
-    }
-
-    .cred-grid {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .cred-card {
-      display: grid;
-      justify-items: center;
-      gap: 8px;
-      text-align: center;
-      min-height: 188px;
-      padding: 14px 10px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      align-content: start;
-    }
-
-    .cred-card img {
-      display: block;
-      width: 112px;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .cred-card .issuer {
-      color: var(--muted);
-      font-size: 0.82rem;
-      min-height: 1.2em;
-    }
-
-    .cred-card .button {
-      padding: 8px 11px;
-      font-size: 0.86rem;
-    }
-
-    .path-table {
-      width: 100%;
-      border-collapse: collapse;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.035);
-    }
-
-    .path-table th,
-    .path-table td {
-      text-align: left;
-      padding: 14px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      vertical-align: top;
-    }
-
-    .path-table th {
-      color: #ffe6a1;
-      background: rgba(242, 201, 76, 0.08);
-      font-size: 0.92rem;
-    }
-
-    .path-table tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .tool {
-      padding: 24px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.96fr);
-      gap: 22px;
-      align-items: start;
-    }
-
-    .form {
-      display: grid;
-      gap: 10px;
-    }
-
-    .check {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      padding: 12px 14px;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: var(--muted);
-    }
-
-    .check input {
-      margin-top: 4px;
-      accent-color: var(--gold);
-    }
-
-    .result {
-      min-height: 246px;
-      padding: 18px;
-      border-radius: 12px;
-      background: linear-gradient(180deg, rgba(242, 201, 76, 0.10), rgba(255, 255, 255, 0.035));
-      border: 1px solid rgba(242, 201, 76, 0.22);
-    }
-
-    .result ul {
-      margin: 14px 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .pill {
-      display: inline-flex;
-      padding: 7px 11px;
-      border-radius: 999px;
-      font-weight: 800;
-      margin-bottom: 10px;
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .pill.low { color: var(--green); }
-    .pill.medium { color: var(--warn); }
-    .pill.high { color: var(--high); }
-
-    .footer {
-      margin-top: 46px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 980px) {
-      .topbar,
-      .hero,
-      .maintainer,
-      .tool,
-      .grid,
-      .grid.two {
-        grid-template-columns: 1fr;
-      }
-
-      .topbar {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .links {
-        justify-content: flex-start;
-      }
-
-      .cred-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 620px) {
-      .wrap {
-        width: min(100% - 22px, 1160px);
-        padding-top: 14px;
-      }
-
-      .hero-main,
-      .hero-side,
-      .tool {
-        padding: 16px;
-      }
-
-      .path-table,
-      .path-table tbody,
-      .path-table tr,
-      .path-table th,
-      .path-table td {
-        display: block;
-        width: 100%;
-      }
-
-      .path-table thead {
-        display: none;
-      }
-
-      .path-table td {
-        border-bottom: 0;
-      }
-
-      .path-table tr {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .cred-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU AI Act Toolkit — Practical Readiness for SMEs</title>
+  <meta name="description" content="Practical templates, checklists, and documentation for SMEs working toward EU AI Act readiness. Start with inventory, screening, and governance support.">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%230a2463'>🇪🇺</text></svg>">
 </head>
 <body>
-  <div class="wrap">
-    <header class="topbar">
-      <a class="brand" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/README.md">
-        <div class="brand-mark">EU</div>
-        <div>
-          <strong>EU AI Act Toolkit</strong>
-          <span>Readiness support for SMEs</span>
-        </div>
-      </a>
-      <nav class="links" aria-label="Primary">
-        <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/START-HERE.md">Starter Pack</a>
-        <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/README.md">Vendor Pack</a>
-        <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/tree/main/toolkit/sector-packs">Sector Packs</a>
-        <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/project/credentials.md">Credentials</a>
-        <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/DISCLAIMER.md">Disclaimer</a>
+  <header>
+    <div class="header-container">
+      <a href="/" class="logo">🇪🇺 EU AI Act Toolkit</a>
+      <nav>
+        <ul>
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/packs.html">Toolkit Packs</a></li>
+          <li><a href="/use-cases.html">Use Cases</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/maintainer.html">Maintainer</a></li>
+          <li><a href="/community.html">Community</a></li>
+        </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-main">
-          <span class="eyebrow">Practical readiness tools for SMEs</span>
-          <h1 id="hero-title">EU AI Act Toolkit</h1>
-          <p class="lede">
-            Practical templates, checklists, and readiness tools for SMEs preparing for the EU AI Act.
-            Use it as a starting point for inventory, screening, vendor review, documentation support, and escalation.
-          </p>
-          <div class="disclaimer">
-            Educational and informational only. Not legal advice and not compliance assurance.
-          </div>
-          <div class="actions">
-            <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/START-HERE.md">Start here</a>
-            <a class="button" href="#self-check">Run self-check</a>
-            <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">Open GitHub repo</a>
-          </div>
-          <img class="hero-banner" src="assets/branding/test.png" alt="EU AI Act Toolkit">
-        </div>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>EU AI Act Toolkit</h1>
+      <p class="hero-subtitle">Practical templates, checklists, and documentation tools for SMEs working toward EU AI Act readiness.</p>
+      <div class="hero-buttons">
+        <a href="/packs.html" class="btn btn-primary">Explore Toolkit Packs</a>
+        <a href="/resources.html" class="btn btn-secondary">Browse Resources</a>
+      </div>
+    </section>
 
-        <aside class="hero-side" aria-label="Toolkit summary">
-          <div class="signal">
-            <label>Use case</label>
-            <strong>Readiness, screening, documentation support</strong>
-          </div>
-          <div class="signal">
-            <label>Audience</label>
-            <strong>SMEs, startups, consultants, and small teams</strong>
-          </div>
-          <div class="signal">
-            <label>Escalation</label>
-            <strong>Route sensitive or people-affecting AI use for qualified review</strong>
-          </div>
-          <div class="signal">
-            <label>Maintenance</label>
-            <strong>Review regularly as guidance and standards evolve</strong>
-          </div>
-        </aside>
-      </section>
-
-      <section class="maintainer" aria-labelledby="maintainer-title">
-        <div>
-          <div class="section-head">
-            <h2 id="maintainer-title">Maintainer &amp; Credentials</h2>
-            <p>
-              <strong>Artem Nazarko</strong> maintains the EU AI Act Toolkit with a focus on practical AI governance,
-              legal-tech documentation, and compliance readiness resources for SMEs and small teams.
-            </p>
-          </div>
-          <p>External credentials and professional profiles should be verified directly on the original platforms.</p>
-          <div class="profile-links" aria-label="Maintainer profile links">
-            <a href="https://github.com/artemhobotun"><img src="assets/profile-icons/github.svg" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/artem-nazarko/"><img src="assets/profile-icons/linkedin.svg" alt="LinkedIn"></a>
-            <a href="https://www.credly.com/users/artem-nazarko"><img src="assets/profile-icons/credly.svg" alt="Credly"></a>
-            <a href="https://orcid.org/0000-0002-4190-7288"><img src="assets/profile-icons/orcid.svg" alt="ORCID"></a>
+    <!-- What This Toolkit Helps With -->
+    <section>
+      <div class="section-header">
+        <h2>What This Toolkit Helps With</h2>
+        <p>Four practical starting points to build readiness in your organization.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>AI Inventory</h3>
+          <p>Track which AI tools your organization uses, who manages them, and when they need review.</p>
+          <div class="card-buttons">
+            <a href="../toolkit/templates/ai-system-inventory.csv" class="btn btn-sm btn-primary">Start Inventory</a>
           </div>
         </div>
-
-        <div>
-          <h2>Selected Credentials</h2>
-          <p>Selected public credentials and professional badges are available through Credly.</p>
-          <div class="cred-grid">
-            <div class="cred-card">
-              <a href="https://www.credly.com/badges/58cabc99-a446-46aa-9c0e-346a52071f2e/public_url">
-                <img src="assets/credentials/credly/ai-skills-passport.png" alt="AI Skills Passport">
-              </a>
-              <span class="issuer">Microsoft Elevate</span>
-              <a class="button" href="https://www.credly.com/badges/58cabc99-a446-46aa-9c0e-346a52071f2e/public_url">Verify on Credly</a>
-            </div>
-            <div class="cred-card">
-              <a href="https://www.credly.com/badges/193a3f60-2ffd-4e76-a04e-5191cba610aa/public_url">
-                <img src="assets/credentials/credly/google-ai-professional-certificate.png" alt="Google AI Professional Certificate">
-              </a>
-              <span class="issuer">Google / Coursera</span>
-              <a class="button" href="https://www.credly.com/badges/193a3f60-2ffd-4e76-a04e-5191cba610aa/public_url">Verify on Credly</a>
-            </div>
-            <div class="cred-card">
-              <a href="https://www.credly.com/badges/f857b433-a33e-43be-8cfc-5f137335b704/public_url">
-                <img src="assets/credentials/credly/legal-ai-leader.png" alt="Legal AI Leader">
-              </a>
-              <span class="issuer">Thomson Reuters</span>
-              <a class="button" href="https://www.credly.com/badges/f857b433-a33e-43be-8cfc-5f137335b704/public_url">Verify on Credly</a>
-            </div>
-            <div class="cred-card">
-              <a href="https://www.credly.com/badges/009c39ee-487c-4b98-a120-6c0d7e8f93e8/public_url">
-                <img src="assets/credentials/credly/ai-literacy.png" alt="AI Literacy">
-              </a>
-              <span class="issuer">IBM SkillsBuild</span>
-              <a class="button" href="https://www.credly.com/badges/009c39ee-487c-4b98-a120-6c0d7e8f93e8/public_url">Verify on Credly</a>
-            </div>
-            <div class="cred-card">
-              <a href="https://www.credly.com/badges/70997f1a-7196-4481-a650-81c2d7d9ca45/public_url">
-                <img src="assets/credentials/credly/ai-fundamentals-with-ibm-skillsbuild.png" alt="AI Fundamentals with IBM SkillsBuild">
-              </a>
-              <span class="issuer">Cisco</span>
-              <a class="button" href="https://www.credly.com/badges/70997f1a-7196-4481-a650-81c2d7d9ca45/public_url">Verify on Credly</a>
-            </div>
-            <div class="cred-card">
-              <a href="https://www.credly.com/badges/456bf973-fc77-4b5b-b2a8-ad6a01e05fa9/public_url">
-                <img src="assets/credentials/credly/google-ai-essentials-v1.png" alt="Google AI Essentials v1">
-              </a>
-              <span class="issuer">Google</span>
-              <a class="button" href="https://www.credly.com/badges/456bf973-fc77-4b5b-b2a8-ad6a01e05fa9/public_url">Verify on Credly</a>
-            </div>
+        <div class="card">
+          <div class="card-icon">⚠️</div>
+          <h3>Risk Screening</h3>
+          <p>Screen AI tools for readiness gaps, human oversight, data processing, and vendor documentation.</p>
+          <div class="card-buttons">
+            <a href="../toolkit/templates/ai-risk-screening-form.md" class="btn btn-sm btn-primary">Run Screening</a>
           </div>
         </div>
-      </section>
-
-      <section aria-labelledby="packs-title">
-        <div class="section-head">
-          <h2 id="packs-title">Core Toolkit Packs</h2>
-          <p>Pick the pack that matches the decision you need to support.</p>
-        </div>
-        <div class="grid">
-          <article class="tile">
-            <h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/START-HERE.md">Starter Pack</a></h3>
-            <p>Fast internal starting point for inventory, screening, policy, and management briefing.</p>
-          </article>
-          <article class="tile">
-            <h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/README.md">Vendor Assessment Pack</a></h3>
-            <p>Practical review flow before buying or renewing AI-enabled SaaS tools.</p>
-          </article>
-          <article class="tile">
-            <h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/sector-packs/README.md">Sector Packs</a></h3>
-            <p>Context-specific examples for internal GenAI, support, HR, marketing, procurement, and legal review.</p>
-          </article>
-        </div>
-      </section>
-
-      <section aria-labelledby="path-title">
-        <div class="section-head">
-          <h2 id="path-title">Choose Your Path</h2>
-          <p>Start with the closest scenario, then move into the relevant template or escalation resource.</p>
-        </div>
-        <table class="path-table">
-          <thead>
-            <tr>
-              <th>Scenario</th>
-              <th>Start here</th>
-              <th>Best next step</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Internal ChatGPT or Copilot use</td>
-              <td><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/sector-packs/internal-productivity-and-genai.md">Internal productivity and GenAI</a></td>
-              <td><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-use-policy-template.md">AI use policy template</a></td>
-            </tr>
-            <tr>
-              <td>AI SaaS procurement</td>
-              <td><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/README.md">Vendor Assessment Pack</a></td>
-              <td><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/templates/vendor-ai-due-diligence-questionnaire.md">Vendor due diligence questionnaire</a></td>
-            </tr>
-            <tr>
-              <td>Customer support chatbot</td>
-              <td><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/sector-packs/customer-support-chatbots.md">Customer support pack</a></td>
-              <td><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-risk-screening-form.md">Risk screening form</a></td>
-            </tr>
-            <tr>
-              <td>HR, recruitment, or people-affecting use</td>
-              <td><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/sector-packs/hr-and-recruitment.md">HR and recruitment pack</a></td>
-              <td><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/16-what-to-escalate-for-legal-review.md">Escalation guide</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section id="self-check" aria-labelledby="self-check-title">
-        <div class="section-head">
-          <h2 id="self-check-title">Readiness Self-Check</h2>
-          <p>Use this as a preliminary screening note for internal discussion. It does not replace legal, privacy, security, or technical review.</p>
-        </div>
-        <div class="tool">
-          <div class="form" id="screening-form">
-            <label class="check"><input type="checkbox" data-weight="2"><span>AI affects decisions about people</span></label>
-            <label class="check"><input type="checkbox" data-weight="2"><span>Personal data is processed</span></label>
-            <label class="check"><input type="checkbox" data-weight="3"><span>Employment, education, credit, healthcare, or essential services are involved</span></label>
-            <label class="check"><input type="checkbox" data-weight="3"><span>Biometric identification or another sensitive use is involved</span></label>
-            <label class="check"><input type="checkbox" data-weight="2"><span>No human review is in place</span></label>
-            <label class="check"><input type="checkbox" data-weight="2"><span>Vendor uses customer data for training</span></label>
-            <div class="actions">
-              <button class="button" type="button" id="generate">Generate preliminary readiness note</button>
-            </div>
-          </div>
-
-          <div class="result" id="result">
-            <div class="pill low" id="risk-pill">Low attention</div>
-            <h3 id="result-title">Preliminary readiness note</h3>
-            <p id="result-copy">
-              Select the checks that apply, then generate a preliminary note. This is a quick triage tool for SME readiness work.
-            </p>
-            <ul id="suggested-files"></ul>
-            <p>Preliminary screening only. Not legal advice.</p>
+        <div class="card">
+          <div class="card-icon">📄</div>
+          <h3>Governance Documentation</h3>
+          <p>Document your AI policies, tool ownership, incident processes, and review schedules internally.</p>
+          <div class="card-buttons">
+            <a href="../toolkit/checklists/ai-tool-owner-checklist.md" class="btn btn-sm btn-primary">Create Policy</a>
           </div>
         </div>
-      </section>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>Vendor Review</h3>
+          <p>Ask better questions before buying, renewing, or expanding an AI-enabled SaaS tool.</p>
+          <div class="card-buttons">
+            <a href="/packs.html" class="btn btn-sm btn-primary">Vendor Assessment</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section aria-labelledby="resources-title">
-        <div class="section-head">
-          <h2 id="resources-title">Templates, Checklists, and Examples</h2>
-          <p>Use the files as a practical starting point, then adapt them to your sector, product, vendor, and internal process.</p>
+    <!-- Choose Your Path -->
+    <section>
+      <div class="section-header">
+        <h2>Choose Your Path</h2>
+        <p>Different starting points depending on your role and immediate needs.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>New to AI governance?</h3>
+          <p>Start with the Starter Pack to understand readiness basics and run a quick self-assessment.</p>
+          <div class="card-buttons">
+            <a href="../toolkit/starter-pack/START-HERE.md" class="btn btn-sm btn-primary">Starter Pack</a>
+          </div>
         </div>
-        <div class="grid">
-          <article class="tile"><h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-system-inventory.csv">AI system inventory</a></h3><p>Track tools, owners, vendors, affected people, and review cadence.</p></article>
-          <article class="tile"><h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-risk-screening-form.md">Risk screening form</a></h3><p>Capture first-pass screening, documentation support, and escalation notes.</p></article>
-          <article class="tile"><h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/vendor-ai-questionnaire.md">Vendor AI questionnaire</a></h3><p>Ask practical questions before procurement or renewal.</p></article>
-          <article class="tile"><h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-use-policy-template.md">AI use policy</a></h3><p>Set rules for approved use, prohibited use, data handling, and human review.</p></article>
-          <article class="tile"><h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/checklists/sme-ai-act-readiness-checklist.md">Readiness checklist</a></h3><p>Run a lightweight internal review without turning it into a heavy program.</p></article>
-          <article class="tile"><h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/README.md">Use-case examples</a></h3><p>Fictional examples for internal GenAI, support, HR, marketing, vendor review, CRM, and documents.</p></article>
+        <div class="card">
+          <h3>Buying or renewing AI SaaS?</h3>
+          <p>Use the Vendor Assessment Pack to evaluate AI tools and document procurement decisions.</p>
+          <div class="card-buttons">
+            <a href="/packs.html" class="btn btn-sm btn-primary">Vendor Pack</a>
+          </div>
         </div>
-      </section>
+        <div class="card">
+          <h3>Specific industry or use case?</h3>
+          <p>Explore sector-specific packs and examples tailored to your business context.</p>
+          <div class="card-buttons">
+            <a href="/use-cases.html" class="btn btn-sm btn-primary">See Examples</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Need templates and checklists?</h3>
+          <p>Browse ready-to-use templates for inventory, risk screening, policy, and vendor review.</p>
+          <div class="card-buttons">
+            <a href="/packs.html" class="btn btn-sm btn-primary">Templates</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section aria-labelledby="trust-title">
-        <div class="section-head">
-          <h2 id="trust-title">Trust &amp; Maintenance</h2>
-          <p>These resources keep the toolkit conservative, source-aware, and easier to update as official guidance changes.</p>
-        </div>
-        <div class="grid two">
-          <article class="tile"><h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/14-official-source-register.md">Official source register</a></h3><p>Track official and authoritative sources before changing legal wording.</p></article>
-          <article class="tile"><h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/15-versioning-and-maintenance-policy.md">Versioning policy</a></h3><p>Understand patch, minor, and major updates.</p></article>
-          <article class="tile"><h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/16-what-to-escalate-for-legal-review.md">Escalation guide</a></h3><p>Identify use cases that deserve deeper legal, privacy, security, or technical review.</p></article>
-          <article class="tile"><h3><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/13-evidence-pack-index.md">Evidence pack index</a></h3><p>Keep a lightweight record of inventory, screening, vendor answers, policies, and review notes.</p></article>
-        </div>
-      </section>
-    </main>
+    <!-- How to Use -->
+    <section>
+      <div class="section-header">
+        <h2>How to Use This Toolkit</h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <ol style="line-height: 1.8; color: var(--text-muted);">
+          <li style="margin-bottom: var(--spacing-lg);"><strong>Define your AI inventory:</strong> List the AI tools you use and who manages each one.</li>
+          <li style="margin-bottom: var(--spacing-lg);"><strong>Run a readiness check:</strong> Screen each tool for documentation gaps, data processing concerns, and vendor clarity.</li>
+          <li style="margin-bottom: var(--spacing-lg);"><strong>Document internally:</strong> Create simple governance records (policies, owner checklists, incident processes).</li>
+          <li><strong>Escalate where needed:</strong> For high-risk cases or unclear vendor practices, escalate to qualified legal, privacy, or security review.</li>
+        </ol>
+      </div>
+    </section>
 
-    <p class="footer">
-      Practical legal-tech and AI governance readiness support for SMEs. Educational and informational only.
-    </p>
-  </div>
+    <!-- Trust & Maintenance -->
+    <section>
+      <div class="section-header">
+        <h2>About This Toolkit</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Educational & Practical</h3>
+          <p>This toolkit is educational and informational only. It is not legal advice and does not provide compliance assurance. Always escalate sensitive questions to qualified experts.</p>
+        </div>
+        <div class="card">
+          <h3>Regular Review</h3>
+          <p>EU AI Act implementation guidance and standards may change. Review the toolkit regularly and check the source notes for current regulatory context.</p>
+        </div>
+        <div class="card">
+          <h3>SME-Focused</h3>
+          <p>Designed for small and medium enterprises. Practical, concise, and built on real-world readiness workflows, not academic theory.</p>
+        </div>
+        <div class="card">
+          <h3>Source Aware</h3>
+          <p>All guidance is rooted in <a href="../docs/10-source-notes.md">official EU sources</a> and conservative interpretation. See the source register for detailed references.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Preview -->
+    <section>
+      <div class="section-header">
+        <h2>Quick Resources</h2>
+        <p>Essential guidance, tools, and documentation in one place.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>❓ FAQ</h3>
+          <p>Common questions about the toolkit, readiness, compliance, and how to escalate concerns.</p>
+          <div class="card-buttons">
+            <a href="../docs/23-faq.md" class="btn btn-sm btn-secondary">Read FAQ</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🌳 Decision Tree</h3>
+          <p>A guided flowchart to help you decide when an AI tool needs escalation or specialist review.</p>
+          <div class="card-buttons">
+            <a href="../docs/19-sme-decision-tree.md" class="btn btn-sm btn-secondary">Explore Tree</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>📚 Glossary</h3>
+          <p>SME-friendly definitions of key AI governance and compliance terms.</p>
+          <div class="card-buttons">
+            <a href="../docs/18-glossary.md" class="btn btn-sm btn-secondary">View Glossary</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>⚖️ Escalation Guide</h3>
+          <p>When and how to involve legal, privacy, security, or technical specialists.</p>
+          <div class="card-buttons">
+            <a href="../docs/16-what-to-escalate-for-legal-review.md" class="btn btn-sm btn-secondary">Read Guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Call to Action -->
+    <section style="text-align: center; padding: var(--spacing-2xl) 0;">
+      <h2>Ready to Start?</h2>
+      <p>Choose your first step: explore toolkit packs, review use cases, or check the FAQ.</p>
+      <div class="hero-buttons">
+        <a href="/packs.html" class="btn btn-primary">Explore Packs</a>
+        <a href="/use-cases.html" class="btn btn-secondary">View Examples</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About</h3>
+          <p>A practical readiness toolkit for SMEs working toward EU AI Act compliance and governance maturity.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/packs.html">Toolkit Packs</a></li>
+            <li><a href="/use-cases.html">Use Cases</a></li>
+            <li><a href="/resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="/community.html">Contributing</a></li>
+            <li><a href="../.github/CONTRIBUTING.md">How to Contribute</a></li>
+            <li><a href="../SECURITY.md">Security & Privacy</a></li>
+            <li><a href="../LICENSE">License</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Maintainer</h3>
+          <ul>
+            <li><a href="/maintainer.html">Artem Nazarko</a></li>
+            <li><a href="https://github.com/artemhobotun">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/artem-nazarko/">LinkedIn</a></li>
+            <li><a href="https://orcid.org/0000-0002-4190-7288">ORCID</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p><strong>EU AI Act Toolkit</strong> — Practical readiness and documentation support.</p>
+        <p>This toolkit is educational and informational only. It is not legal advice. <a href="../DISCLAIMER.md">Read the disclaimer.</a></p>
+        <p>© 2026. <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">View on GitHub</a></p>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    const form = document.getElementById("screening-form");
-    const resultTitle = document.getElementById("result-title");
-    const resultCopy = document.getElementById("result-copy");
-    const riskPill = document.getElementById("risk-pill");
-    const suggestedFiles = document.getElementById("suggested-files");
-    const button = document.getElementById("generate");
-
-    function scoreReadiness() {
-      const checked = [...form.querySelectorAll("input[type='checkbox']:checked")];
-      const score = checked.reduce((sum, input) => sum + Number(input.dataset.weight || 0), 0);
-
-      let level = "low";
-      let title = "Low attention";
-      let copy = "No obvious high-attention flags were selected. Keep the inventory current and keep documentation light but complete.";
-      let pillClass = "low";
-
-      if (score >= 7) {
-        level = "high";
-        title = "High attention";
-        copy = "This use case deserves deeper legal, privacy, security, and technical review. Escalate it before wider rollout.";
-        pillClass = "high";
-      } else if (score >= 3) {
-        level = "medium";
-        title = "Medium attention";
-        copy = "This use case should be documented carefully. Complete screening, review the vendor, and assign a clear owner.";
-        pillClass = "medium";
+    // Simple active nav indicator
+    document.querySelectorAll('nav a').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === window.location.pathname ||
+          (window.location.pathname === '/' && link.getAttribute('href') === '/')) {
+        link.classList.add('active');
       }
-
-      const nextFiles = {
-        low: [
-          '<li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-system-inventory.csv">AI inventory</a></li>',
-          '<li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-use-policy-template.md">AI use policy</a></li>',
-          '<li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/templates/vendor-ai-due-diligence-questionnaire.md">Vendor questionnaire</a></li>'
-        ],
-        medium: [
-          '<li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-risk-screening-form.md">Risk screening form</a></li>',
-          '<li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/checklists/vendor-red-flags-checklist.md">Vendor red flags checklist</a></li>',
-          '<li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/templates/vendor-decision-record.md">Vendor decision record</a></li>'
-        ],
-        high: [
-          '<li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/16-what-to-escalate-for-legal-review.md">Legal review escalation guide</a></li>',
-          '<li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-risk-screening-form.md">Risk screening form</a></li>',
-          '<li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/templates/vendor-ai-due-diligence-questionnaire.md">Vendor questionnaire</a></li>'
-        ]
-      };
-
-      riskPill.className = `pill ${pillClass}`;
-      riskPill.textContent = title;
-      resultTitle.textContent = "Preliminary readiness note";
-      resultCopy.textContent = `${copy} Preliminary screening only. Not legal advice.`;
-      suggestedFiles.innerHTML = nextFiles[level].join("");
-    }
-
-    button.addEventListener("click", scoreReadiness);
+    });
   </script>
 </body>
 </html>

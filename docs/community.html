@@ -1,136 +1,247 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Community and contribution - EU AI Act Toolkit</title>
-  <meta name="description" content="Community, contribution, support, and governance information for the EU AI Act Toolkit." />
-  <style>
-    :root {
-      --bg: #071223;
-      --panel: rgba(11, 28, 54, 0.84);
-      --panel-border: rgba(255, 255, 255, 0.09);
-      --text: #edf3ff;
-      --muted: #b8c6e4;
-      --gold: #f1c24b;
-      --gold-soft: rgba(241, 194, 75, 0.14);
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
-      --radius: 18px;
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      background:
-        radial-gradient(circle at top left, rgba(105, 167, 255, 0.14), transparent 30%),
-        radial-gradient(circle at top right, rgba(241, 194, 75, 0.12), transparent 28%),
-        linear-gradient(180deg, var(--bg), #050b15 100%);
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.55;
-    }
-    a { color: #b7d4ff; }
-    .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 24px 0 56px; }
-    .panel {
-      background: var(--panel);
-      border: 1px solid var(--panel-border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-    }
-    .hero { padding: 34px; margin-bottom: 24px; }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px;
-      border: 1px solid rgba(241, 194, 75, 0.25); border-radius: 999px;
-      background: var(--gold-soft); color: #ffe8a3; font-size: 0.92rem; margin-bottom: 16px;
-    }
-    h1 { margin: 0; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.04; }
-    .lede { max-width: 62ch; color: var(--muted); margin: 16px 0 0; }
-    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
-    .card { padding: 20px; min-height: 150px; }
-    .card h2 { margin: 0 0 8px; font-size: 1.15rem; }
-    .card p, .section p, li { color: var(--muted); }
-    .section { padding: 28px; margin-top: 18px; }
-    .columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-    .list { padding-left: 20px; margin: 10px 0 0; }
-    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
-    .button {
-      display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--panel-border);
-      background: rgba(255,255,255,0.04); color: var(--text); text-decoration: none;
-      border-radius: 999px; padding: 10px 14px;
-    }
-    .footer { color: var(--muted); text-align: center; margin: 26px 0 0; }
-    @media (max-width: 920px) {
-      .grid, .columns { grid-template-columns: 1fr; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community — EU AI Act Toolkit</title>
+  <meta name="description" content="Contributing, governance, code of conduct, and security policy.">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <div class="wrap">
-    <section class="panel hero">
-      <div class="eyebrow">EU AI Act Toolkit</div>
-      <h1>Contribute to the EU AI Act Toolkit</h1>
-      <p class="lede">
-        This page collects the community, support, governance, maintainer, and license notes that keep the project practical,
-        welcoming, and source-aware for SMEs.
+  <header>
+    <div class="header-container">
+      <a href="/" class="logo">🇪🇺 EU AI Act Toolkit</a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/packs.html">Toolkit Packs</a></li>
+          <li><a href="/use-cases.html">Use Cases</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/maintainer.html">Maintainer</a></li>
+          <li><a href="/community.html" class="active">Community</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Community & Contribution</h1>
+      <p class="hero-subtitle">Help improve the EU AI Act Toolkit. We welcome feedback, contributions, and collaboration.</p>
+    </section>
+
+    <!-- Ways to Contribute -->
+    <section>
+      <div class="section-header">
+        <h2>How to Get Involved</h2>
+        <p>Different ways to contribute depending on your interest and expertise.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>📝 Improve Wording</h3>
+          <p>Found a typo, unclear phrasing, or have a suggestion for better language? Small improvements make a big difference.</p>
+          <div class="card-buttons">
+            <a href="../.github/CONTRIBUTING.md" class="btn btn-sm btn-primary">Contributing Guide</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>💡 Suggest a Template</h3>
+          <p>Think a new template or checklist would be useful? Open a template request issue and tell us why.</p>
+          <div class="card-buttons">
+            <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/issues/new" class="btn btn-sm btn-primary">Create Issue</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🎯 Add a Use Case</h3>
+          <p>Have a realistic example of AI governance or procurement? We'd love to see it.</p>
+          <div class="card-buttons">
+            <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/issues/new" class="btn btn-sm btn-primary">Suggest Example</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🔗 Update Source Notes</h3>
+          <p>Spot outdated references or new sources we should include? Let us know.</p>
+          <div class="card-buttons">
+            <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/issues/new" class="btn btn-sm btn-primary">Report Update</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🐛 Report a Bug</h3>
+          <p>Found a broken link, formatting issue, or error? Open an issue.</p>
+          <div class="card-buttons">
+            <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/issues" class="btn btn-sm btn-primary">GitHub Issues</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>💬 Share Feedback</h3>
+          <p>Have general feedback on the toolkit? Discussions and input are welcome.</p>
+          <div class="card-buttons">
+            <a href="../.github/SUPPORT.md" class="btn btn-sm btn-primary">Get Support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Guidelines -->
+    <section>
+      <div class="section-header">
+        <h2>Community Standards</h2>
+        <p>Guidelines for respectful, constructive collaboration.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>🤝 Code of Conduct</h3>
+          <p>We are committed to providing a welcoming, respectful community space for everyone.</p>
+          <div class="card-buttons">
+            <a href="../.github/CODE_OF_CONDUCT.md" class="btn btn-sm btn-primary">Read CoC</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>📖 Contributing Guide</h3>
+          <p>How to propose changes, submit pull requests, and work with the team.</p>
+          <div class="card-buttons">
+            <a href="../.github/CONTRIBUTING.md" class="btn btn-sm btn-primary">View Guide</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🛡️ Security & Privacy</h3>
+          <p>How to report security concerns responsibly without public disclosure.</p>
+          <div class="card-buttons">
+            <a href="../SECURITY.md" class="btn btn-sm btn-primary">Security Policy</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>❓ Support & Questions</h3>
+          <p>Where to get help if you have questions about the toolkit.</p>
+          <div class="card-buttons">
+            <a href="../.github/SUPPORT.md" class="btn btn-sm btn-primary">Support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Information -->
+    <section>
+      <div class="section-header">
+        <h2>Project Information</h2>
+        <p>Governance, licensing, and project details.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>🏛️ Governance</h3>
+          <p>How project decisions are made and the toolkit is maintained.</p>
+          <div class="card-buttons">
+            <a href="../docs/project/governance.md" class="btn btn-sm btn-primary">Read Governance</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>📋 Maintainers</h3>
+          <p>Meet the team maintaining the toolkit.</p>
+          <div class="card-buttons">
+            <a href="/maintainer.html" class="btn btn-sm btn-primary">View Team</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>📜 License</h3>
+          <p>Understand the toolkit's open-source license and usage rights.</p>
+          <div class="card-buttons">
+            <a href="../LICENSE" class="btn btn-sm btn-primary">View License</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>📚 License Notes</h3>
+          <p>Practical explanation of what you can and can't do with this toolkit.</p>
+          <div class="card-buttons">
+            <a href="../docs/project/license-notes.md" class="btn btn-sm btn-primary">License Notes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recognition -->
+    <section>
+      <div class="section-header">
+        <h2>Contributors</h2>
+        <p>Thank you to everyone who has improved this toolkit through feedback, issues, and contributions.</p>
+      </div>
+      <p style="text-align: center; color: var(--text-muted);">
+        Contributors are recognized in the GitHub contributor graph and in <a href="../CONTRIBUTORS.md">CONTRIBUTORS.md</a>.
       </p>
-      <div class="links">
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/CONTRIBUTING.md">Contributing Guide</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/SECURITY.md">Security Policy</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/SUPPORT.md">Support</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/project/governance.md">Governance</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/project/maintainers.md">Maintainers</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/project/license-notes.md">License Notes</a>
+      <div style="text-align: center; margin: var(--spacing-lg) 0;">
+        <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/graphs/contributors" class="btn btn-primary">View Contributors</a>
       </div>
     </section>
 
-    <section class="grid">
-      <div class="panel card"><h2><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/CODE_OF_CONDUCT.md">Code of Conduct</a></h2><p>Community standard for respectful, cautious, evidence-aware collaboration.</p></div>
-      <div class="panel card"><h2><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/CONTRIBUTING.md">Contributing Guide</a></h2><p>How to suggest improvements, run checks, and open focused pull requests.</p></div>
-      <div class="panel card"><h2><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/SECURITY.md">Security Policy</a></h2><p>Where to report privacy or security concerns without exposing sensitive data.</p></div>
-      <div class="panel card"><h2><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/SUPPORT.md">Support</a></h2><p>Where to ask for help and what this project can and cannot cover.</p></div>
-      <div class="panel card"><h2><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/project/governance.md">Governance</a></h2><p>How content is reviewed, released, and kept practical over time.</p></div>
-      <div class="panel card"><h2><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/project/maintainers.md">Maintainers</a></h2><p>Who maintains the project and how responsibilities are split.</p></div>
+    <!-- Call to Action -->
+    <section style="background-color: var(--bg-light); padding: var(--spacing-lg); border-radius: var(--border-radius-lg); margin-bottom: var(--spacing-xl); text-align: center;">
+      <h3 style="margin-top: 0;">Ready to Contribute?</h3>
+      <p>Start by reading the Contributing Guide, then open an issue or submit a pull request.</p>
+      <a href="../.github/CONTRIBUTING.md" class="btn btn-primary">Start Contributing</a>
     </section>
 
-    <section class="panel section">
-      <div class="columns">
-        <div>
-          <h2>How to contribute safely</h2>
-          <ul class="list">
-            <li>keep examples fictional or sample only</li>
-            <li>avoid personal or confidential data</li>
-            <li>use cautious wording for legal-sensitive topics</li>
-            <li>update source notes when legal wording changes</li>
+    <hr>
+
+    <!-- CTA -->
+    <section style="text-align: center; padding: var(--spacing-2xl) 0;">
+      <h2>Back to the Toolkit</h2>
+      <div class="hero-buttons">
+        <a href="/" class="btn btn-primary">Home</a>
+        <a href="/packs.html" class="btn btn-secondary">Explore Packs</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contribute</h3>
+          <ul>
+            <li><a href="../.github/CONTRIBUTING.md">Contributing Guide</a></li>
+            <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/issues">Issues</a></li>
+            <li><a href="../.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
           </ul>
         </div>
-        <div>
-          <h2>Good first contribution ideas</h2>
-          <ul class="list">
-            <li>fix a broken link</li>
-            <li>improve a checklist</li>
-            <li>add a vendor question</li>
-            <li>refine a Pages card or navigation link</li>
+        <div class="footer-section">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="/community.html">Community</a></li>
+            <li><a href="../CONTRIBUTORS.md">Contributors</a></li>
+            <li><a href="../docs/project/governance.md">Governance</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Project</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/maintainer.html">Maintainer</a></li>
+            <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="../LICENSE">License</a></li>
+            <li><a href="../SECURITY.md">Security</a></li>
+            <li><a href="../DISCLAIMER.md">Disclaimer</a></li>
           </ul>
         </div>
       </div>
-    </section>
-
-    <section class="panel section">
-      <h2>What not to share</h2>
-      <p>Do not post confidential business information, personal data, contracts, security details, or incident data in public GitHub issues.</p>
-      <div class="links">
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/issues/new/choose">Open an issue</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/ISSUE_TEMPLATE/template-request.yml">Template request form</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/ISSUE_TEMPLATE/source-update.yml">Source update form</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/ISSUE_TEMPLATE/use-case-example.yml">Use-case example form</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/ISSUE_TEMPLATE/documentation-improvement.yml">Documentation form</a>
-        <a class="button" href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/ISSUE_TEMPLATE/question.yml">Question form</a>
+      <div class="footer-bottom">
+        <p><strong>EU AI Act Toolkit</strong> — Maintained by a passionate community.</p>
+        <p>© 2026. <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">View on GitHub</a></p>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <p class="footer">Practical legal-tech and compliance tooling for SMEs.</p>
-  </div>
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === window.location.pathname || link.getAttribute('href').includes('community')) {
+        link.classList.add('active');
+      }
+    });
+  </script>
 </body>
 </html>
