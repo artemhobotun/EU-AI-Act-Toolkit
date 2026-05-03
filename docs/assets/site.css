@@ -422,6 +422,16 @@ nav a.nav-cta:hover { background: var(--blue-500); }
 @media (max-width: 900px) { .cards-grid-4 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 500px) { .cards-grid-4 { grid-template-columns: 1fr; } }
 
+.cards-grid-4 .card {
+  text-align: center;
+  align-items: center;
+  padding: var(--s-6) var(--s-4);
+}
+.cards-grid-4 .card-icon { font-size: 32px; }
+.cards-grid-4 .card h3 { font-size: var(--text-base); }
+.cards-grid-4 .card p { font-size: var(--text-xs); color: var(--text-muted); line-height: 1.5; }
+.cards-grid-4 .card-buttons { justify-content: center; }
+
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
