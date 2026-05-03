@@ -6,6 +6,11 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+- Redesigned the GitHub Pages mini-site into a multi-page static toolkit portal.
+- Added separate Pages sections for Toolkit Packs, Use Cases, Resources, Maintainer, and Community.
+- Improved navigation, layout, card system, and overall visual polish.
+- Created shared design system with consistent typography, spacing, colors, and responsive layout.
+- Reorganized mini-site content for better clarity and professional presentation.
 - Restructured community policy files for improved readability with quick reference tables and collapsible details blocks.
 - Updated CODE_OF_CONDUCT.md with Quick standard table and 5 collapsible sections.
 - Updated CONTRIBUTING.md with Quick contribution paths table and 6 collapsible sections.
