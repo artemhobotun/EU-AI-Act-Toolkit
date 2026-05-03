@@ -10,15 +10,15 @@
 <body>
   <header>
     <div class="header-container">
-      <a href="/" class="logo">🇪🇺 EU AI Act Toolkit</a>
+      <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/packs.html">Toolkit Packs</a></li>
-          <li><a href="/use-cases.html">Use Cases</a></li>
-          <li><a href="/resources.html">Resources</a></li>
-          <li><a href="/maintainer.html">Maintainer</a></li>
-          <li><a href="/community.html" class="active">Community</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="packs.html">Toolkit Packs</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="maintainer.html">Maintainer</a></li>
+          <li><a href="community.html" class="active">Community</a></li>
         </ul>
       </nav>
     </div>
@@ -139,7 +139,7 @@
           <h3>📋 Maintainers</h3>
           <p>Meet the team maintaining the toolkit.</p>
           <div class="card-buttons">
-            <a href="/maintainer.html" class="btn btn-sm btn-primary">View Team</a>
+            <a href="maintainer.html" class="btn btn-sm btn-primary">View Team</a>
           </div>
         </div>
         <div class="card">
@@ -186,8 +186,8 @@
     <section style="text-align: center; padding: var(--spacing-2xl) 0;">
       <h2>Back to the Toolkit</h2>
       <div class="hero-buttons">
-        <a href="/" class="btn btn-primary">Home</a>
-        <a href="/packs.html" class="btn btn-secondary">Explore Packs</a>
+        <a href="index.html" class="btn btn-primary">Home</a>
+        <a href="packs.html" class="btn btn-secondary">Explore Packs</a>
       </div>
     </section>
   </main>
@@ -206,7 +206,7 @@
         <div class="footer-section">
           <h3>Community</h3>
           <ul>
-            <li><a href="/community.html">Community</a></li>
+            <li><a href="community.html">Community</a></li>
             <li><a href="../CONTRIBUTORS.md">Contributors</a></li>
             <li><a href="../docs/project/governance.md">Governance</a></li>
           </ul>
@@ -214,8 +214,8 @@
         <div class="footer-section">
           <h3>Project</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/maintainer.html">Maintainer</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="maintainer.html">Maintainer</a></li>
             <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
           </ul>
         </div>
@@ -238,7 +238,7 @@
   <script>
     document.querySelectorAll('nav a').forEach(link => {
       link.classList.remove('active');
-      if (link.getAttribute('href') === window.location.pathname || link.getAttribute('href').includes('community')) {
+      if (window.location.pathname.endsWith(link.getAttribute('href')) || window.location.pathname.endsWith('community.html')) {
         link.classList.add('active');
       }
     });
