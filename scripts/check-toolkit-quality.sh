@@ -471,6 +471,54 @@ else
   fail "Link audit script is not executable"
 fi
 
+# Quality tooling checks (added in v1.4.0)
+if [[ -f "$ROOT_DIR/.gitattributes" ]]; then
+  pass ".gitattributes present for Linguist configuration"
+else
+  fail ".gitattributes missing"
+fi
+
+if [[ -f "$ROOT_DIR/docs/assets/site.js" ]]; then
+  pass "Site interactivity script present: docs/assets/site.js"
+else
+  fail "Site interactivity script missing: docs/assets/site.js"
+fi
+
+if [[ -f "$ROOT_DIR/tools/validate_site_links.py" ]]; then
+  pass "Link validation tool present: tools/validate_site_links.py"
+else
+  fail "Link validation tool missing: tools/validate_site_links.py"
+fi
+
+if [[ -f "$ROOT_DIR/tools/build_toolkit_manifest.py" ]]; then
+  pass "Toolkit manifest builder present: tools/build_toolkit_manifest.py"
+else
+  fail "Toolkit manifest builder missing: tools/build_toolkit_manifest.py"
+fi
+
+# Run Python quality tools if available
+if command -v python3 &> /dev/null; then
+  if python3 "$ROOT_DIR/tools/validate_site_links.py"; then
+    pass "Site link validation passed"
+  else
+    fail "Site link validation failed"
+  fi
+
+  if python3 "$ROOT_DIR/tools/build_toolkit_manifest.py"; then
+    pass "Toolkit manifest generated"
+  else
+    fail "Toolkit manifest generation failed"
+  fi
+
+  if [[ -f "$ROOT_DIR/docs/assets/toolkit-manifest.json" ]]; then
+    pass "Toolkit manifest file created: docs/assets/toolkit-manifest.json"
+  else
+    fail "Toolkit manifest file not found after generation"
+  fi
+else
+  pass "Python3 not available (link validation and manifest generation skipped)"
+fi
+
 if [[ "$FAILURES" -gt 0 ]]; then
   printf 'Quality checks failed: %s\n' "$FAILURES"
   exit 1
