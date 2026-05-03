@@ -6,6 +6,25 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+### v1.5.0 — Structured Toolkit Data Layer
+
+- Added TypeScript quiz scoring engine (src/quiz-engine.ts) with fully typed readiness assessment logic, 10 example questions, and three readiness levels.
+- Added SQLite schema (database/evidence-pack-schema.sql) for optional local evidence pack storage with 8 tables: ai_systems, risk_screenings, vendors, vendor_reviews, incidents, ai_literacy_records, maintenance_reviews, source_updates.
+- Added YAML machine-readable registries (data/):
+  - toolkit-registry.yml: 13 toolkit resources with metadata for discoverability.
+  - official-sources.yml: 6 official EU AI Act sources with institution, publication date, and use cases.
+  - use-cases.yml: 7 common AI governance scenarios with key concerns and escalation triggers.
+- Added JSON Schema definitions (schemas/):
+  - ai-system-inventory.schema.json: Validates AI system inventory data.
+  - risk-screening.schema.json: Validates readiness screening results.
+  - vendor-review.schema.json: Validates vendor assessment documentation.
+- Added comprehensive README files for schemas/ and database/ explaining structure, use cases, and integration patterns.
+- Updated quality check script to require and validate all new structured data files with lightweight checks.
+- Updated .gitattributes to mark src/**, database/**, data/**, schemas/** as project source (not documentation).
+- Updated README with compact "Structured technical layer" section linking to new registries and schemas.
+- Updated docs/resources.html with "Structured Toolkit Data" section featuring cards for each layer with links to technical resources.
+- All structured data files are informational, optional, and designed for tool integration without being required for toolkit use.
+
 ### v1.4.0 — Site Interactivity and Quality Tooling
 
 - Added GitHub Linguist configuration (.gitattributes) to properly count HTML, CSS, and JavaScript as project source code.

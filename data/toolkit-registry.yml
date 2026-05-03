@@ -1,0 +1,161 @@
+# EU AI Act Toolkit — Resource Registry
+#
+# Machine-readable registry of all toolkit resources, packs, and materials.
+# Used for navigation, discoverability, and future integrations.
+
+toolkit_resources:
+  - id: starter-pack
+    title: Starter Pack
+    type: pack
+    path: toolkit/starter-pack/
+    purpose: Foundation for AI governance readiness
+    description: A structured beginning point with 30-minute assessment, executive checklist, and internal rollout materials.
+    recommended_for:
+      - new_to_ai_governance
+      - small_teams
+      - building_foundations
+    review_level: foundational
+
+  - id: vendor-assessment-pack
+    title: Vendor Assessment Pack
+    type: pack
+    path: toolkit/vendor-pack/
+    purpose: Evaluate AI-enabled SaaS tools systematically
+    description: Due diligence questionnaire, comparison matrix, scoring, risk register, and decision record templates.
+    recommended_for:
+      - vendor_procurement
+      - tool_evaluation
+      - compliance_documentation
+    review_level: moderate
+
+  - id: sector-packs
+    title: Sector Packs
+    type: pack
+    path: toolkit/sector-packs/
+    purpose: Context-specific guidance for common AI use cases
+    description: Six sector-specific guides covering internal GenAI, customer chatbots, HR recruitment, marketing, vendor procurement, and legal review.
+    recommended_for:
+      - sector_specific_guidance
+      - use_case_examples
+    review_level: moderate
+
+  - id: templates
+    title: Templates
+    type: pack
+    path: toolkit/templates/
+    purpose: Ready-to-use governance documents
+    description: AI inventory CSV, risk screening form, vendor questionnaire, and other templates.
+    recommended_for:
+      - quick_implementation
+      - practical_work
+    review_level: practical
+
+  - id: checklists
+    title: Checklists
+    type: pack
+    path: toolkit/checklists/
+    purpose: Readiness and governance checklists
+    description: SME readiness checklist, tool owner checklist, and vendor red flags.
+    recommended_for:
+      - self_assessment
+      - governance_ownership
+    review_level: practical
+
+  - id: examples
+    title: Examples
+    type: pack
+    path: toolkit/examples/
+    purpose: Worked examples and sample evidence pack
+    description: Use case examples and sample evidence pack structure.
+    recommended_for:
+      - learning_by_example
+      - understanding_context
+    review_level: illustrative
+
+  - id: faq
+    title: FAQ
+    type: reference
+    path: docs/23-faq.md
+    purpose: Frequently asked questions
+    description: Common questions about the toolkit, readiness, and the EU AI Act.
+    recommended_for:
+      - quick_answers
+      - clarification
+    review_level: reference
+
+  - id: decision-tree
+    title: SME Decision Tree
+    type: reference
+    path: docs/19-sme-decision-tree.md
+    purpose: When to escalate AI tool concerns
+    description: Structured guide for determining when an AI tool requires specialist review.
+    recommended_for:
+      - escalation_decisions
+      - risk_assessment
+    review_level: guidance
+
+  - id: evidence-pack
+    title: Evidence Pack Structure
+    type: reference
+    path: toolkit/examples/sample-evidence-pack/
+    purpose: How to organise AI governance documentation
+    description: Example structure for collecting and maintaining evidence of readiness.
+    recommended_for:
+      - documentation_organisation
+      - audit_preparation
+    review_level: practical
+
+  - id: source-notes
+    title: Source Notes
+    type: reference
+    path: docs/10-source-notes.md
+    purpose: How toolkit content links to official sources
+    description: Detailed mapping of toolkit guidance to official regulation articles.
+    recommended_for:
+      - legal_grounding
+      - source_verification
+    review_level: reference
+
+  - id: glossary
+    title: Glossary
+    type: reference
+    path: docs/18-glossary.md
+    purpose: Plain-language terminology
+    description: Definitions of AI governance, compliance, and EU AI Act terms in accessible language.
+    recommended_for:
+      - terminology
+      - learning
+    review_level: reference
+
+  - id: implementation-playbook
+    title: Implementation Playbook
+    type: guidance
+    path: docs/20-sme-implementation-playbook.md
+    purpose: Step-by-step guide to introducing AI governance
+    description: A structured approach to rolling out AI governance in your organisation.
+    recommended_for:
+      - implementation_planning
+      - change_management
+    review_level: guidance
+
+  - id: escalation-guide
+    title: Escalation Guide
+    type: guidance
+    path: docs/16-what-to-escalate-for-legal-review.md
+    purpose: When to involve specialists
+    description: Guidance on escalating to legal, privacy, or technical professionals.
+    recommended_for:
+      - specialist_decision
+      - risk_management
+    review_level: guidance
+
+  - id: common-mistakes
+    title: Common Mistakes
+    type: guidance
+    path: docs/21-common-mistakes.md
+    purpose: Common AI governance readiness errors and how to avoid them
+    description: Real patterns of mistakes and practical fixes.
+    recommended_for:
+      - error_prevention
+      - learning_from_others
+    review_level: guidance

@@ -4,6 +4,12 @@ docs/**/*.html -linguist-documentation
 docs/assets/**/*.css -linguist-documentation
 docs/assets/**/*.js -linguist-documentation
 
+# Structured data layer as project source (not documentation).
+src/**/*.ts -linguist-documentation
+database/**/*.sql -linguist-documentation
+data/**/*.yml -linguist-documentation
+schemas/**/*.json -linguist-documentation
+
 # Treat release/build outputs as generated.
 dist/** linguist-generated
 *.zip linguist-generated

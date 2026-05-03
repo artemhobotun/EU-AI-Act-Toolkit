@@ -1,0 +1,92 @@
+# EU AI Act Toolkit — Official EU Sources Registry
+#
+# Authoritative EU publications, regulations, and guidance on the EU AI Act.
+# These are external resources maintained by EU institutions.
+
+official_sources:
+  - id: regulation-2024-1689
+    title: Regulation (EU) 2024/1689 — Full Official Text
+    source_type: regulation
+    url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+    institution: EUR-Lex (Official Journal of the EU)
+    publication_date: 2024-07-12
+    use_for:
+      - primary_legal_reference
+      - compliance_baseline
+      - article_citations
+    notes: The complete and authoritative legal text of the EU Artificial Intelligence Act.
+
+  - id: eur-lex-summary
+    title: EUR-Lex Summary — Rules for Trustworthy AI
+    source_type: guidance
+    url: https://eur-lex.europa.eu/EN/legal-content/summary/rules-for-trustworthy-ai.html
+    institution: EUR-Lex
+    use_for:
+      - overview_and_summary
+      - key_concepts
+      - structured_navigation
+    notes: Official EUR-Lex summary providing a structured overview of the regulation's scope and provisions.
+
+  - id: eur-lex-document-hub
+    title: EUR-Lex Document Hub — Regulation (EU) 2024/1689
+    source_type: reference
+    url: https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32024R1689
+    institution: EUR-Lex
+    use_for:
+      - all_language_versions
+      - legislative_history
+      - related_documents
+    notes: Main EUR-Lex entry with all language versions and related legislative documents. CELEX ID 32024R1689.
+
+  - id: ec-regulatory-framework
+    title: European Commission — AI Regulatory Framework
+    source_type: policy
+    url: https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+    institution: European Commission (Digital Strategy)
+    use_for:
+      - policy_context
+      - commission_guidance
+      - implementation_resources
+    notes: Official Commission policy page on the EU AI Act regulatory framework.
+
+  - id: eu-ai-office
+    title: European AI Office
+    source_type: agency
+    url: https://digital-strategy.ec.europa.eu/en/policies/ai-office
+    institution: European Commission
+    use_for:
+      - governance_body
+      - implementation_oversight
+      - gpai_provisions
+    notes: The official EU body responsible for overseeing the implementation of the AI Act, particularly for general-purpose AI models.
+
+  - id: ec-ai-policy-overview
+    title: European Commission — AI Policy Overview
+    source_type: policy
+    url: https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence
+    institution: European Commission (Digital Strategy)
+    use_for:
+      - broader_policy_context
+      - european_ai_strategy
+    notes: The Commission's overall approach to AI governance, ethics, and regulation.
+
+  - id: legislative-history
+    title: Better Regulation Portal — AI Act Legislative Process
+    source_type: reference
+    url: https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/12527-Artificial-intelligence-ethical-and-legal-requirements_en
+    institution: European Commission
+    use_for:
+      - legislative_history
+      - negotiation_notes
+      - background
+    notes: Portal entry documenting the legislative process and public consultation history.
+
+important_notes: |
+  These are external resources maintained by EU institutions. Links and content may change.
+
+  Always verify the official sources directly for authoritative interpretation.
+
+  The EU AI Act Toolkit is an independent educational resource. It is not affiliated with,
+  endorsed by, or produced by the European Union, European Commission, or any EU institution.
+
+  For legally significant decisions, consult qualified legal professionals.
