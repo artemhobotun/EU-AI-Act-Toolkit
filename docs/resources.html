@@ -4,234 +4,370 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resources — EU AI Act Toolkit</title>
-  <meta name="description" content="FAQ, glossary, decision tree, escalation guide, and more.">
+  <meta name="description" content="FAQ, glossary, decision tree, escalation guide, implementation playbook, and official EU source links — everything to support your AI governance readiness journey.">
   <link rel="stylesheet" href="assets/site.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🇪🇺</text></svg>">
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
-      <nav>
+
+<header>
+  <div class="header-container">
+    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packs.html">Packs</a></li>
+        <li><a href="use-cases.html">Use Cases</a></li>
+        <li><a href="resources.html" class="active">Resources</a></li>
+        <li><a href="official-sources.html">EU Sources</a></li>
+        <li><a href="maintainer.html">Maintainer</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="quiz.html" class="nav-cta">Self-Check →</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-eyebrow">📖 Reference & Guidance Library</div>
+    <h1>Resources</h1>
+    <p class="hero-subtitle">
+      Practical guidance tools, reference documentation, FAQ, and official source links to support every stage of your AI governance readiness journey.
+    </p>
+    <div class="hero-buttons">
+      <a href="quiz.html" class="btn btn-gold btn-lg">Start with the Self-Check →</a>
+      <a href="official-sources.html" class="btn btn-secondary btn-lg">Official EU Sources</a>
+    </div>
+  </section>
+
+  <!-- Guidance & Tools -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Guidance Tools</span>
+      <h2>Practical Decision Support</h2>
+      <p>Interactive tools and structured guides to help you work through governance decisions and questions.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card card-gold">
+        <div class="card-icon">🛡️</div>
+        <h3>AI Governance Self-Check</h3>
+        <p>10 guided questions to help you understand whether your organisation likely needs structured AI governance readiness work. Free, 2 minutes, no sign-up.</p>
+        <div class="card-buttons">
+          <a href="quiz.html" class="btn btn-sm btn-gold">Take Self-Check →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌳</div>
+        <h3>SME Decision Tree</h3>
+        <p>A guided flowchart to help you decide when an AI tool or use case needs escalation, specialist review, or legal input.</p>
+        <div class="card-buttons">
+          <a href="../docs/19-sme-decision-tree.md" class="btn btn-sm btn-primary">Open Decision Tree</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🗺️</div>
+        <h3>SME Implementation Playbook</h3>
+        <p>A step-by-step implementation guide for introducing AI governance practices in a small or medium organisation.</p>
+        <div class="card-buttons">
+          <a href="../docs/20-sme-implementation-playbook.md" class="btn btn-sm btn-primary">View Playbook</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚖️</div>
+        <h3>Escalation Guide</h3>
+        <p>When and how to involve legal, privacy, security, or technical specialists — with clear signals for when self-service is not enough.</p>
+        <div class="card-buttons">
+          <a href="../docs/16-what-to-escalate-for-legal-review.md" class="btn btn-sm btn-primary">Read Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Frequently Asked Questions</span>
+      <h2>Common Questions</h2>
+      <p>Quick answers to the most common questions about the toolkit, readiness, and the EU AI Act.</p>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <details>
+        <summary>Does using this toolkit make my organisation compliant with the EU AI Act?</summary>
+        No. This toolkit is educational and informational — it provides practical readiness support and documentation templates. It does not constitute legal advice and cannot guarantee or confirm compliance. Legal compliance determinations require qualified legal review specific to your organisation and use case.
+      </details>
+      <details>
+        <summary>Who is this toolkit designed for?</summary>
+        Primarily SMEs and teams working with AI tools who do not have dedicated legal or compliance staff. It is designed to be accessible to non-lawyers while remaining grounded in the official regulation and conservative interpretation.
+      </details>
+      <details>
+        <summary>Does the EU AI Act apply to my organisation if we only use third-party AI tools?</summary>
+        The EU AI Act applies to providers and deployers of AI systems. If you use AI-enabled SaaS tools in your operations, you may be a deployer under the regulation — which carries its own obligations, particularly for higher-risk use cases. The decision tree and escalation guide can help identify what attention your specific use warrants.
+      </details>
+      <details>
+        <summary>When does the EU AI Act apply?</summary>
+        The regulation entered into force on 1 August 2024. Provisions apply on a phased basis: prohibited practices from early 2025, GPAI model obligations from August 2025, high-risk system rules from August 2026, and full application by August 2027. Always verify current dates against the official text on EUR-Lex.
+      </details>
+      <details>
+        <summary>Where should I start if I am new to this topic?</summary>
+        Take the 2-minute AI governance self-check first. Then review the Starter Pack, starting with the 30-minute readiness self-assessment. The decision tree and FAQ are useful secondary references once you have a baseline sense of your situation.
+      </details>
+      <details>
+        <summary>Is this toolkit affiliated with the EU or European Commission?</summary>
+        No. The EU AI Act Toolkit is an independent resource maintained by Artem Nazarko. It is not affiliated with, endorsed by, or produced by the European Union, European Commission, or any EU institution. Official sources are linked on the EU Sources page.
+      </details>
+    </div>
+    <div style="text-align: center; margin-top: var(--s-8);">
+      <a href="../docs/23-faq.md" class="btn btn-outline">Full FAQ Document</a>
+    </div>
+  </section>
+
+  <!-- Reference Documents -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Reference Library</span>
+      <h2>Documentation & Reference</h2>
+      <p>Structured reference materials to support governance work and ongoing use of the toolkit.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--s-2); max-width: 800px; margin: 0 auto;">
+
+      <a href="../docs/18-glossary.md" class="resource-row">
+        <div class="resource-row-icon">📚</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Glossary</div>
+          <div class="resource-row-desc">SME-friendly definitions of AI governance, compliance, and EU AI Act terms</div>
+        </div>
+        <div class="resource-row-arrow">↗</div>
+      </a>
+
+      <a href="../docs/10-source-notes.md" class="resource-row">
+        <div class="resource-row-icon">📖</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Source Notes</div>
+          <div class="resource-row-desc">How toolkit content connects to official regulation articles and authoritative guidance</div>
+        </div>
+        <div class="resource-row-arrow">↗</div>
+      </a>
+
+      <a href="../docs/13-evidence-pack-index.md" class="resource-row">
+        <div class="resource-row-icon">📋</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Evidence Pack Index</div>
+          <div class="resource-row-desc">An index of documentation to retain for readiness review and stakeholder evidence</div>
+        </div>
+        <div class="resource-row-arrow">↗</div>
+      </a>
+
+      <a href="../docs/21-common-mistakes.md" class="resource-row">
+        <div class="resource-row-icon">⚠️</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Common Mistakes</div>
+          <div class="resource-row-desc">The most frequent AI governance readiness errors and how to avoid them</div>
+        </div>
+        <div class="resource-row-arrow">↗</div>
+      </a>
+
+      <a href="../docs/15-versioning-and-maintenance-policy.md" class="resource-row">
+        <div class="resource-row-icon">🔄</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Versioning & Maintenance Policy</div>
+          <div class="resource-row-desc">How the toolkit is maintained, updated, and reviewed over time</div>
+        </div>
+        <div class="resource-row-arrow">↗</div>
+      </a>
+
+      <a href="../docs/17-downloadable-toolkit-pack.md" class="resource-row">
+        <div class="resource-row-icon">⬇️</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Downloadable Toolkit Pack</div>
+          <div class="resource-row-desc">Instructions for downloading a complete offline copy of the toolkit</div>
+        </div>
+        <div class="resource-row-arrow">↗</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Official Sources teaser -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Official EU Sources</span>
+      <h2>Primary Legal Sources</h2>
+      <p>Direct links to official EU publications, regulations, and authoritative guidance on the EU AI Act.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--s-2); max-width: 800px; margin: 0 auto;">
+
+      <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" target="_blank" rel="noopener noreferrer" class="resource-row">
+        <div class="resource-row-icon">📜</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">Regulation (EU) 2024/1689 — Full Official Text</div>
+          <div class="resource-row-desc">Primary authoritative source — EUR-Lex Official Journal</div>
+        </div>
+        <div class="resource-row-arrow">↗</div>
+      </a>
+
+      <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener noreferrer" class="resource-row">
+        <div class="resource-row-icon">🇪🇺</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">European Commission — AI Regulatory Framework</div>
+          <div class="resource-row-desc">Official Commission policy page on the EU AI Act</div>
+        </div>
+        <div class="resource-row-arrow">↗</div>
+      </a>
+
+      <a href="https://digital-strategy.ec.europa.eu/en/policies/ai-office" target="_blank" rel="noopener noreferrer" class="resource-row">
+        <div class="resource-row-icon">🏢</div>
+        <div class="resource-row-body">
+          <div class="resource-row-title">EU AI Office</div>
+          <div class="resource-row-desc">Official body overseeing EU AI Act implementation</div>
+        </div>
+        <div class="resource-row-arrow">↗</div>
+      </a>
+
+    </div>
+    <div style="text-align: center; margin-top: var(--s-8);">
+      <a href="official-sources.html" class="btn btn-outline">View All Official Sources →</a>
+    </div>
+  </section>
+
+  <!-- Learning Paths -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Suggested Paths</span>
+      <h2>Where to Start Based on Your Situation</h2>
+    </div>
+    <div class="cards-grid-2" style="max-width: 900px; margin: 0 auto;">
+
+      <div class="card">
+        <div class="card-icon">🌱</div>
+        <h3>New to AI Governance</h3>
+        <div class="path-steps" style="margin-top: var(--s-4);">
+          <div class="path-step">
+            <div class="path-step-line"><div class="path-step-num">1</div><div class="path-step-connector"></div></div>
+            <div class="path-step-body">
+              <h4>Take the self-check</h4>
+              <p>Understand your likely readiness level — 2 minutes</p>
+            </div>
+          </div>
+          <div class="path-step">
+            <div class="path-step-line"><div class="path-step-num">2</div><div class="path-step-connector"></div></div>
+            <div class="path-step-body">
+              <h4>Run the 30-minute self-assessment</h4>
+              <p>Get a structured baseline from the Starter Pack</p>
+            </div>
+          </div>
+          <div class="path-step">
+            <div class="path-step-line"><div class="path-step-num">3</div><div class="path-step-connector"></div></div>
+            <div class="path-step-body">
+              <h4>Check the FAQ and glossary</h4>
+              <p>Clarify terms and common questions</p>
+            </div>
+          </div>
+          <div class="path-step">
+            <div class="path-step-line"><div class="path-step-num">4</div></div>
+            <div class="path-step-body">
+              <h4>Use the decision tree</h4>
+              <p>For your first specific AI tool review</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-buttons" style="margin-top: var(--s-4);">
+          <a href="quiz.html" class="btn btn-sm btn-gold">Start Self-Check</a>
+          <a href="packs.html" class="btn btn-sm btn-outline">Starter Pack</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🛍️</div>
+        <h3>Evaluating a New AI SaaS Tool</h3>
+        <div class="path-steps" style="margin-top: var(--s-4);">
+          <div class="path-step">
+            <div class="path-step-line"><div class="path-step-num">1</div><div class="path-step-connector"></div></div>
+            <div class="path-step-body">
+              <h4>Review the Vendor Assessment Pack</h4>
+              <p>Understand the full review process</p>
+            </div>
+          </div>
+          <div class="path-step">
+            <div class="path-step-line"><div class="path-step-num">2</div><div class="path-step-connector"></div></div>
+            <div class="path-step-body">
+              <h4>Check vendor review examples</h4>
+              <p>See how others have approached similar tools</p>
+            </div>
+          </div>
+          <div class="path-step">
+            <div class="path-step-line"><div class="path-step-num">3</div><div class="path-step-connector"></div></div>
+            <div class="path-step-body">
+              <h4>Complete the due diligence questionnaire</h4>
+              <p>With the vendor or from public documentation</p>
+            </div>
+          </div>
+          <div class="path-step">
+            <div class="path-step-line"><div class="path-step-num">4</div></div>
+            <div class="path-step-body">
+              <h4>Document with a decision record</h4>
+              <p>Capture the outcome and any conditions</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-buttons" style="margin-top: var(--s-4);">
+          <a href="packs.html" class="btn btn-sm btn-primary">Vendor Pack</a>
+          <a href="use-cases.html" class="btn btn-sm btn-outline">Vendor Examples</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo-footer">🇪🇺 EU AI Act Toolkit</span>
+        <p>Practical AI governance readiness for SMEs. Educational use only.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="packs.html">Toolkit Packs</a></li>
+          <li><a href="resources.html">FAQ</a></li>
+          <li><a href="../docs/19-sme-decision-tree.md">Decision Tree</a></li>
+          <li><a href="../docs/18-glossary.md">Glossary</a></li>
+          <li><a href="../docs/16-what-to-escalate-for-legal-review.md">Escalation</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Toolkit</h4>
+        <ul>
+          <li><a href="packs.html">Packs</a></li>
           <li><a href="use-cases.html">Use Cases</a></li>
-          <li><a href="resources.html" class="active">Resources</a></li>
+          <li><a href="quiz.html">Self-Check</a></li>
+          <li><a href="official-sources.html">EU Sources</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Project</h4>
+        <ul>
           <li><a href="maintainer.html">Maintainer</a></li>
           <li><a href="community.html">Community</a></li>
+          <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <h1>Resources</h1>
-      <p class="hero-subtitle">Essential guidance, tools, and documentation to support your readiness journey.</p>
-    </section>
-
-    <!-- Guidance & Tools -->
-    <section>
-      <div class="section-header">
-        <h2>Guidance & Interactive Tools</h2>
-      </div>
-      <div class="cards-grid">
-        <div class="card">
-          <h3>❓ Frequently Asked Questions</h3>
-          <p>Common questions about the toolkit, readiness, compliance, and how to escalate concerns.</p>
-          <div class="card-buttons">
-            <a href="../docs/23-faq.md" class="btn btn-sm btn-primary">Read FAQ</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>🌳 Decision Tree</h3>
-          <p>A guided flowchart to help you decide when an AI tool needs escalation or specialist review.</p>
-          <div class="card-buttons">
-            <a href="../docs/19-sme-decision-tree.md" class="btn btn-sm btn-primary">Explore Tree</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>🗺️ Implementation Playbook</h3>
-          <p>A step-by-step playbook for implementing AI governance in your organization.</p>
-          <div class="card-buttons">
-            <a href="../docs/20-sme-implementation-playbook.md" class="btn btn-sm btn-primary">View Playbook</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>⚖️ Escalation Guide</h3>
-          <p>When and how to involve legal, privacy, security, or technical specialists.</p>
-          <div class="card-buttons">
-            <a href="../docs/16-what-to-escalate-for-legal-review.md" class="btn btn-sm btn-primary">Read Guide</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reference & Documentation -->
-    <section>
-      <div class="section-header">
-        <h2>Reference & Documentation</h2>
-      </div>
-      <div class="cards-grid">
-        <div class="card">
-          <h3>📚 Glossary</h3>
-          <p>SME-friendly definitions of AI governance and compliance terms.</p>
-          <div class="card-buttons">
-            <a href="../docs/18-glossary.md" class="btn btn-sm btn-primary">View Glossary</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>📖 Source Notes</h3>
-          <p>Detailed references to EU regulations, standards, and authoritative sources.</p>
-          <div class="card-buttons">
-            <a href="../docs/10-source-notes.md" class="btn btn-sm btn-primary">View Sources</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>📋 Evidence Pack Index</h3>
-          <p>A CSV index of what documentation to retain for compliance review.</p>
-          <div class="card-buttons">
-            <a href="../docs/13-evidence-pack-index.md" class="btn btn-sm btn-primary">View Index</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>🔄 Versioning & Maintenance</h3>
-          <p>How the toolkit is maintained and updated, and how to report issues.</p>
-          <div class="card-buttons">
-            <a href="../docs/15-versioning-and-maintenance-policy.md" class="btn btn-sm btn-primary">Read Policy</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Governance & Project -->
-    <section>
-      <div class="section-header">
-        <h2>Governance & Project Information</h2>
-      </div>
-      <div class="cards-grid">
-        <div class="card">
-          <h3>🏛️ Governance</h3>
-          <p>How the EU AI Act Toolkit project is governed and decisions are made.</p>
-          <div class="card-buttons">
-            <a href="../docs/project/governance.md" class="btn btn-sm btn-primary">Read Governance</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>👥 Maintainers</h3>
-          <p>Meet the people maintaining this toolkit and their backgrounds.</p>
-          <div class="card-buttons">
-            <a href="../docs/project/maintainers.md" class="btn btn-sm btn-primary">View Team</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>🗺️ Roadmap</h3>
-          <p>Planned future improvements and new toolkit packs.</p>
-          <div class="card-buttons">
-            <a href="../docs/project/roadmap.md" class="btn btn-sm btn-primary">View Roadmap</a>
-          </div>
-        </div>
-        <div class="card">
-          <h3>📚 Downloadable Pack</h3>
-          <p>Instructions for downloading a complete offline copy of the toolkit.</p>
-          <div class="card-buttons">
-            <a href="../docs/17-downloadable-toolkit-pack.md" class="btn btn-sm btn-primary">Learn How</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Learning Paths -->
-    <section>
-      <div class="section-header">
-        <h2>Learning Paths</h2>
-      </div>
-      <div style="max-width: 800px; margin: 0 auto;">
-        <h3>If you're new to AI governance...</h3>
-        <ol style="line-height: 1.8; color: var(--text-muted);">
-          <li>Read the <strong><a href="index.html">home page intro</a></strong> (5 min)</li>
-          <li>Run the <strong><a href="../toolkit/starter-pack/printable/30-minute-readiness-self-assessment.md">30-minute readiness self-assessment</a></strong> (30 min)</li>
-          <li>Check the <strong><a href="../docs/23-faq.md">FAQ</a></strong> (10 min)</li>
-          <li>Review the <strong><a href="../docs/18-glossary.md">glossary</a></strong> for unfamiliar terms (20 min)</li>
-          <li>Use the <strong><a href="../docs/19-sme-decision-tree.md">decision tree</a></strong> for your first tool review (15 min)</li>
-        </ol>
-      </div>
-      <div style="max-width: 800px; margin: var(--spacing-2xl) auto;">
-        <h3>If you need to buy or renew an AI SaaS tool...</h3>
-        <ol style="line-height: 1.8; color: var(--text-muted);">
-          <li>Review the <strong><a href="packs.html">Vendor Assessment Pack</a></strong> overview (10 min)</li>
-          <li>Check <strong><a href="use-cases.html">vendor examples</a></strong> to see how others approached it (15 min)</li>
-          <li>Fill out the <strong><a href="../toolkit/vendor-pack/templates/vendor-ai-due-diligence-questionnaire.md">vendor questionnaire</a></strong> (varies)</li>
-          <li>Use the <strong><a href="../toolkit/vendor-pack/templates/vendor-comparison-matrix.csv">comparison matrix</a></strong> if evaluating multiple vendors (varies)</li>
-          <li>Document your decision with a <strong><a href="../toolkit/vendor-pack/templates/vendor-decision-record.md">decision record</a></strong> (10 min)</li>
-        </ol>
-      </div>
-    </section>
-
-    <hr>
-
-    <!-- CTA -->
-    <section style="text-align: center; padding: var(--spacing-2xl) 0;">
-      <h2>Where to Start?</h2>
-      <p>Choose based on your immediate need.</p>
-      <div class="hero-buttons">
-        <a href="index.html" class="btn btn-primary">Back to Home</a>
-        <a href="packs.html" class="btn btn-secondary">Explore Packs</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Resources</h3>
-          <ul>
-            <li><a href="resources.html">Guidance & Tools</a></li>
-            <li><a href="resources.html">Reference</a></li>
-            <li><a href="resources.html">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Documentation</h3>
-          <ul>
-            <li><a href="../docs/10-source-notes.md">Source Notes</a></li>
-            <li><a href="../docs/18-glossary.md">Glossary</a></li>
-            <li><a href="../docs/15-versioning-and-maintenance-policy.md">Maintenance</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Toolkit</h3>
-          <ul>
-            <li><a href="packs.html">Packs</a></li>
-            <li><a href="use-cases.html">Use Cases</a></li>
-            <li><a href="resources.html">Resources</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Community</h3>
-          <ul>
-            <li><a href="community.html">Contributing</a></li>
-            <li><a href="maintainer.html">Maintainer</a></li>
-            <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p><strong>EU AI Act Toolkit</strong> — Practical resources for readiness and documentation.</p>
-        <p>© 2026. <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">View on GitHub</a></p>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p><strong>EU AI Act Toolkit</strong> — Educational and informational. Not legal advice.</p>
+      <p>© 2026. <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">View on GitHub</a></p>
+    </div>
+  </div>
+</footer>
 
-  <script>
-    document.querySelectorAll('nav a').forEach(link => {
-      link.classList.remove('active');
-      if (window.location.pathname.endsWith(link.getAttribute('href')) || window.location.pathname.endsWith('resources.html')) {
-        link.classList.add('active');
-      }
-    });
-  </script>
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 20);
+  });
+</script>
 </body>
 </html>
