@@ -119,6 +119,8 @@ required_files=(
   "toolkit/vendor-pack/templates/vendor-decision-record.md"
   "toolkit/vendor-pack/templates/vendor-document-request-list.md"
   "toolkit/vendor-pack/templates/vendor-contract-review-notes.md"
+  "toolkit/vendor-pack/templates/vendor-scoring-worksheet.md"
+  "toolkit/vendor-pack/templates/vendor-scoring-worksheet.csv"
   "toolkit/vendor-pack/checklists/vendor-red-flags-checklist.md"
   "toolkit/vendor-pack/checklists/vendor-procurement-workflow.md"
   "toolkit/vendor-pack/checklists/vendor-meeting-checklist.md"

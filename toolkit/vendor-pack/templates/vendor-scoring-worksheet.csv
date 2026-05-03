@@ -1,0 +1,3 @@
+Vendor,Product,Use case,Documentation quality,Data use clarity,Training clarity,Human oversight support,Audit logs,Security documentation,DPA/subprocessor,EU AI Act readiness,Open questions,Risk level,Score,Decision,Notes
+Example Inc,ChatBot Plus,Customer support,4,3,4,3,4,4,4,3,Few,Medium,3.4,Further review,"Strong documentation, minor data questions"
+,,,,,,,,,,,,,
