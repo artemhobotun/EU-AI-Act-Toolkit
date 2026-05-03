@@ -23,9 +23,13 @@ jobs:
         with:
           node-version: "22"
           cache: npm
+          cache-dependency-path: dev/typescript-toolchain/package-lock.json
       - run: npm ci
+        working-directory: dev/typescript-toolchain
       - run: npm run typecheck
+        working-directory: dev/typescript-toolchain
       - run: npm test
+        working-directory: dev/typescript-toolchain
 
   data-registries:
     runs-on: ubuntu-latest

@@ -57,9 +57,11 @@ This repository is practical, SME-friendly, source-aware, and not legal advice. 
 GitHub Actions also runs **Node.js** checks (`npm ci`, `npm run typecheck`, `npm test`) for the TypeScript quiz engine, and **Python** validation of `data/*.yml` against JSON Schema. To mirror that locally:
 
 ```bash
+cd dev/typescript-toolchain
 npm ci
 npm run typecheck
 npm test
+cd ../..
 python3 -m pip install -r tools/requirements-ci.txt
 python3 tools/validate_data_registries.py
 ```

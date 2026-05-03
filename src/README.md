@@ -34,9 +34,10 @@ This TypeScript engine can support:
 
 ## Local checks (Node.js)
 
-From the repository root (after [installing Node.js](https://nodejs.org/)):
+After [installing Node.js](https://nodejs.org/), from [`dev/typescript-toolchain/`](../dev/typescript-toolchain/):
 
 ```bash
+cd dev/typescript-toolchain
 npm ci
 npm run typecheck
 npm test
