@@ -11,15 +11,15 @@
 <body>
   <header>
     <div class="header-container">
-      <a href="/" class="logo">🇪🇺 EU AI Act Toolkit</a>
+      <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
       <nav>
         <ul>
-          <li><a href="/" class="active">Home</a></li>
-          <li><a href="/packs.html">Toolkit Packs</a></li>
-          <li><a href="/use-cases.html">Use Cases</a></li>
-          <li><a href="/resources.html">Resources</a></li>
-          <li><a href="/maintainer.html">Maintainer</a></li>
-          <li><a href="/community.html">Community</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="packs.html">Toolkit Packs</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="maintainer.html">Maintainer</a></li>
+          <li><a href="community.html">Community</a></li>
         </ul>
       </nav>
     </div>
@@ -31,8 +31,8 @@
       <h1>EU AI Act Toolkit</h1>
       <p class="hero-subtitle">Practical templates, checklists, and documentation tools for SMEs working toward EU AI Act readiness.</p>
       <div class="hero-buttons">
-        <a href="/packs.html" class="btn btn-primary">Explore Toolkit Packs</a>
-        <a href="/resources.html" class="btn btn-secondary">Browse Resources</a>
+        <a href="packs.html" class="btn btn-primary">Explore Toolkit Packs</a>
+        <a href="resources.html" class="btn btn-secondary">Browse Resources</a>
       </div>
     </section>
 
@@ -72,7 +72,7 @@
           <h3>Vendor Review</h3>
           <p>Ask better questions before buying, renewing, or expanding an AI-enabled SaaS tool.</p>
           <div class="card-buttons">
-            <a href="/packs.html" class="btn btn-sm btn-primary">Vendor Assessment</a>
+            <a href="packs.html" class="btn btn-sm btn-primary">Vendor Assessment</a>
           </div>
         </div>
       </div>
@@ -96,21 +96,21 @@
           <h3>Buying or renewing AI SaaS?</h3>
           <p>Use the Vendor Assessment Pack to evaluate AI tools and document procurement decisions.</p>
           <div class="card-buttons">
-            <a href="/packs.html" class="btn btn-sm btn-primary">Vendor Pack</a>
+            <a href="packs.html" class="btn btn-sm btn-primary">Vendor Pack</a>
           </div>
         </div>
         <div class="card">
           <h3>Specific industry or use case?</h3>
           <p>Explore sector-specific packs and examples tailored to your business context.</p>
           <div class="card-buttons">
-            <a href="/use-cases.html" class="btn btn-sm btn-primary">See Examples</a>
+            <a href="use-cases.html" class="btn btn-sm btn-primary">See Examples</a>
           </div>
         </div>
         <div class="card">
           <h3>Need templates and checklists?</h3>
           <p>Browse ready-to-use templates for inventory, risk screening, policy, and vendor review.</p>
           <div class="card-buttons">
-            <a href="/packs.html" class="btn btn-sm btn-primary">Templates</a>
+            <a href="packs.html" class="btn btn-sm btn-primary">Templates</a>
           </div>
         </div>
       </div>
@@ -201,8 +201,8 @@
       <h2>Ready to Start?</h2>
       <p>Choose your first step: explore toolkit packs, review use cases, or check the FAQ.</p>
       <div class="hero-buttons">
-        <a href="/packs.html" class="btn btn-primary">Explore Packs</a>
-        <a href="/use-cases.html" class="btn btn-secondary">View Examples</a>
+        <a href="packs.html" class="btn btn-primary">Explore Packs</a>
+        <a href="use-cases.html" class="btn btn-secondary">View Examples</a>
       </div>
     </section>
   </main>
@@ -217,16 +217,16 @@
         <div class="footer-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/packs.html">Toolkit Packs</a></li>
-            <li><a href="/use-cases.html">Use Cases</a></li>
-            <li><a href="/resources.html">Resources</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="packs.html">Toolkit Packs</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+            <li><a href="resources.html">Resources</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h3>Community</h3>
           <ul>
-            <li><a href="/community.html">Contributing</a></li>
+            <li><a href="community.html">Contributing</a></li>
             <li><a href="../.github/CONTRIBUTING.md">How to Contribute</a></li>
             <li><a href="../SECURITY.md">Security & Privacy</a></li>
             <li><a href="../LICENSE">License</a></li>
@@ -235,7 +235,7 @@
         <div class="footer-section">
           <h3>Maintainer</h3>
           <ul>
-            <li><a href="/maintainer.html">Artem Nazarko</a></li>
+            <li><a href="maintainer.html">Artem Nazarko</a></li>
             <li><a href="https://github.com/artemhobotun">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/artem-nazarko/">LinkedIn</a></li>
             <li><a href="https://orcid.org/0000-0002-4190-7288">ORCID</a></li>
@@ -255,7 +255,8 @@
     document.querySelectorAll('nav a').forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('href') === window.location.pathname ||
-          (window.location.pathname === '/' && link.getAttribute('href') === '/')) {
+          (window.location.pathname === '/' && link.getAttribute('href') === 'index.html') ||
+          window.location.pathname.endsWith(link.getAttribute('href'))) {
         link.classList.add('active');
       }
     });

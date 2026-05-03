@@ -10,15 +10,15 @@
 <body>
   <header>
     <div class="header-container">
-      <a href="/" class="logo">🇪🇺 EU AI Act Toolkit</a>
+      <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/packs.html">Toolkit Packs</a></li>
-          <li><a href="/use-cases.html" class="active">Use Cases</a></li>
-          <li><a href="/resources.html">Resources</a></li>
-          <li><a href="/maintainer.html">Maintainer</a></li>
-          <li><a href="/community.html">Community</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="packs.html">Toolkit Packs</a></li>
+          <li><a href="use-cases.html" class="active">Use Cases</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="maintainer.html">Maintainer</a></li>
+          <li><a href="community.html">Community</a></li>
         </ul>
       </nav>
     </div>
@@ -146,8 +146,8 @@
       <h2>Ready to Apply the Toolkit?</h2>
       <p>Explore the packs or check resources to understand what you need for your situation.</p>
       <div class="hero-buttons">
-        <a href="/packs.html" class="btn btn-primary">View Packs</a>
-        <a href="/" class="btn btn-secondary">Back to Home</a>
+        <a href="packs.html" class="btn btn-primary">View Packs</a>
+        <a href="index.html" class="btn btn-secondary">Back to Home</a>
       </div>
     </section>
   </main>
@@ -158,32 +158,32 @@
         <div class="footer-section">
           <h3>Use Cases</h3>
           <ul>
-            <li><a href="/use-cases.html">Common Scenarios</a></li>
-            <li><a href="/use-cases.html">Vendor Examples</a></li>
-            <li><a href="/use-cases.html">Evidence Pack</a></li>
+            <li><a href="use-cases.html">Common Scenarios</a></li>
+            <li><a href="use-cases.html">Vendor Examples</a></li>
+            <li><a href="use-cases.html">Evidence Pack</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h3>Resources</h3>
           <ul>
-            <li><a href="/resources.html">FAQ</a></li>
-            <li><a href="/resources.html">Decision Tree</a></li>
-            <li><a href="/resources.html">Glossary</a></li>
+            <li><a href="resources.html">FAQ</a></li>
+            <li><a href="resources.html">Decision Tree</a></li>
+            <li><a href="resources.html">Glossary</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h3>Toolkit</h3>
           <ul>
-            <li><a href="/packs.html">Packs</a></li>
-            <li><a href="/packs.html">Templates</a></li>
-            <li><a href="/packs.html">Checklists</a></li>
+            <li><a href="packs.html">Packs</a></li>
+            <li><a href="packs.html">Templates</a></li>
+            <li><a href="packs.html">Checklists</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h3>Project</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/maintainer.html">Maintainer</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="maintainer.html">Maintainer</a></li>
             <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
           </ul>
         </div>
@@ -198,7 +198,7 @@
   <script>
     document.querySelectorAll('nav a').forEach(link => {
       link.classList.remove('active');
-      if (link.getAttribute('href') === window.location.pathname || link.getAttribute('href').includes('use-case')) {
+      if (window.location.pathname.endsWith(link.getAttribute('href')) || window.location.pathname.endsWith('use-cases.html')) {
         link.classList.add('active');
       }
     });

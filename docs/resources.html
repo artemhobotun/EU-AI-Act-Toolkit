@@ -10,15 +10,15 @@
 <body>
   <header>
     <div class="header-container">
-      <a href="/" class="logo">🇪🇺 EU AI Act Toolkit</a>
+      <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/packs.html">Toolkit Packs</a></li>
-          <li><a href="/use-cases.html">Use Cases</a></li>
-          <li><a href="/resources.html" class="active">Resources</a></li>
-          <li><a href="/maintainer.html">Maintainer</a></li>
-          <li><a href="/community.html">Community</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="packs.html">Toolkit Packs</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="resources.html" class="active">Resources</a></li>
+          <li><a href="maintainer.html">Maintainer</a></li>
+          <li><a href="community.html">Community</a></li>
         </ul>
       </nav>
     </div>
@@ -150,7 +150,7 @@
       <div style="max-width: 800px; margin: 0 auto;">
         <h3>If you're new to AI governance...</h3>
         <ol style="line-height: 1.8; color: var(--text-muted);">
-          <li>Read the <strong><a href="/">home page intro</a></strong> (5 min)</li>
+          <li>Read the <strong><a href="index.html">home page intro</a></strong> (5 min)</li>
           <li>Run the <strong><a href="../toolkit/starter-pack/printable/30-minute-readiness-self-assessment.md">30-minute readiness self-assessment</a></strong> (30 min)</li>
           <li>Check the <strong><a href="../docs/23-faq.md">FAQ</a></strong> (10 min)</li>
           <li>Review the <strong><a href="../docs/18-glossary.md">glossary</a></strong> for unfamiliar terms (20 min)</li>
@@ -160,8 +160,8 @@
       <div style="max-width: 800px; margin: var(--spacing-2xl) auto;">
         <h3>If you need to buy or renew an AI SaaS tool...</h3>
         <ol style="line-height: 1.8; color: var(--text-muted);">
-          <li>Review the <strong><a href="/packs.html">Vendor Assessment Pack</a></strong> overview (10 min)</li>
-          <li>Check <strong><a href="/use-cases.html">vendor examples</a></strong> to see how others approached it (15 min)</li>
+          <li>Review the <strong><a href="packs.html">Vendor Assessment Pack</a></strong> overview (10 min)</li>
+          <li>Check <strong><a href="use-cases.html">vendor examples</a></strong> to see how others approached it (15 min)</li>
           <li>Fill out the <strong><a href="../toolkit/vendor-pack/templates/vendor-ai-due-diligence-questionnaire.md">vendor questionnaire</a></strong> (varies)</li>
           <li>Use the <strong><a href="../toolkit/vendor-pack/templates/vendor-comparison-matrix.csv">comparison matrix</a></strong> if evaluating multiple vendors (varies)</li>
           <li>Document your decision with a <strong><a href="../toolkit/vendor-pack/templates/vendor-decision-record.md">decision record</a></strong> (10 min)</li>
@@ -176,8 +176,8 @@
       <h2>Where to Start?</h2>
       <p>Choose based on your immediate need.</p>
       <div class="hero-buttons">
-        <a href="/" class="btn btn-primary">Back to Home</a>
-        <a href="/packs.html" class="btn btn-secondary">Explore Packs</a>
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+        <a href="packs.html" class="btn btn-secondary">Explore Packs</a>
       </div>
     </section>
   </main>
@@ -188,9 +188,9 @@
         <div class="footer-section">
           <h3>Resources</h3>
           <ul>
-            <li><a href="/resources.html">Guidance & Tools</a></li>
-            <li><a href="/resources.html">Reference</a></li>
-            <li><a href="/resources.html">FAQ</a></li>
+            <li><a href="resources.html">Guidance & Tools</a></li>
+            <li><a href="resources.html">Reference</a></li>
+            <li><a href="resources.html">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-section">
@@ -204,16 +204,16 @@
         <div class="footer-section">
           <h3>Toolkit</h3>
           <ul>
-            <li><a href="/packs.html">Packs</a></li>
-            <li><a href="/use-cases.html">Use Cases</a></li>
-            <li><a href="/resources.html">Resources</a></li>
+            <li><a href="packs.html">Packs</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+            <li><a href="resources.html">Resources</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h3>Community</h3>
           <ul>
-            <li><a href="/community.html">Contributing</a></li>
-            <li><a href="/maintainer.html">Maintainer</a></li>
+            <li><a href="community.html">Contributing</a></li>
+            <li><a href="maintainer.html">Maintainer</a></li>
             <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
           </ul>
         </div>
@@ -228,7 +228,7 @@
   <script>
     document.querySelectorAll('nav a').forEach(link => {
       link.classList.remove('active');
-      if (link.getAttribute('href') === window.location.pathname || link.getAttribute('href').includes('resource')) {
+      if (window.location.pathname.endsWith(link.getAttribute('href')) || window.location.pathname.endsWith('resources.html')) {
         link.classList.add('active');
       }
     });
