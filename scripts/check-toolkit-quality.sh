@@ -160,6 +160,7 @@ required_files=(
   "toolkit/templates/ai-risk-screening-form.md"
   "toolkit/templates/vendor-ai-questionnaire.md"
   "toolkit/checklists/sme-ai-act-readiness-checklist.md"
+  "toolkit/checklists/ai-tool-owner-checklist.md"
   "toolkit/examples/sample-evidence-pack/README.md"
   "toolkit/templates/README.md"
   "toolkit/checklists/README.md"
