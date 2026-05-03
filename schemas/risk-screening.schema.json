@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/schemas/risk-screening.schema.json",
+  "title": "Risk Screening Result",
+  "description": "Schema for documenting an AI system readiness and risk screening result",
+  "type": "object",
+  "properties": {
+    "screening_id": {
+      "type": "string",
+      "description": "Unique identifier for this screening (e.g., SCREEN-001)"
+    },
+    "ai_system_id": {
+      "type": "string",
+      "description": "Reference to the AI system being screened"
+    },
+    "ai_system_name": {
+      "type": "string",
+      "description": "Name of the AI system for context"
+    },
+    "screening_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the screening was conducted"
+    },
+    "reviewer_name": {
+      "type": "string",
+      "description": "Person conducting the screening"
+    },
+    "reviewer_email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email of the reviewer"
+    },
+    "data_risk": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high"
+      ],
+      "description": "Assessment of data handling risks"
+    },
+    "data_risk_notes": {
+      "type": "string",
+      "description": "Explanation of data risk assessment"
+    },
+    "oversight_risk": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high"
+      ],
+      "description": "Assessment of human oversight gaps"
+    },
+    "oversight_risk_notes": {
+      "type": "string",
+      "description": "Explanation of oversight risk assessment"
+    },
+    "vendor_clarity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "moderate",
+        "high"
+      ],
+      "description": "How clear is the vendor's AI documentation and practices"
+    },
+    "vendor_clarity_notes": {
+      "type": "string",
+      "description": "Explanation of vendor clarity assessment"
+    },
+    "bias_concern": {
+      "type": "boolean",
+      "description": "Whether bias or fairness concerns are present"
+    },
+    "bias_concern_details": {
+      "type": "string",
+      "description": "Details of any bias concerns"
+    },
+    "escalation_recommended": {
+      "type": "boolean",
+      "description": "Whether escalation to specialist is recommended"
+    },
+    "escalation_reason": {
+      "type": "string",
+      "description": "Why escalation is needed"
+    },
+    "escalation_to": {
+      "type": "string",
+      "enum": [
+        "legal",
+        "privacy",
+        "security",
+        "technical",
+        "other"
+      ],
+      "description": "What type of specialist should review"
+    },
+    "recommended_next_steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Actions to take based on this screening"
+    },
+    "overall_readiness": {
+      "type": "string",
+      "enum": [
+        "ready",
+        "needs_remediation",
+        "escalate",
+        "do_not_use"
+      ],
+      "description": "Overall readiness determination"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional observations or context"
+    }
+  },
+  "required": [
+    "ai_system_id",
+    "screening_date",
+    "reviewer_name",
+    "overall_readiness"
+  ],
+  "additionalProperties": false
+}
