@@ -94,23 +94,23 @@ Selected public credentials and professional badges are available through Credly
 
 The public mini-site gives a guided version of the toolkit with visual navigation, readiness self-checks, toolkit packs, official sources, and maintainer information.
 
-<p align="center">
-  <a href="https://artemhobotun.github.io/EU-AI-Act-Toolkit/">
-    <strong>🚀 Open the EU AI Act Toolkit mini-site →</strong>
-  </a>
-</p>
-
 <details>
 <summary><strong>🧭 What is inside the mini-site?</strong></summary>
 
-- **Home** — overview, quick navigation, and main entry points
+- **Home** — overview, quick navigation, and key entry points
 - **Toolkit Packs** — starter pack, vendor pack, sector packs, templates, and checklists
 - **Use Cases** — realistic AI governance and compliance-readiness scenarios
 - **Resources** — FAQ, decision tree, glossary, guides, and official source links
-- **Maintainer** — Artem Nazarko, credentials, and project philosophy
-- **Community** — contributing, governance, code of conduct, security, and support
+- **Maintainer** — Artem Nazarko, background, credentials, and project philosophy
+- **Community** — contribution, governance, code of conduct, security, and support
 
 </details>
+
+<p align="center">
+  <a href="https://artemhobotun.github.io/EU-AI-Act-Toolkit/">
+    <strong><span style="font-size: 1.2em;">🚀 Open the EU AI Act Toolkit mini-site →</span></strong>
+  </a>
+</p>
 
 ## 🚀 Start here
 
@@ -146,16 +146,6 @@ The practical working materials live in `toolkit/` so the repository root stays 
 ## 📊 Structured technical layer
 
 The toolkit includes optional structured data and automation helpers for teams that want to reuse the materials programmatically.
-
-Included technical components:
-
-- 🧠 TypeScript quiz engine — readiness scoring logic
-- 🗄 SQLite schema — optional evidence-pack database structure
-- 🧩 YAML registries — machine-readable toolkit, source, and use-case inventories
-- ✅ JSON Schemas — validation helpers for key toolkit data
-- 🐳 Container package — static site preview via GHCR/nginx
-
-🔎 Expand the sections below to explore more detailed resources, examples, and supporting documentation.
 
 <details>
 <summary><strong>🧠 TypeScript quiz engine</strong></summary>
@@ -219,6 +209,10 @@ http://localhost:8080
 The image serves the static GitHub Pages site through nginx. See [docs/packages.md](docs/packages.md) for details.
 
 </details>
+
+## 🗂 Explore toolkit content
+
+Expand the sections below to browse the main parts of the toolkit and supporting documentation.
 
 <details>
 <summary><strong>🗺️ Full toolkit map</strong></summary>
@@ -421,8 +415,6 @@ scripts/
 ```
 
 </details>
-
-Community: [Code of Conduct](.github/CODE_OF_CONDUCT.md) · [Contributing](.github/CONTRIBUTING.md) · [Security](SECURITY.md) · [Support](.github/SUPPORT.md) · [Governance](docs/project/governance.md) · [Maintainers](docs/project/maintainers.md) · [License Notes](docs/project/license-notes.md)
 
 ## ⚠️ Disclaimer
 
