@@ -6,6 +6,17 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+### v1.4.0 — Site Interactivity and Quality Tooling
+
+- Added GitHub Linguist configuration (.gitattributes) to properly count HTML, CSS, and JavaScript as project source code.
+- Added lightweight JavaScript (docs/assets/site.js) for Pages interactivity: quiz scoring, result recommendations, scroll animations, active nav state, and copy-link buttons.
+- Integrated site.js across all eight GitHub Pages HTML files (index, packs, use-cases, resources, quiz, official-sources, maintainer, community).
+- Added Python tool (tools/validate_site_links.py) to validate local file references in static site HTML.
+- Added Python tool (tools/build_toolkit_manifest.py) to generate toolkit metadata manifest (docs/assets/toolkit-manifest.json).
+- Updated quality check script (scripts/check-toolkit-quality.sh) to call Python validation tools and verify new files.
+- Marked generated assets (dist/**, toolkit-manifest.json) as linguist-generated in .gitattributes.
+- All JavaScript and Python tooling is purely defensive, non-breaking, and produces meaningful project contributions.
+
 ### v1.3.0 — Site Container Package
 
 - Added a GitHub Packages container workflow for the static Pages site.
