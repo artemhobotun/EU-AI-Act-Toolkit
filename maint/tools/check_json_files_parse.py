@@ -10,15 +10,15 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
 RELATIVE_JSON_FILES = (
-    "registry/schemas/ai-system-inventory.schema.json",
-    "registry/schemas/risk-screening.schema.json",
-    "registry/schemas/vendor-review.schema.json",
-    "registry/schemas/toolkit-registry.document.schema.json",
-    "registry/schemas/official-sources.document.schema.json",
-    "registry/schemas/use-cases.document.schema.json",
-    "registry/schemas/samples/ai-system-inventory.sample.json",
-    "registry/schemas/samples/risk-screening.sample.json",
-    "registry/schemas/samples/vendor-review.sample.json",
+    "maint/schemas/ai-system-inventory.schema.json",
+    "maint/schemas/risk-screening.schema.json",
+    "maint/schemas/vendor-review.schema.json",
+    "maint/schemas/toolkit-registry.document.schema.json",
+    "maint/schemas/official-sources.document.schema.json",
+    "maint/schemas/use-cases.document.schema.json",
+    "maint/schemas/samples/ai-system-inventory.sample.json",
+    "maint/schemas/samples/risk-screening.sample.json",
+    "maint/schemas/samples/vendor-review.sample.json",
 )
 
 

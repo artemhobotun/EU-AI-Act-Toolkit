@@ -9,6 +9,6 @@ export default defineConfig({
   root: repoRoot,
   test: {
     environment: 'node',
-    include: ['src/**/*.test.ts'],
+    include: ['maint/src/**/*.test.ts'],
   },
 });

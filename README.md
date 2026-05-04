@@ -152,9 +152,9 @@ The toolkit includes optional structured data and automation helpers for teams t
 
 The quiz engine provides fully typed readiness assessment scoring logic for AI governance assessments.
 
-**Location:** [src/](src/)
+**Location:** [maint/src/](maint/src/)
 
-Supports programmatic scoring, validation, and tool integration. See [src/README.md](src/README.md) for implementation details.
+Supports programmatic scoring, validation, and tool integration. See [maint/src/README.md](maint/src/README.md) for implementation details.
 
 </details>
 
@@ -174,9 +174,9 @@ Use this schema if you want to manage toolkit data in a structured database. Sup
 
 Machine-readable toolkit resource inventory, official EU sources, and use-case scenarios.
 
-**Location:** [registry/data/](registry/data/)
+**Location:** [maint/data/](maint/data/)
 
-Includes toolkit registry, official EU AI Act sources, and compliance readiness use cases. Useful for automation, site generation, and tool integration. See [registry/data/README.md](registry/data/README.md) for details.
+Includes toolkit registry, official EU AI Act sources, and compliance readiness use cases. Useful for automation, site generation, and tool integration. See [maint/data/README.md](maint/data/README.md) for details.
 
 </details>
 
@@ -185,9 +185,9 @@ Includes toolkit registry, official EU AI Act sources, and compliance readiness 
 
 Validation schemas for AI system inventory, risk screening, and vendor assessment data.
 
-**Location:** [registry/schemas/](registry/schemas/)
+**Location:** [maint/schemas/](maint/schemas/)
 
-Use these schemas to validate structured data, integrate with third-party tools, or build custom automation. See [registry/schemas/README.md](registry/schemas/README.md) for schema details and examples.
+Use these schemas to validate structured data, integrate with third-party tools, or build custom automation. See [maint/schemas/README.md](maint/schemas/README.md) for schema details and examples.
 
 </details>
 
@@ -404,9 +404,7 @@ LICENSE
 CITATION.cff
 .github/          contributing, workflows, Node toolchain
 docs/             Pages site, disclaimer, project notes (includes database SQL)
-maint/            dev config, docker image, Python tools, shell scripts
-registry/         YAML registries (data/) and JSON Schemas (schemas/)
-src/
+maint/            quiz TypeScript, dev config, docker, YAML data + JSON Schemas, Python tools, shell scripts
 toolkit/
 ```
 

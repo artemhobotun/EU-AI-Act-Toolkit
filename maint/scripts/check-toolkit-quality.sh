@@ -325,16 +325,16 @@ fi
 
 # Structured data layer validation (added in v1.5.0)
 # TypeScript quiz engine
-if grep -q "export enum ReadinessLevel" "$ROOT_DIR/src/quiz-engine.ts"; then
-  pass "TypeScript export types found in src/quiz-engine.ts"
+if grep -q "export enum ReadinessLevel" "$ROOT_DIR/maint/src/quiz-engine.ts"; then
+  pass "TypeScript export types found in maint/src/quiz-engine.ts"
 else
-  fail "TypeScript export types missing in src/quiz-engine.ts"
+  fail "TypeScript export types missing in maint/src/quiz-engine.ts"
 fi
 
-if grep -q "calculateReadinessScore" "$ROOT_DIR/src/quiz-engine.ts"; then
-  pass "Quiz scoring function found in src/quiz-engine.ts"
+if grep -q "calculateReadinessScore" "$ROOT_DIR/maint/src/quiz-engine.ts"; then
+  pass "Quiz scoring function found in maint/src/quiz-engine.ts"
 else
-  fail "Quiz scoring function missing in src/quiz-engine.ts"
+  fail "Quiz scoring function missing in maint/src/quiz-engine.ts"
 fi
 
 # SQL evidence schema
@@ -345,19 +345,19 @@ else
 fi
 
 # YAML registries validation (check for expected keys without requiring PyYAML)
-if grep -q "^  - id:" "$ROOT_DIR/registry/data/toolkit-registry.yml"; then
+if grep -q "^  - id:" "$ROOT_DIR/maint/data/toolkit-registry.yml"; then
   pass "toolkit-registry.yml has expected structure (id: entries)"
 else
   fail "toolkit-registry.yml missing expected structure"
 fi
 
-if grep -q "^  - id:" "$ROOT_DIR/registry/data/official-sources.yml"; then
+if grep -q "^  - id:" "$ROOT_DIR/maint/data/official-sources.yml"; then
   pass "official-sources.yml has expected structure (id: entries)"
 else
   fail "official-sources.yml missing expected structure"
 fi
 
-if grep -q "^  - id:" "$ROOT_DIR/registry/data/use-cases.yml"; then
+if grep -q "^  - id:" "$ROOT_DIR/maint/data/use-cases.yml"; then
   pass "use-cases.yml has expected structure (id: entries)"
 else
   fail "use-cases.yml missing expected structure"

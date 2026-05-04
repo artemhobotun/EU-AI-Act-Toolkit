@@ -57,7 +57,7 @@ When GitHub labels are enabled on this repository, look for **`good first issue`
 5. Open a pull request.
 6. Respond to review.
 
-GitHub Actions also runs **Node.js** checks (`npm ci`, `npm run typecheck`, `npm test`) for the TypeScript quiz engine, **ShellCheck** on the quality/link/packaging shell scripts, **html-validate** on `docs/*.html` (see `maint/dev/htmlvalidate.json`), **Lighthouse CI** on pushes to `main` that touch the site (`.github/workflows/lighthouse.yml`), and **Python** validation of `registry/data/*.yml` against JSON Schema. To mirror that locally:
+GitHub Actions also runs **Node.js** checks (`npm ci`, `npm run typecheck`, `npm test`) for the TypeScript quiz engine, **ShellCheck** on the quality/link/packaging shell scripts, **html-validate** on `docs/*.html` (see `maint/dev/htmlvalidate.json`), **Lighthouse CI** on pushes to `main` that touch the site (`.github/workflows/lighthouse.yml`), and **Python** validation of `maint/data/*.yml` against JSON Schema. To mirror that locally:
 
 ```bash
 npx --yes html-validate@10.15.0 --config maint/dev/htmlvalidate.json "docs/*.html"
@@ -80,7 +80,7 @@ If `PyYAML` and `jsonschema` are installed, `./maint/scripts/check-toolkit-quali
 
 - **Main branch:** substantive and tooling changes are expected on **`main`** (no long-lived dependency-update branches; see Dependabot note below).
 - **Dependabot:** `.github/dependabot.yml` sets **`open-pull-requests-limit: 0`**, so Dependabot does **not** open version-update PR branches. Bump **GitHub Actions**, **npm** in `.github/node-toolchain`, and **Docker** under `maint/docker/` with ordinary commits on `main` (for example `npm outdated` in the toolchain directory and a refreshed `package-lock.json`).
-- **Layout:** `docs/` (GitHub Pages), `toolkit/` (templates and packs), `src/` (TypeScript quiz engine; Vitest for tests), `maint/` (`dev/` semver + HTML/Lighthouse CI config, `docker/` site image, `tools/` Python validators and manifest, `scripts/` quality checks), `registry/` (YAML registries + JSON Schemas), `.github/node-toolchain/` (Node CI).
+- **Layout:** `docs/` (GitHub Pages), `toolkit/` (templates and packs), `maint/` (TypeScript quiz under `src/`, `dev/` semver + HTML/Lighthouse CI config, `docker/` site image, `data/` + `schemas/` registries, `tools/` Python validators and manifest, `scripts/` quality checks), `.github/node-toolchain/` (Node CI).
 - **Alerts:** enable **Dependabot alerts** (and optional security PRs) under the repository **Settings → Code security** if you want GitHub to flag known vulnerable dependencies; that is separate from the version-update limit above.
 - **Forks:** workflows that publish the site image to GHCR use the repository owner for the registry namespace; fork maintainers should adjust image names or disable publishing if they do not use `ghcr.io`.
 

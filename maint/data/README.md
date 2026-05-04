@@ -72,7 +72,7 @@ These YAML files can be:
 5. **Cross-referenced** to validate consistency across toolkit materials
 
 ### For Validation
-Each registry file is checked in CI against a **document-level** JSON Schema in `registry/schemas/` (`*.document.schema.json`). To run the same check locally:
+Each registry file is checked in CI against a **document-level** JSON Schema in `maint/schemas/` (`*.document.schema.json`). To run the same check locally:
 
 ```bash
 python3 -m pip install -r maint/tools/requirements-ci.txt

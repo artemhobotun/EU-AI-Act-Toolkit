@@ -10,6 +10,6 @@
     "isolatedModules": true,
     "types": ["node"]
   },
-  "include": ["../../src/**/*.ts"],
-  "exclude": ["../../src/**/*.test.ts"]
+  "include": ["../../maint/src/**/*.ts"],
+  "exclude": ["../../maint/src/**/*.test.ts"]
 }

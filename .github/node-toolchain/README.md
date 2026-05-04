@@ -1,6 +1,6 @@
 # Node.js toolchain (maintainers)
 
-Type-checking and unit tests for [`../../src/quiz-engine.ts`](../../src/quiz-engine.ts). Not part of the published SME toolkit.
+Type-checking and unit tests for [`../../maint/src/quiz-engine.ts`](../../maint/src/quiz-engine.ts). Not part of the published SME toolkit.
 
 ```bash
 npm ci

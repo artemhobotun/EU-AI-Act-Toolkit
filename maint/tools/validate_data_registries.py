@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate registry/data/*.yml registry files against JSON Schema document schemas."""
+"""Validate maint/data/*.yml registry files against JSON Schema document schemas."""
 
 from __future__ import annotations
 
@@ -27,9 +27,9 @@ def _normalize_for_jsonschema(obj: object) -> object:
     return obj
 
 REGISTRY_PAIRS: tuple[tuple[str, str], ...] = (
-    ("registry/data/toolkit-registry.yml", "registry/schemas/toolkit-registry.document.schema.json"),
-    ("registry/data/official-sources.yml", "registry/schemas/official-sources.document.schema.json"),
-    ("registry/data/use-cases.yml", "registry/schemas/use-cases.document.schema.json"),
+    ("maint/data/toolkit-registry.yml", "maint/schemas/toolkit-registry.document.schema.json"),
+    ("maint/data/official-sources.yml", "maint/schemas/official-sources.document.schema.json"),
+    ("maint/data/use-cases.yml", "maint/schemas/use-cases.document.schema.json"),
 )
 
 
