@@ -197,7 +197,7 @@ Use these schemas to validate structured data, integrate with third-party tools,
 This project publishes a lightweight container image for running the static site locally:
 
 ```bash
-docker run --rm -p 8080:80 ghcr.io/artemhobotun/eu-ai-act-toolkit-site:latest
+docker run --rm -p 8080:8080 ghcr.io/artemhobotun/eu-ai-act-toolkit-site:latest
 ```
 
 Then open:

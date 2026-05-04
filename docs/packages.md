@@ -6,14 +6,14 @@ This repository publishes a lightweight container image for the static EU AI Act
 
 **Name:** `ghcr.io/artemhobotun/eu-ai-act-toolkit-site`
 
-**Contents:** The static GitHub Pages site (`docs/`) served via nginx:alpine.
+**Contents:** The static GitHub Pages site (`docs/`) served via [nginxinc/nginx-unprivileged](https://hub.docker.com/r/nginxinc/nginx-unprivileged) (non-root, port **8080** in the container).
 
 **Published to:** [GitHub Container Registry (GHCR)](https://github.com/artemhobotun/EU-AI-Act-Toolkit/pkgs/container/eu-ai-act-toolkit-site)
 
 ## Run locally
 
 ```bash
-docker run --rm -p 8080:80 ghcr.io/artemhobotun/eu-ai-act-toolkit-site:latest
+docker run --rm -p 8080:8080 ghcr.io/artemhobotun/eu-ai-act-toolkit-site:latest
 ```
 
 Then open: **http://localhost:8080**

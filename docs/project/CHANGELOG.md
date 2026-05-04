@@ -9,6 +9,8 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 ### CI, quality scripts, and repository hygiene
 
 - Pinned third-party GitHub Actions to full commit SHAs (checkout, setup-node, setup-python, docker/login, docker/build-push, trivy-action) for reproducible CI.
+- **Dockerfile:** switched base image to **`nginxinc/nginx-unprivileged`** (non-root, container port **8080**) so Trivy config scan passes **DS-0002**; README and `docs/packages.md` use **`docker run -p 8080:8080`**.
+- **Lighthouse CI:** use **`@lhci/cli@0.15.1`** (0.14.1 is not published on npm).
 - **Publish site container:** Trivy config scan on `./docker` now uses **`exit-code: "1"`** so misconfigurations at CRITICAL/HIGH severity fail the workflow.
 - Added **`html-validate`** job (recommended rules; inline `style` allowed) and **`lighthouserc.js`** + **`lighthouse.yml`** workflow for static runs against `docs/`.
 - Added **`tools/check_json_files_parse.py`** and **`scripts/required-toolkit-files.txt`** so required-file lists and JSON parse checks are easier to maintain.
