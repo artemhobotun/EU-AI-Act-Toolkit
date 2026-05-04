@@ -5,16 +5,18 @@ docs/assets/**/*.css -linguist-documentation
 docs/assets/**/*.js -linguist-documentation
 
 # Structured data layer as project source (not documentation).
-maint/src/**/*.ts -linguist-documentation
-docs/project/database/**/*.sql -linguist-documentation
-maint/data/**/*.yml -linguist-documentation
-maint/schemas/**/*.json -linguist-documentation
+.github/tools/quiz-engine/**/*.ts -linguist-documentation -linguist-vendored
+.github/project/database/**/*.sql -linguist-documentation -linguist-vendored
+.github/tools/data/**/*.yml -linguist-documentation -linguist-vendored
+.github/tools/schemas/**/*.json -linguist-documentation -linguist-vendored
+.github/tools/scripts/**/*.sh -linguist-documentation -linguist-vendored
+.github/tools/tools/**/*.py -linguist-documentation -linguist-vendored
 
 # Treat release/build outputs as generated.
 dist/** linguist-generated
 *.zip linguist-generated
 docs/assets/toolkit-manifest.json linguist-generated
-.github/node-toolchain/package-lock.json linguist-generated
+.github/tools/quiz-engine/package-lock.json linguist-generated
 
 # Keep Markdown toolkit materials as documentation.
 toolkit/**/*.md linguist-documentation
