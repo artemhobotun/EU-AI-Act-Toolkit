@@ -6,6 +6,17 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+### Tooling, site parity, and repository polish
+
+- Renamed README hero image asset to `docs/assets/branding/readme-hero-banner.png` (replacing `test.png`).
+- Added root `VERSION` file; `tools/build_toolkit_manifest.py` now reads the toolkit version from it (ISO-8601 manifest timestamps use UTC).
+- Aligned `docs/assets/site.js` quiz tier boundaries with `src/quiz-engine.ts` (inclusive 33% / 66% thresholds).
+- Added Vitest guard `src/site-quiz-parity.test.ts` to prevent the Pages quiz from drifting from the TypeScript engine.
+- Added minimal JSON samples under `schemas/samples/` and `tools/validate_schema_samples.py` (CI + quality script).
+- Removed duplicate `docs/community.html` entry from the quality script required-file list.
+- Added `.editorconfig` and Dependabot updates for the `docker/` image.
+- Documented issue labels and `good first issue` in `.github/CONTRIBUTING.md`; README community section links to the changelog.
+
 ### README Restructuring — Mini-site, Technical Sections, and Navigation
 
 - Reordered the README mini-site section so the mini-site overview appears before the main CTA.

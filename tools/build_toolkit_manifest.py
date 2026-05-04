@@ -9,7 +9,7 @@ information about the toolkit structure, key pages, resources, and build info.
 import json
 import sys
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 def get_repo_root():
@@ -17,11 +17,20 @@ def get_repo_root():
     return Path(__file__).parent.parent
 
 
+def read_version(repo_root: Path) -> str:
+    """Single-line semver from VERSION at repository root."""
+    path = repo_root / "VERSION"
+    if not path.is_file():
+        return "0.0.0"
+    text = path.read_text(encoding="utf-8").strip()
+    return text.splitlines()[0].strip() if text else "0.0.0"
+
+
 def get_manifest_data(repo_root):
     """Build the manifest data structure."""
     return {
         "title": "EU AI Act Toolkit",
-        "version": "1.4.0",
+        "version": read_version(repo_root),
         "description": "Practical AI governance readiness for SMEs",
         "repository": {
             "url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit",
@@ -89,7 +98,7 @@ def get_manifest_data(repo_root):
                 "type": "agency"
             }
         ],
-        "generated": datetime.utcnow().isoformat() + "Z",
+        "generated": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "license": "CC0 1.0 Universal (Public Domain Dedication)"
     }
 

@@ -76,6 +76,8 @@ check_hygiene_pattern() {
 
 required_files=(
   "README.md"
+  "VERSION"
+  ".editorconfig"
   "docker/Dockerfile"
   "docker/.dockerignore"
   ".github/workflows/publish-site-container.yml"
@@ -156,10 +158,9 @@ required_files=(
   "docs/21-common-mistakes.md"
   "docs/22-maintainer-content-style-guide.md"
   "docs/23-faq.md"
-  "docs/community.html"
   "docs/assets/branding/readme-hero.svg"
   "docs/assets/branding/readme-hero-bg.png"
-  "docs/assets/branding/test.png"
+  "docs/assets/branding/readme-hero-banner.png"
   "docs/assets/profile-icons/github.svg"
   "docs/assets/profile-icons/linkedin.svg"
   "docs/assets/profile-icons/credly.svg"
@@ -200,6 +201,9 @@ required_files=(
   "schemas/toolkit-registry.document.schema.json"
   "schemas/official-sources.document.schema.json"
   "schemas/use-cases.document.schema.json"
+  "schemas/samples/ai-system-inventory.sample.json"
+  "schemas/samples/risk-screening.sample.json"
+  "schemas/samples/vendor-review.sample.json"
   ".github/node-toolchain/README.md"
   ".github/node-toolchain/package.json"
   ".github/node-toolchain/package-lock.json"
@@ -207,6 +211,7 @@ required_files=(
   ".github/node-toolchain/vitest.config.ts"
   "src/quiz-engine.test.ts"
   "tools/validate_data_registries.py"
+  "tools/validate_schema_samples.py"
   "tools/requirements-ci.txt"
   ".github/dependabot.yml"
 )
@@ -214,6 +219,12 @@ required_files=(
 for file in "${required_files[@]}"; do
   check_file "$file"
 done
+
+if grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$' "$ROOT_DIR/VERSION" 2>/dev/null; then
+  pass "VERSION is a single-line semver (e.g. 1.5.0)"
+else
+  fail "VERSION must be a single semver line (major.minor.patch)"
+fi
 
 check_contains "README.md" "not legal advice"
 check_contains "docs/DISCLAIMER.md" "not legal advice"
@@ -233,7 +244,7 @@ check_contains "README.md" "🤝 Community, contribution, license, and security"
 check_contains "README.md" "## 📦 Core toolkit packs"
 check_contains "README.md" "Maintainer"
 check_contains "README.md" "Vendor Assessment Pack"
-check_contains "README.md" "docs/assets/branding/test.png"
+check_contains "README.md" "docs/assets/branding/readme-hero-banner.png"
 check_contains "README.md" "https://www.linkedin.com/in/artem-nazarko/"
 check_contains "README.md" "https://orcid.org/0000-0002-4190-7288"
 check_contains "README.md" "docs/assets/credentials/credly/ai-skills-passport.png"
@@ -440,6 +451,8 @@ check_contains ".github/CONTRIBUTING.md" "<details>"
 check_contains ".github/CONTRIBUTING.md" "Quick contribution paths"
 check_contains ".github/CONTRIBUTING.md" "Contribution principles"
 check_contains ".github/CONTRIBUTING.md" "Good first contributions"
+check_contains ".github/CONTRIBUTING.md" "Issues and labels"
+check_contains ".github/CONTRIBUTING.md" "good first issue"
 check_contains ".github/CONTRIBUTING.md" "Contribution workflow"
 check_contains ".github/CONTRIBUTING.md" "Content style guide"
 check_contains ".github/CONTRIBUTING.md" "Pull request checklist"
@@ -589,6 +602,24 @@ if command -v python3 &> /dev/null; then
   else
     fail "use-cases.document.schema.json is not valid JSON"
   fi
+
+  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/samples/ai-system-inventory.sample.json'))" 2>/dev/null; then
+    pass "ai-system-inventory.sample.json is valid JSON"
+  else
+    fail "ai-system-inventory.sample.json is not valid JSON"
+  fi
+
+  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/samples/risk-screening.sample.json'))" 2>/dev/null; then
+    pass "risk-screening.sample.json is valid JSON"
+  else
+    fail "risk-screening.sample.json is not valid JSON"
+  fi
+
+  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/samples/vendor-review.sample.json'))" 2>/dev/null; then
+    pass "vendor-review.sample.json is valid JSON"
+  else
+    fail "vendor-review.sample.json is not valid JSON"
+  fi
 fi
 
 # Quality tooling checks (added in v1.4.0)
@@ -649,6 +680,16 @@ if command -v python3 &> /dev/null; then
     fi
   else
     pass "PyYAML/jsonschema not installed (install tools/requirements-ci.txt to validate data registries locally)"
+  fi
+
+  if python3 -c "import jsonschema" 2>/dev/null; then
+    if python3 "$ROOT_DIR/tools/validate_schema_samples.py"; then
+      pass "JSON Schema samples validated against instance schemas"
+    else
+      fail "JSON Schema sample validation failed"
+    fi
+  else
+    pass "jsonschema not installed (schema sample validation skipped locally)"
   fi
 fi
 

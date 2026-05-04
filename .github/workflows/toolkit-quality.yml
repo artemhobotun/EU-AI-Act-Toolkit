@@ -40,3 +40,4 @@ jobs:
           python-version: "3.12"
       - run: pip install -r tools/requirements-ci.txt
       - run: python3 tools/validate_data_registries.py
+      - run: python3 tools/validate_schema_samples.py
