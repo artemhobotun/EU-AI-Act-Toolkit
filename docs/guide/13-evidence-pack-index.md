@@ -13,7 +13,7 @@ SMEs can use this as a simple index of documents and evidence to keep for AI rea
 | AI literacy records | [templates/employee-ai-literacy-record.md](../templates/employee-ai-literacy-record.md) | HR / manager | Annual or on change | Keep training completion records |
 | Incident log | [templates/ai-incident-log.md](../templates/ai-incident-log.md) | Security / ops | Monthly | Include near misses and follow-up actions |
 | Human review notes | Internal record | Process owner | As needed | Keep the minimum record needed for accountability |
-| Source notes | [docs/guide/docs/guide/10-source-notes.md](docs/guide/docs/guide/10-source-notes.md) | Maintainer / reviewer | When guidance changes | Keep conservative and current |
+| Source notes | [docs/guide/10-source-notes.md](docs/guide/10-source-notes.md) | Maintainer / reviewer | When guidance changes | Keep conservative and current |
 | Decision logs | Internal record | Project owner | As needed | Note why a use case was approved, paused, or escalated |
 | Procurement approvals | Internal record | Procurement / manager | Per decision | Keep the approval or exception rationale |
 | Evidence pack CSV | [templates/evidence-pack-index.csv](../templates/evidence-pack-index.csv) | Maintainer / ops | Quarterly | Index the evidence pack in a machine-friendly format |

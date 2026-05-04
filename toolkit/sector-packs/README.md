@@ -22,9 +22,9 @@ Use them to decide:
 
 ## Related toolkit files
 
-- [docs/guide/docs/guide/19-sme-decision-tree.md](../docs/guide/docs/guide/19-sme-decision-tree.md)
-- [docs/guide/docs/guide/20-sme-implementation-playbook.md](../docs/guide/docs/guide/20-sme-implementation-playbook.md)
-- [docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md)
+- [docs/guide/19-sme-decision-tree.md](../docs/guide/19-sme-decision-tree.md)
+- [docs/guide/20-sme-implementation-playbook.md](../docs/guide/20-sme-implementation-playbook.md)
+- [docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/16-what-to-escalate-for-legal-review.md)
 - [templates/ai-use-policy-template.md](../templates/ai-use-policy-template.md)
 - [templates/ai-risk-screening-form.md](../templates/ai-risk-screening-form.md)
 - [templates/vendor-ai-questionnaire.md](../templates/vendor-ai-questionnaire.md)

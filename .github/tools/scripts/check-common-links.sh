@@ -38,8 +38,8 @@ check_file "docs/guide/faq.md"
 
 # Scripts
 echo "=== Checking scripts ==="
-check_file "tools/scripts/check-toolkit-quality.sh"
-if [[ -x "$ROOT_DIR/tools/scripts/check-toolkit-quality.sh" ]]; then
+check_file ".github/tools/scripts/check-toolkit-quality.sh"
+if [[ -x "$ROOT_DIR/.github/tools/scripts/check-toolkit-quality.sh" ]]; then
   pass "check-toolkit-quality.sh executable"
 else
   fail "check-toolkit-quality.sh not executable"

@@ -19,7 +19,7 @@ rm -f "$ZIP_PATH"
   toolkit/checklists \
   README.md \
   docs/DISCLAIMER.md \
-  docs/guide/docs/guide/10-source-notes.md \
+  docs/guide/10-source-notes.md \
   docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md \
   docs/guide/docs/guide/17-downloadable-toolkit-pack.md)
 

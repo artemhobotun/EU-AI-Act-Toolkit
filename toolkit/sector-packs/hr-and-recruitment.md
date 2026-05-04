@@ -65,7 +65,7 @@ Human review should be mandatory before any hiring, promotion, discipline, or te
 
 - [templates/ai-risk-screening-form.md](../templates/ai-risk-screening-form.md)
 - [templates/vendor-ai-questionnaire.md](../templates/vendor-ai-questionnaire.md)
-- [docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md)
+- [docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/16-what-to-escalate-for-legal-review.md)
 - [templates/employee-ai-literacy-record.md](../templates/employee-ai-literacy-record.md)
 
 ## Disclaimer

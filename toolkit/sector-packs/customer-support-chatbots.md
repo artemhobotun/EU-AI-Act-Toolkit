@@ -67,7 +67,7 @@ Human review should be available for complaints, sensitive requests, account iss
 - [templates/ai-risk-screening-form.md](../templates/ai-risk-screening-form.md)
 - [templates/vendor-ai-questionnaire.md](../templates/vendor-ai-questionnaire.md)
 - [templates/ai-use-policy-template.md](../templates/ai-use-policy-template.md)
-- [docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md)
+- [docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/16-what-to-escalate-for-legal-review.md)
 
 ## Disclaimer
 

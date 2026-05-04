@@ -1,6 +1,6 @@
 {
   "title": "EU AI Act Toolkit",
-  "version": "1.5.0",
+  "version": "0.0.0",
   "description": "Practical AI governance readiness for SMEs",
   "repository": {
     "url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit",
@@ -68,6 +68,6 @@
       "type": "agency"
     }
   ],
-  "generated": "2026-05-04T00:08:58.456329Z",
+  "generated": "2026-05-04T03:45:01.412500Z",
   "license": "CC0 1.0 Universal (Public Domain Dedication)"
 }

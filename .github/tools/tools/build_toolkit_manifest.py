@@ -14,11 +14,11 @@ from datetime import datetime, timezone
 
 def get_repo_root():
     """Get the path to the repository root."""
-    return Path(__file__).resolve().parent.parent.parent
+    return Path(__file__).resolve().parent.parent.parent.parent
 
 
 def read_version(repo_root: Path) -> str:
-    """Single-line semver from maint/dev/VERSION (keeps repo root listing short)."""
+    """Single-line semver from .github/tools/dev/VERSION (keeps repo root listing short)."""
     path = repo_root / "maint" / "dev" / "VERSION"
     if not path.is_file():
         return "0.0.0"

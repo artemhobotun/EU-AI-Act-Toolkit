@@ -14,12 +14,12 @@ import sys
 from copy import deepcopy
 from pathlib import Path
 
-_REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 _COMMITTED = _REPO_ROOT / "docs" / "assets" / "toolkit-manifest.json"
 
 
 def _load_build_module():
-    path = _REPO_ROOT / "maint" / "tools" / "build_toolkit_manifest.py"
+    path = _REPO_ROOT / ".github" / "tools" / "tools" / "build_toolkit_manifest.py"
     spec = importlib.util.spec_from_file_location("build_toolkit_manifest", path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"Cannot load {path}")
@@ -52,8 +52,8 @@ def main() -> int:
     if _canonical(a) != _canonical(b):
         print(
             "ERROR: docs/assets/toolkit-manifest.json is out of sync with "
-            "maint/tools/build_toolkit_manifest.py (ignoring 'generated').\n"
-            "Run: python3 maint/tools/build_toolkit_manifest.py\n"
+            ".github/tools/tools/build_toolkit_manifest.py (ignoring 'generated').\n"
+            "Run: python3 .github/tools/tools/build_toolkit_manifest.py\n"
             "Then commit the updated manifest.",
             file=sys.stderr,
         )

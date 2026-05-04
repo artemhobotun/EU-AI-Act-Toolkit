@@ -65,7 +65,7 @@ Human review should happen before customer-facing publication and before any sco
 
 - [templates/ai-risk-screening-form.md](../templates/ai-risk-screening-form.md)
 - [templates/vendor-ai-questionnaire.md](../templates/vendor-ai-questionnaire.md)
-- [docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md)
+- [docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/16-what-to-escalate-for-legal-review.md)
 
 ## Disclaimer
 

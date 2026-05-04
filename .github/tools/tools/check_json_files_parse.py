@@ -7,18 +7,18 @@ import json
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 
 RELATIVE_JSON_FILES = (
-    "maint/schemas/ai-system-inventory.schema.json",
-    "maint/schemas/risk-screening.schema.json",
-    "maint/schemas/vendor-review.schema.json",
-    "maint/schemas/toolkit-registry.document.schema.json",
-    "maint/schemas/official-sources.document.schema.json",
-    "maint/schemas/use-cases.document.schema.json",
-    "maint/schemas/samples/ai-system-inventory.sample.json",
-    "maint/schemas/samples/risk-screening.sample.json",
-    "maint/schemas/samples/vendor-review.sample.json",
+    ".github/tools/schemas/ai-system-inventory.schema.json",
+    ".github/tools/schemas/risk-screening.schema.json",
+    ".github/tools/schemas/vendor-review.schema.json",
+    ".github/tools/schemas/toolkit-registry.document.schema.json",
+    ".github/tools/schemas/official-sources.document.schema.json",
+    ".github/tools/schemas/use-cases.document.schema.json",
+    ".github/tools/schemas/samples/ai-system-inventory.sample.json",
+    ".github/tools/schemas/samples/risk-screening.sample.json",
+    ".github/tools/schemas/samples/vendor-review.sample.json",
 )
 
 

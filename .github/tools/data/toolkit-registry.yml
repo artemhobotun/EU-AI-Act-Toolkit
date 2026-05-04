@@ -108,7 +108,7 @@ toolkit_resources:
   - id: source-notes
     title: Source Notes
     type: reference
-    path: docs/guide/docs/guide/10-source-notes.md
+    path: docs/guide/10-source-notes.md
     purpose: How toolkit content links to official sources
     description: Detailed mapping of toolkit guidance to official regulation articles.
     recommended_for:

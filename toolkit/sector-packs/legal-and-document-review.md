@@ -64,7 +64,7 @@ Human review should happen before any legal or contractual decision is made.
 - [templates/ai-risk-screening-form.md](../templates/ai-risk-screening-form.md)
 - [templates/ai-use-policy-template.md](../templates/ai-use-policy-template.md)
 - [templates/vendor-ai-questionnaire.md](../templates/vendor-ai-questionnaire.md)
-- [docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md)
+- [docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/16-what-to-escalate-for-legal-review.md)
 
 ## Disclaimer
 

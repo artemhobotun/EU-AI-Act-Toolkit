@@ -26,8 +26,8 @@ Start with the **Starter Pack**, especially:
 Then review the sector pack relevant to your industry.
 
 You should also review:
-1. Inventory: [docs/guide/docs/guide/04-ai-system-inventory-guide.md](docs/guide/docs/guide/04-ai-system-inventory-guide.md)
-2. Screening: [docs/guide/docs/guide/05-basic-risk-screening.md](docs/guide/docs/guide/05-basic-risk-screening.md)
+1. Inventory: [docs/guide/04-ai-system-inventory-guide.md](docs/guide/04-ai-system-inventory-guide.md)
+2. Screening: [docs/guide/05-basic-risk-screening.md](docs/guide/05-basic-risk-screening.md)
 3. Governance baseline:
    - internal policy: [../../toolkit/templates/ai-use-policy-template.md](../../toolkit/templates/ai-use-policy-template.md)
    - procurement controls: [../../toolkit/checklists/ai-tool-procurement-checklist.md](../../toolkit/checklists/ai-tool-procurement-checklist.md)
