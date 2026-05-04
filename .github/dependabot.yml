@@ -4,13 +4,25 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    groups:
+      actions:
+        patterns:
+          - "*"
 
   - package-ecosystem: npm
     directory: /.github/node-toolchain
     schedule:
       interval: weekly
+    groups:
+      node-toolchain:
+        patterns:
+          - "*"
 
   - package-ecosystem: docker
     directory: /docker
     schedule:
       interval: weekly
+    groups:
+      docker:
+        patterns:
+          - "*"
