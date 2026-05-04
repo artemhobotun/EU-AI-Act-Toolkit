@@ -2,77 +2,11 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-FAILURES=0
-
-pass() {
-  printf 'PASS: %s\n' "$1"
-}
-
-fail() {
-  printf 'FAIL: %s\n' "$1"
-  FAILURES=$((FAILURES + 1))
-}
-
-check_file() {
-  local file="$1"
-  if [[ -f "$ROOT_DIR/$file" ]]; then
-    pass "Required file present: $file"
-  else
-    fail "Required file missing: $file"
-  fi
-}
-
-check_contains() {
-  local file="$1"
-  local needle="$2"
-  if grep -Fqi "$needle" "$ROOT_DIR/$file"; then
-    pass "Found wording in $file: $needle"
-  else
-    fail "Missing wording in $file: $needle"
-  fi
-}
-
-check_not_contains_file() {
-  local file="$1"
-  local needle="$2"
-  if grep -Fqi "$needle" "$ROOT_DIR/$file"; then
-    fail "Forbidden wording found in $file: $needle"
-  else
-    pass "Forbidden wording absent in $file: $needle"
-  fi
-}
+# shellcheck source=quality-lib.sh
+source "$(dirname "${BASH_SOURCE[0]}")/quality-lib.sh"
 
 old_readme_title="# 🇪🇺 EU AI Act Toolkit"" for SMEs"
 old_maintainer_name="Artem ""Hobotun"
-
-check_not_contains_repo() {
-  local needle="$1"
-  local matches
-  local grep_args=(grep -RInF --exclude-dir=.git --exclude='check-toolkit-quality.sh')
-  if [[ "$needle" == "guaranteed compliant" ]]; then
-    grep_args+=(--exclude='.github/PULL_REQUEST_TEMPLATE.md')
-  fi
-  grep_args+=("$needle" "$ROOT_DIR")
-  matches="$("${grep_args[@]}" || true)"
-  matches="$(printf '%s\n' "$matches" | grep -vF "does not guarantee compliance" || true)"
-  if [[ -n "$matches" ]]; then
-    fail "Forbidden wording found in repository: $needle"
-  else
-    pass "Forbidden wording absent: $needle"
-  fi
-}
-
-check_hygiene_pattern() {
-  local pattern="$1"
-  if [[ "$pattern" == ".DS_Store" ]]; then
-    find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type f -name "$pattern" -exec rm -f {} +
-  fi
-  if find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type f -name "$pattern" -print | grep -q .; then
-    fail "Found forbidden file pattern: $pattern"
-  else
-    pass "No files matching pattern: $pattern"
-  fi
-}
 
 required_files=(
   "README.md"
@@ -179,6 +113,8 @@ required_files=(
   "toolkit/templates/README.md"
   "toolkit/checklists/README.md"
   "toolkit/examples/README.md"
+  "toolkit/examples/progress-notes/README.md"
+  "toolkit/examples/progress-notes/EXAMPLE_PROGRESS_NOTE.md"
   "scripts/build-starter-pack.sh"
   ".github/PULL_REQUEST_TEMPLATE.md"
   ".github/ISSUE_TEMPLATE/template-request.yml"
@@ -213,6 +149,8 @@ required_files=(
   "tools/validate_data_registries.py"
   "tools/validate_schema_samples.py"
   "tools/requirements-ci.txt"
+  "tools/verify_toolkit_manifest_sync.py"
+  "scripts/quality-lib.sh"
   ".github/dependabot.yml"
 )
 
@@ -655,16 +593,10 @@ if command -v python3 &> /dev/null; then
     fail "Site link validation failed"
   fi
 
-  if python3 "$ROOT_DIR/tools/build_toolkit_manifest.py"; then
-    pass "Toolkit manifest generated"
+  if python3 "$ROOT_DIR/tools/verify_toolkit_manifest_sync.py"; then
+    pass "Toolkit manifest matches build_toolkit_manifest.py (generated timestamp ignored)"
   else
-    fail "Toolkit manifest generation failed"
-  fi
-
-  if [[ -f "$ROOT_DIR/docs/assets/toolkit-manifest.json" ]]; then
-    pass "Toolkit manifest file created: docs/assets/toolkit-manifest.json"
-  else
-    fail "Toolkit manifest file not found after generation"
+    fail "Toolkit manifest out of sync; run: python3 tools/build_toolkit_manifest.py && git add docs/assets/toolkit-manifest.json"
   fi
 else
   pass "Python3 not available (link validation and manifest generation skipped)"

@@ -20,6 +20,9 @@ docs/assets/toolkit-manifest.json linguist-generated
 toolkit/**/*.md linguist-documentation
 docs/**/*.md linguist-documentation
 
+# Override: progress-note examples are vendored-style samples, not primary docs.
+toolkit/examples/progress-notes/** linguist-vendored
+
 # Keep common generated/local files out of meaningful stats.
 *.bundle linguist-generated
 *.tar.gz linguist-generated

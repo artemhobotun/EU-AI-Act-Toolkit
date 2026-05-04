@@ -1,5 +1,9 @@
 name: Toolkit quality checks
 
+concurrency:
+  group: toolkit-quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   push:
   pull_request:
@@ -14,6 +18,19 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run toolkit quality checks
         run: ./scripts/check-toolkit-quality.sh
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ShellCheck
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq shellcheck
+      - name: Run ShellCheck (error severity)
+        run: |
+          shellcheck -S error -x scripts/check-toolkit-quality.sh
+          shellcheck -S error scripts/check-common-links.sh scripts/build-starter-pack.sh
 
   typescript:
     runs-on: ubuntu-latest

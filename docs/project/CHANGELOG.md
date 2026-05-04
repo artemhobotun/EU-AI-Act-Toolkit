@@ -6,6 +6,16 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+### CI, quality scripts, and repository hygiene
+
+- Added `tools/verify_toolkit_manifest_sync.py`: CI compares the committed `docs/assets/toolkit-manifest.json` to `build_toolkit_manifest.py` output with **`generated` ignored**, so the manifest does not need rewriting every run.
+- Split shared bash helpers into `scripts/quality-lib.sh` sourced by `check-toolkit-quality.sh`.
+- Added a **ShellCheck** job (`shellcheck -S error scripts/*.sh`) to Toolkit quality checks.
+- Added **concurrency** groups to cancel superseded workflow runs for quality checks and site container publish.
+- **Publish site container:** image tags now include `VERSION` from the repo root, registry path uses lowercase `github.repository_owner`, push triggers on `VERSION` changes, and **Trivy** config scan runs on `./docker` (non-blocking `exit-code: 0` for config findings).
+- Removed hundreds of committed `toolkit/examples/progress-notes/**/toolkit-progress-note-*.md` samples; added `README.md`, `EXAMPLE_PROGRESS_NOTE.md`, and `.gitignore` for local-only note filenames; Linguist override for that folder.
+- Documented maintainer dependency workflow (main-only bumps, Dependabot limit 0, security alerts, forks) in `.github/CONTRIBUTING.md`.
+
 ### Tooling, site parity, and repository polish
 
 - Renamed README hero image asset to `docs/assets/branding/readme-hero-banner.png` (replacing `test.png`).

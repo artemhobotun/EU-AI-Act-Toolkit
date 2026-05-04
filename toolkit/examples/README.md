@@ -9,3 +9,7 @@ Examples are fictional and for demonstration only. They help SMEs understand how
 ## Sample evidence pack
 
 - [sample-evidence-pack/](sample-evidence-pack/)
+
+## Progress notes (optional)
+
+- [progress-notes/](progress-notes/) — local-style notes; only an example is tracked in git.

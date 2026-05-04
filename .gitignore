@@ -2,3 +2,6 @@
 node_modules/
 .env
 dist/*.zip
+
+# Local-only toolkit progress dumps (see toolkit/examples/progress-notes/README.md)
+toolkit/examples/progress-notes/**/toolkit-progress-note-*.md

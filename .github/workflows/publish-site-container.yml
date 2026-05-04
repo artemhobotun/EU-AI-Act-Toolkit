@@ -1,5 +1,9 @@
 name: Publish site container
 
+concurrency:
+  group: publish-site-container-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   push:
     branches:
@@ -7,6 +11,7 @@ on:
     paths:
       - docker/Dockerfile
       - docs/**
+      - VERSION
   workflow_dispatch:
 
 permissions:
@@ -19,6 +24,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Image name and VERSION tag
+        id: meta
+        run: |
+          OWNER_LC="$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')"
+          echo "image=ghcr.io/${OWNER_LC}/eu-ai-act-toolkit-site" >> "$GITHUB_OUTPUT"
+          ver="$(tr -d '\r\n\t ' < VERSION | head -c 64)"
+          echo "version=${ver}" >> "$GITHUB_OUTPUT"
+
+      - name: Trivy Dockerfile scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: config
+          scan-ref: ./docker
+          severity: CRITICAL,HIGH
+          exit-code: "0"
 
       - name: Log in to GHCR
         uses: docker/login-action@v3
@@ -34,5 +55,6 @@ jobs:
           file: docker/Dockerfile
           push: true
           tags: |
-            ghcr.io/artemhobotun/eu-ai-act-toolkit-site:latest
-            ghcr.io/artemhobotun/eu-ai-act-toolkit-site:${{ github.sha }}
+            ${{ steps.meta.outputs.image }}:latest
+            ${{ steps.meta.outputs.image }}:${{ github.sha }}
+            ${{ steps.meta.outputs.image }}:${{ steps.meta.outputs.version }}

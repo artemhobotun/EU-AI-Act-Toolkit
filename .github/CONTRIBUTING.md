@@ -78,6 +78,16 @@ If `PyYAML` and `jsonschema` are installed, `./scripts/check-toolkit-quality.sh`
 </details>
 
 <details>
+<summary><strong>📦 Dependencies and security (maintainer workflow)</strong></summary>
+
+- **Main branch:** substantive and tooling changes are expected on **`main`** (see `.cursor/rules/eu-ai-act-toolkit-main-only.mdc`).
+- **Dependabot:** `.github/dependabot.yml` sets **`open-pull-requests-limit: 0`**, so Dependabot does **not** open version-update PR branches. Bump **GitHub Actions**, **npm** in `.github/node-toolchain`, and **Docker** under `docker/` with ordinary commits on `main` (for example `npm outdated` in the toolchain directory and a refreshed `package-lock.json`).
+- **Alerts:** enable **Dependabot alerts** (and optional security PRs) under the repository **Settings → Code security** if you want GitHub to flag known vulnerable dependencies; that is separate from the version-update limit above.
+- **Forks:** workflows that publish the site image to GHCR use the repository owner for the registry namespace; fork maintainers should adjust image names or disable publishing if they do not use `ghcr.io`.
+
+</details>
+
+<details>
 <summary><strong>📝 Content style guide</strong></summary>
 
 See [docs/22-maintainer-content-style-guide.md](../docs/22-maintainer-content-style-guide.md).
