@@ -8,12 +8,8 @@
     "noEmit": true,
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
-    "types": ["node"],
-    "baseUrl": ".",
-    "paths": {
-      "vitest": ["./node_modules/vitest"],
-      "vitest/*": ["./node_modules/vitest/*"]
-    }
+    "types": ["node"]
   },
-  "include": ["../../src/**/*.ts"]
+  "include": ["../../src/**/*.ts"],
+  "exclude": ["../../src/**/*.test.ts"]
 }
