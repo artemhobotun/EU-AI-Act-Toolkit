@@ -19,7 +19,7 @@ Deliverables:
   - Where is the system used (internal only vs customer-facing)?
   - Does it affect people's rights, safety, access to services, employment, education, etc.?
 
-Guide: [06-provider-vs-deployer.md](06-provider-vs-deployer.md)
+Guide: [docs/guide/docs/guide/06-provider-vs-deployer.md](docs/guide/docs/guide/06-provider-vs-deployer.md)
 
 ## Phase 3: Basic Screening (Week 2-4)
 

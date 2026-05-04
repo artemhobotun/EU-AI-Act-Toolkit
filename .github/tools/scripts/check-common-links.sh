@@ -33,13 +33,13 @@ check_file "toolkit/checklists/README.md"
 
 # Documentation
 echo "=== Checking documentation files ==="
-check_file "docs/project/credentials.md"
-check_file "docs/23-faq.md"
+check_file ".github/project/credentials.md"
+check_file "docs/guide/faq.md"
 
 # Scripts
 echo "=== Checking scripts ==="
-check_file "maint/scripts/check-toolkit-quality.sh"
-if [[ -x "$ROOT_DIR/maint/scripts/check-toolkit-quality.sh" ]]; then
+check_file "tools/scripts/check-toolkit-quality.sh"
+if [[ -x "$ROOT_DIR/tools/scripts/check-toolkit-quality.sh" ]]; then
   pass "check-toolkit-quality.sh executable"
 else
   fail "check-toolkit-quality.sh not executable"

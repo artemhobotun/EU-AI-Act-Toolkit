@@ -36,7 +36,7 @@ This document describes a practical maintenance process for keeping the toolkit 
 ## How to Update the Toolkit
 
 1. Start with the "Source Notes" and identify what changed:
-   - docs/10-source-notes.md
+   - docs/guide/docs/guide/10-source-notes.md
 2. Update templates and checklists to remain usable for SMEs:
    - keep fields stable where possible to avoid churn for users
 3. Keep language conservative:

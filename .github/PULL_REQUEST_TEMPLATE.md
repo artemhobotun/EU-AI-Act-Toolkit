@@ -28,6 +28,6 @@
 
 ## Quality
 
-- [ ] Ran `./maint/scripts/check-toolkit-quality.sh`
+- [ ] Ran `./tools/scripts/check-toolkit-quality.sh`
 - [ ] Links checked where practical
 - [ ] Markdown renders cleanly

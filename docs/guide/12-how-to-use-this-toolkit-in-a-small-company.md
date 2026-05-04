@@ -70,4 +70,4 @@ Keep your working evidence in a simple folder or workspace that is easy to revie
 - source notes
 - decision logs and approvals
 
-Suggested evidence index: [docs/13-evidence-pack-index.md](docs/13-evidence-pack-index.md)
+Suggested evidence index: [docs/guide/docs/guide/13-evidence-pack-index.md](docs/guide/docs/guide/13-evidence-pack-index.md)

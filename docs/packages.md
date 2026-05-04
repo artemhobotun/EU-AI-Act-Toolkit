@@ -27,7 +27,7 @@ Then open: **http://localhost:8080**
 
 ## When the image is published
 
-The container is rebuilt automatically on every push to `main` that changes `maint/docker/Dockerfile`, `maint/dev/VERSION`, or any file under `docs/`. It can also be triggered manually via the GitHub Actions workflow dispatch.
+The container is rebuilt automatically on every push to `main` that changes `.github/tools/docker/Dockerfile`, `.github/tools/dev/VERSION`, or any file under `docs/`. It can also be triggered manually via the GitHub Actions workflow dispatch.
 
 ## Forks and GHCR
 

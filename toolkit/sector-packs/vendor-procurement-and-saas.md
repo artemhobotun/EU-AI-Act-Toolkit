@@ -69,7 +69,7 @@ Human review should happen before purchase approval and before any expanded depl
 
 - [templates/vendor-ai-questionnaire.md](../templates/vendor-ai-questionnaire.md)
 - [checklists/ai-tool-procurement-checklist.md](../checklists/ai-tool-procurement-checklist.md)
-- [docs/16-what-to-escalate-for-legal-review.md](../docs/16-what-to-escalate-for-legal-review.md)
+- [docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md)
 
 ## Disclaimer
 

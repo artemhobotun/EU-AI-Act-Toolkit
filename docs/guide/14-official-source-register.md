@@ -35,5 +35,5 @@ SMEs should check national competent authority information, local enforcement gu
 - Check the official source before changing legal wording
 - Do not overstate obligations
 - Prefer "may require review" over categorical claims
-- Update [docs/10-source-notes.md](10-source-notes.md) when source assumptions change
+- Update [docs/guide/docs/guide/10-source-notes.md](docs/guide/docs/guide/10-source-notes.md) when source assumptions change
 - Record updates in [CHANGELOG.md](project/CHANGELOG.md)

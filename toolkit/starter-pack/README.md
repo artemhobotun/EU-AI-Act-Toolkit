@@ -6,7 +6,7 @@ This starter pack is a lightweight entry point for SMEs that want to get organiz
 
 | File | Purpose | Recommended owner |
 |---|---|---|
-| [30-minute readiness self-assessment](printable/30-minute-readiness-self-assessment.md) | Quick self-check for the most important readiness questions | Founder, operator, or AI owner |
+| [30-minute readiness self-assessment](printable/docs/guide/docs/guide/30-minute-readiness-self-assessment.md) | Quick self-check for the most important readiness questions | Founder, operator, or AI owner |
 | [One-page executive checklist](printable/one-page-executive-checklist.md) | Simple management checklist for the first review | Founder, management sponsor |
 | [AI tool inventory starter](printable/ai-tool-inventory-starter.md) | Basic register for AI tools and features | AI owner or operations lead |
 | [Basic risk screening starter](printable/basic-risk-screening-starter.md) | First-pass screening for people, data, and escalation | AI owner or privacy reviewer |

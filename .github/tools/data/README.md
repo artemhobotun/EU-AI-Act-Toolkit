@@ -72,11 +72,11 @@ These YAML files can be:
 5. **Cross-referenced** to validate consistency across toolkit materials
 
 ### For Validation
-Each registry file is checked in CI against a **document-level** JSON Schema in `maint/schemas/` (`*.document.schema.json`). To run the same check locally:
+Each registry file is checked in CI against a **document-level** JSON Schema in `tools/schemas/` (`*.document.schema.json`). To run the same check locally:
 
 ```bash
-python3 -m pip install -r maint/tools/requirements-ci.txt
-python3 maint/tools/validate_data_registries.py
+python3 -m pip install -r tools/tools/requirements-ci.txt
+python3 tools/tools/validate_data_registries.py
 ```
 
 If you add or rename fields in a registry entry, update the matching document schema so the contract stays explicit.

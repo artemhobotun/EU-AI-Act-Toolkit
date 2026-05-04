@@ -127,10 +127,10 @@ The public mini-site gives a guided version of the toolkit with visual navigatio
 | I use ChatGPT/Copilot internally | [Internal productivity and GenAI](toolkit/sector-packs/internal-productivity-and-genai.md) | [AI use policy template](toolkit/templates/ai-use-policy-template.md) |
 | I need general AI procurement guidance | [Vendor procurement and SaaS](toolkit/sector-packs/vendor-procurement-and-saas.md) | [Vendor AI questionnaire](toolkit/templates/vendor-ai-questionnaire.md) |
 | I use AI in customer support | [Customer support chatbots](toolkit/sector-packs/customer-support-chatbots.md) | [Risk screening form](toolkit/templates/ai-risk-screening-form.md) |
-| I use AI in HR/recruitment | [HR and recruitment](toolkit/sector-packs/hr-and-recruitment.md) | [Legal review escalation guide](docs/16-what-to-escalate-for-legal-review.md) |
+| I use AI in HR/recruitment | [HR and recruitment](toolkit/sector-packs/hr-and-recruitment.md) | [Legal review escalation guide](docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md) |
 | I use AI for marketing/sales | [Marketing and sales](toolkit/sector-packs/marketing-and-sales.md) | [Risk screening form](toolkit/templates/ai-risk-screening-form.md) |
 | I want to buy an AI SaaS tool | [Vendor Assessment Pack](toolkit/vendor-pack/README.md) | [Vendor due diligence questionnaire](toolkit/vendor-pack/templates/vendor-ai-due-diligence-questionnaire.md) |
-| I need a documentation pack | [Downloadable toolkit pack](docs/17-downloadable-toolkit-pack.md) | [Evidence pack index](docs/13-evidence-pack-index.md) |
+| I need a documentation pack | [Downloadable toolkit pack](docs/guide/docs/guide/17-downloadable-toolkit-pack.md) | [Evidence pack index](docs/guide/docs/guide/13-evidence-pack-index.md) |
 
 ## 📦 Core toolkit packs
 
@@ -141,7 +141,7 @@ The practical working materials live in `toolkit/` so the repository root stays 
 | Starter Pack | You need a fast internal starting point | [toolkit/starter-pack/START-HERE.md](toolkit/starter-pack/START-HERE.md) |
 | Vendor Assessment Pack | You are buying or renewing AI-enabled SaaS | [toolkit/vendor-pack/README.md](toolkit/vendor-pack/README.md) |
 | Sector Packs | You need context-specific examples | [toolkit/sector-packs/README.md](toolkit/sector-packs/README.md) |
-| Evidence Pack | You need documentation structure | [docs/13-evidence-pack-index.md](docs/13-evidence-pack-index.md) |
+| Evidence Pack | You need documentation structure | [docs/guide/docs/guide/13-evidence-pack-index.md](docs/guide/docs/guide/13-evidence-pack-index.md) |
 
 ## 📊 Structured technical layer
 
@@ -152,9 +152,9 @@ The toolkit includes optional structured data and automation helpers for teams t
 
 The quiz engine provides fully typed readiness assessment scoring logic for AI governance assessments.
 
-**Location:** [maint/src/](maint/src/)
+**Location:** [.github/tools/quiz-engine/](.github/tools/quiz-engine/)
 
-Supports programmatic scoring, validation, and tool integration. See [maint/src/README.md](maint/src/README.md) for implementation details.
+Supports programmatic scoring, validation, and tool integration. See [.github/tools/quiz-engine/README.md](.github/tools/quiz-engine/README.md) for implementation details.
 
 </details>
 
@@ -163,9 +163,9 @@ Supports programmatic scoring, validation, and tool integration. See [maint/src/
 
 Optional evidence pack database structure for tracking AI systems, risk screenings, vendors, and incidents.
 
-**Location:** [docs/project/database/](docs/project/database/)
+**Location:** [.github/project/database/](.github/project/database/)
 
-Use this schema if you want to manage toolkit data in a structured database. Supports queries for audit trails, compliance documentation, and risk management workflows. See [docs/project/database/README.md](docs/project/database/README.md) for schema documentation.
+Use this schema if you want to manage toolkit data in a structured database. Supports queries for audit trails, compliance documentation, and risk management workflows. See [.github/project/database/README.md](.github/project/database/README.md) for schema documentation.
 
 </details>
 
@@ -174,9 +174,9 @@ Use this schema if you want to manage toolkit data in a structured database. Sup
 
 Machine-readable toolkit resource inventory, official EU sources, and use-case scenarios.
 
-**Location:** [maint/data/](maint/data/)
+**Location:** [.github/tools/data/](.github/tools/data/)
 
-Includes toolkit registry, official EU AI Act sources, and compliance readiness use cases. Useful for automation, site generation, and tool integration. See [maint/data/README.md](maint/data/README.md) for details.
+Includes toolkit registry, official EU AI Act sources, and compliance readiness use cases. Useful for automation, site generation, and tool integration. See [.github/tools/data/README.md](.github/tools/data/README.md) for details.
 
 </details>
 
@@ -185,9 +185,9 @@ Includes toolkit registry, official EU AI Act sources, and compliance readiness 
 
 Validation schemas for AI system inventory, risk screening, and vendor assessment data.
 
-**Location:** [maint/schemas/](maint/schemas/)
+**Location:** [.github/tools/schemas/](.github/tools/schemas/)
 
-Use these schemas to validate structured data, integrate with third-party tools, or build custom automation. See [maint/schemas/README.md](maint/schemas/README.md) for schema details and examples.
+Use these schemas to validate structured data, integrate with third-party tools, or build custom automation. See [.github/tools/schemas/README.md](.github/tools/schemas/README.md) for schema details and examples.
 
 </details>
 
@@ -220,7 +220,7 @@ Expand the sections below to browse the main parts of the toolkit and supporting
 | Area | File | What it helps with |
 |---|---|---|
 | Inventory | [toolkit/templates/ai-system-inventory.csv](toolkit/templates/ai-system-inventory.csv) | Tracking AI tools, owners, vendors, and review dates |
-| Inventory guide | [docs/04-ai-system-inventory-guide.md](docs/04-ai-system-inventory-guide.md) | Defining what should go into the register |
+| Inventory guide | [docs/guide/docs/guide/04-ai-system-inventory-guide.md](docs/guide/docs/guide/04-ai-system-inventory-guide.md) | Defining what should go into the register |
 | Risk screening | [toolkit/templates/ai-risk-screening-form.md](toolkit/templates/ai-risk-screening-form.md) | First-pass readiness checks and escalation notes |
 | Vendor review | [toolkit/templates/vendor-ai-questionnaire.md](toolkit/templates/vendor-ai-questionnaire.md) | Asking practical questions before purchase or renewal |
 | Internal policy | [toolkit/templates/ai-use-policy-template.md](toolkit/templates/ai-use-policy-template.md) | Setting rules for approved and prohibited use |
@@ -252,8 +252,8 @@ Expand the sections below to browse the main parts of the toolkit and supporting
 5. Publish a simple internal AI use policy.
 6. Train staff on approved use, human review, and incident reporting.
 7. Review the register and templates on a regular cadence.
-8. Follow the small-company guide: [docs/12-how-to-use-this-toolkit-in-a-small-company.md](docs/12-how-to-use-this-toolkit-in-a-small-company.md)
-9. Keep an evidence pack index: [docs/13-evidence-pack-index.md](docs/13-evidence-pack-index.md)
+8. Follow the small-company guide: [docs/guide/docs/guide/12-how-to-use-this-toolkit-in-a-small-company.md](docs/guide/docs/guide/12-how-to-use-this-toolkit-in-a-small-company.md)
+9. Keep an evidence pack index: [docs/guide/docs/guide/13-evidence-pack-index.md](docs/guide/docs/guide/13-evidence-pack-index.md)
 
 </details>
 
@@ -291,14 +291,14 @@ Use the templates as a practical starting point, then adapt them to your sector,
 
 - [Start here](toolkit/starter-pack/START-HERE.md)
 - [Starter pack overview](toolkit/starter-pack/README.md)
-- [30-minute self-assessment](toolkit/starter-pack/printable/30-minute-readiness-self-assessment.md)
+- [30-minute self-assessment](toolkit/starter-pack/printable/docs/guide/docs/guide/30-minute-readiness-self-assessment.md)
 - [One-page executive checklist](toolkit/starter-pack/printable/one-page-executive-checklist.md)
 - [Management briefing template](toolkit/starter-pack/management/management-briefing-template.md)
 
 Build the ZIP locally:
 
 ```bash
-./maint/scripts/build-starter-pack.sh
+./.github/tools/scripts/build-starter-pack.sh
 ```
 
 The generated ZIP is for internal use. Completed documents should not be uploaded to public GitHub issues.
@@ -307,7 +307,7 @@ The generated ZIP is for internal use. Completed documents should not be uploade
 
 The screening form helps identify whether a use case deserves deeper review. It asks about people-affecting decisions, personal data, sensitive sectors, biometric or sensitive use, human oversight, and vendor training on customer data.
 
-For the full guide, see [docs/05-basic-risk-screening.md](docs/05-basic-risk-screening.md).
+For the full guide, see [docs/guide/docs/guide/05-basic-risk-screening.md](docs/guide/docs/guide/05-basic-risk-screening.md).
 
 </details>
 
@@ -352,29 +352,29 @@ For the full guide, see [docs/05-basic-risk-screening.md](docs/05-basic-risk-scr
 
 This toolkit should be reviewed regularly because EU AI Act implementation guidance, standards, and enforcement practice may change over time.
 
-- Official source register: [docs/14-official-source-register.md](docs/14-official-source-register.md)
-- Versioning and maintenance policy: [docs/15-versioning-and-maintenance-policy.md](docs/15-versioning-and-maintenance-policy.md)
-- Legal review escalation guide: [docs/16-what-to-escalate-for-legal-review.md](docs/16-what-to-escalate-for-legal-review.md)
-- Downloadable toolkit pack: [docs/17-downloadable-toolkit-pack.md](docs/17-downloadable-toolkit-pack.md)
-- Glossary: [docs/18-glossary.md](docs/18-glossary.md)
-- SME decision tree: [docs/19-sme-decision-tree.md](docs/19-sme-decision-tree.md)
-- SME implementation playbook: [docs/20-sme-implementation-playbook.md](docs/20-sme-implementation-playbook.md)
-- Common mistakes: [docs/21-common-mistakes.md](docs/21-common-mistakes.md)
-- Frequently asked questions: [docs/23-faq.md](docs/23-faq.md)
-- Maintainer content style guide: [docs/22-maintainer-content-style-guide.md](docs/22-maintainer-content-style-guide.md)
-- Source notes: [docs/10-source-notes.md](docs/10-source-notes.md)
-- Maintenance process: [docs/11-maintenance-and-review-process.md](docs/11-maintenance-and-review-process.md)
+- Official source register: [docs/guide/docs/guide/14-official-source-register.md](docs/guide/docs/guide/14-official-source-register.md)
+- Versioning and maintenance policy: [docs/guide/docs/guide/15-versioning-and-maintenance-policy.md](docs/guide/docs/guide/15-versioning-and-maintenance-policy.md)
+- Legal review escalation guide: [docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md](docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md)
+- Downloadable toolkit pack: [docs/guide/docs/guide/17-downloadable-toolkit-pack.md](docs/guide/docs/guide/17-downloadable-toolkit-pack.md)
+- Glossary: [docs/guide/docs/guide/18-glossary.md](docs/guide/docs/guide/18-glossary.md)
+- SME decision tree: [docs/guide/docs/guide/19-sme-decision-tree.md](docs/guide/docs/guide/19-sme-decision-tree.md)
+- SME implementation playbook: [docs/guide/docs/guide/20-sme-implementation-playbook.md](docs/guide/docs/guide/20-sme-implementation-playbook.md)
+- Common mistakes: [docs/guide/docs/guide/21-common-mistakes.md](docs/guide/docs/guide/21-common-mistakes.md)
+- Frequently asked questions: [docs/guide/faq.md](docs/guide/faq.md)
+- Maintainer content style guide: [docs/guide/docs/guide/22-maintainer-content-style-guide.md](docs/guide/docs/guide/22-maintainer-content-style-guide.md)
+- Source notes: [docs/guide/docs/guide/10-source-notes.md](docs/guide/docs/guide/10-source-notes.md)
+- Maintenance process: [docs/guide/docs/guide/11-maintenance-and-review-process.md](docs/guide/docs/guide/11-maintenance-and-review-process.md)
 
 This toolkit is based on Regulation (EU) 2024/1689 and keeps the guidance intentionally practical and conservative.
 
 Run local quality checks:
 
 ```bash
-./maint/scripts/check-toolkit-quality.sh
-./maint/scripts/check-common-links.sh
+./.github/tools/scripts/check-toolkit-quality.sh
+./.github/tools/scripts/check-common-links.sh
 ```
 
-See also: [roadmap](docs/project/roadmap.md)
+See also: [roadmap](.github/project/roadmap.md)
 
 </details>
 
@@ -388,13 +388,13 @@ Community resources are maintained outside the main README body to keep the proj
 - Code of conduct: [.github/CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md)
 - Security and privacy reporting: [Security policy](.github/SECURITY.md)
 - Support: [.github/SUPPORT.md](.github/SUPPORT.md)
-- Governance: [docs/project/governance.md](docs/project/governance.md)
-- Maintainers: [docs/project/maintainers.md](docs/project/maintainers.md)
+- Governance: [.github/project/governance.md](.github/project/governance.md)
+- Maintainers: [.github/project/maintainers.md](.github/project/maintainers.md)
 - License: [LICENSE](LICENSE)
-- License notes: [docs/project/license-notes.md](docs/project/license-notes.md)
-- Changelog: [docs/project/CHANGELOG.md](docs/project/CHANGELOG.md)
+- License notes: [.github/project/license-notes.md](.github/project/license-notes.md)
+- Changelog: [.github/project/CHANGELOG.md](.github/project/CHANGELOG.md)
 
-Contributors are listed in [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) and [docs/project/maintainers.md](docs/project/maintainers.md).
+Contributors are listed in [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) and [.github/project/maintainers.md](.github/project/maintainers.md).
 
 ### Repository structure
 
@@ -404,7 +404,7 @@ LICENSE
 CITATION.cff
 .github/          contributing, workflows, Node toolchain
 docs/             Pages site, disclaimer, project notes (includes database SQL)
-maint/            quiz TypeScript, dev config, docker, YAML data + JSON Schemas, Python tools, shell scripts
+.github/tools/    quiz TypeScript, dev config, docker, YAML data + JSON Schemas, Python tools, shell scripts
 toolkit/
 ```
 

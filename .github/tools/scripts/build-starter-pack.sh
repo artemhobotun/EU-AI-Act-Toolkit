@@ -19,8 +19,8 @@ rm -f "$ZIP_PATH"
   toolkit/checklists \
   README.md \
   docs/DISCLAIMER.md \
-  docs/10-source-notes.md \
-  docs/16-what-to-escalate-for-legal-review.md \
-  docs/17-downloadable-toolkit-pack.md)
+  docs/guide/docs/guide/10-source-notes.md \
+  docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md \
+  docs/guide/docs/guide/17-downloadable-toolkit-pack.md)
 
 printf 'Starter pack ZIP created: %s\n' "$ZIP_PATH"

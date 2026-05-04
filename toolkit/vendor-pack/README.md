@@ -97,7 +97,7 @@ Escalate when the tool affects people, processes personal data, uses sensitive d
 
 - [README.md](../README.md)
 - [DISCLAIMER.md](../../docs/DISCLAIMER.md)
-- [docs/16-what-to-escalate-for-legal-review.md](../docs/16-what-to-escalate-for-legal-review.md)
-- [docs/17-downloadable-toolkit-pack.md](../docs/17-downloadable-toolkit-pack.md)
+- [docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md](../docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md)
+- [docs/guide/docs/guide/17-downloadable-toolkit-pack.md](../docs/guide/docs/guide/17-downloadable-toolkit-pack.md)
 - [templates/README.md](../templates/README.md)
 - [checklists/README.md](../checklists/README.md)

@@ -75,7 +75,7 @@ toolkit_resources:
   - id: faq
     title: FAQ
     type: reference
-    path: docs/23-faq.md
+    path: docs/guide/faq.md
     purpose: Frequently asked questions
     description: Common questions about the toolkit, readiness, and the EU AI Act.
     recommended_for:
@@ -86,7 +86,7 @@ toolkit_resources:
   - id: decision-tree
     title: SME Decision Tree
     type: reference
-    path: docs/19-sme-decision-tree.md
+    path: docs/guide/docs/guide/19-sme-decision-tree.md
     purpose: When to escalate AI tool concerns
     description: Structured guide for determining when an AI tool requires specialist review.
     recommended_for:
@@ -108,7 +108,7 @@ toolkit_resources:
   - id: source-notes
     title: Source Notes
     type: reference
-    path: docs/10-source-notes.md
+    path: docs/guide/docs/guide/10-source-notes.md
     purpose: How toolkit content links to official sources
     description: Detailed mapping of toolkit guidance to official regulation articles.
     recommended_for:
@@ -119,7 +119,7 @@ toolkit_resources:
   - id: glossary
     title: Glossary
     type: reference
-    path: docs/18-glossary.md
+    path: docs/guide/docs/guide/18-glossary.md
     purpose: Plain-language terminology
     description: Definitions of AI governance, compliance, and EU AI Act terms in accessible language.
     recommended_for:
@@ -130,7 +130,7 @@ toolkit_resources:
   - id: implementation-playbook
     title: Implementation Playbook
     type: guidance
-    path: docs/20-sme-implementation-playbook.md
+    path: docs/guide/docs/guide/20-sme-implementation-playbook.md
     purpose: Step-by-step guide to introducing AI governance
     description: A structured approach to rolling out AI governance in your organisation.
     recommended_for:
@@ -141,7 +141,7 @@ toolkit_resources:
   - id: escalation-guide
     title: Escalation Guide
     type: guidance
-    path: docs/16-what-to-escalate-for-legal-review.md
+    path: docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md
     purpose: When to involve specialists
     description: Guidance on escalating to legal, privacy, or technical professionals.
     recommended_for:
@@ -152,7 +152,7 @@ toolkit_resources:
   - id: common-mistakes
     title: Common Mistakes
     type: guidance
-    path: docs/21-common-mistakes.md
+    path: docs/guide/docs/guide/21-common-mistakes.md
     purpose: Common AI governance readiness errors and how to avoid them
     description: Real patterns of mistakes and practical fixes.
     recommended_for:

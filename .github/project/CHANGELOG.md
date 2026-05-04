@@ -8,10 +8,10 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ### Repository layout
 
-- TypeScript quiz engine and tests moved from root **`src/`** to **`maint/src/`** (update bookmarks and PR templates that referenced `src/`).
-- **`registry/`** removed from the repo root: YAML registries and JSON Schemas now live under **`maint/data/`** and **`maint/schemas/`** (update bookmarks from `registry/` paths).
-- Consolidated root folders: **`dev/`**, **`scripts/`**, **`tools/`**, **`docker/`** → **`maint/`** (subfolders unchanged); **`data/`** and **`schemas/`** → **`registry/data/`** and **`registry/schemas/`**. Quality checks run via **`./maint/scripts/check-toolkit-quality.sh`**; Python validators live under **`maint/tools/`**.
-- Shorter GitHub root listing (before **`maint/`**): **`VERSION`**, **`.htmlvalidate.json`**, and **`lighthouserc.js`** lived under **`dev/`** (now **`maint/dev/`**); SQLite evidence pack files are under **`docs/project/database/`** (update bookmarks from old `database/` paths).
+- TypeScript quiz engine and tests moved from root **`src/`** to **`tools/src/`** (update bookmarks and PR templates that referenced `src/`).
+- **`registry/`** removed from the repo root: YAML registries and JSON Schemas now live under **`tools/data/`** and **`tools/schemas/`** (update bookmarks from `registry/` paths).
+- Consolidated root folders: **`dev/`**, **`scripts/`**, **`tools/`**, **`docker/`** → **`tools/`** (subfolders unchanged); **`data/`** and **`schemas/`** → **`registry/data/`** and **`registry/schemas/`**. Quality checks run via **`./tools/scripts/check-toolkit-quality.sh`**; Python validators live under **`tools/tools/`**.
+- Shorter GitHub root listing (before **`tools/`**): **`VERSION`**, **`.htmlvalidate.json`**, and **`lighthouserc.js`** lived under **`dev/`** (now **`tools/dev/`**); SQLite evidence pack files are under **`.github/project/database/`** (update bookmarks from old `database/` paths).
 - Hygiene **`find`** in **`quality-lib.sh`** now skips **`node_modules`** so local `npm ci` does not trip the `* 2.md` duplicate-name check.
 
 - Removed root **`AGENTS.md`** and **`.cursor/rules/`** from the tracked tree; added **`.cursor/`** and **`AGENTS.md`** to **`.gitignore`** so they stay local if you use them. Maintainer workflow and layout notes live in **`.github/CONTRIBUTING.md`**.
@@ -163,8 +163,8 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 - Switched the README hero to a flattened PNG version for reliable GitHub rendering.
 - Added two new Credly badges to the selected credentials section.
 - Simplified the maintainer section by removing the external-verification sentence from README.
-- Compact the repository root by moving community health files into `.github/` and project meta files into `docs/project/`.
-- Added a `docs/project/` index to keep the relocated documentation easy to find.
+- Compact the repository root by moving community health files into `.github/` and project meta files into `.github/project/`.
+- Added a `.github/project/` index to keep the relocated documentation easy to find.
 - Updated maintainer name to Artem Nazarko while keeping @artemhobotun as GitHub username.
 - Improved the live mini-site section to make the GitHub Pages entry point clearer.
 - Reworked profile buttons into compact, colorful GitHub, LinkedIn, Credly, and ORCID buttons.
