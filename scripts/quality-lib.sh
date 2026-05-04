@@ -70,9 +70,9 @@ check_not_contains_repo() {
 check_hygiene_pattern() {
   local pattern="$1"
   if [[ "$pattern" == ".DS_Store" ]]; then
-    find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type f -name "$pattern" -exec rm -f {} +
+    find "$ROOT_DIR" \( -path "$ROOT_DIR/.git" -o -name node_modules \) -prune -o -type f -name "$pattern" -exec rm -f {} +
   fi
-  if find "$ROOT_DIR" -path "$ROOT_DIR/.git" -prune -o -type f -name "$pattern" -print | grep -q .; then
+  if find "$ROOT_DIR" \( -path "$ROOT_DIR/.git" -o -name node_modules \) -prune -o -type f -name "$pattern" -print | grep -q .; then
     fail "Found forbidden file pattern: $pattern"
   else
     pass "No files matching pattern: $pattern"

@@ -8,6 +8,9 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ### Repository layout
 
+- Shorter GitHub root listing: **`VERSION`**, **`.htmlvalidate.json`**, and **`lighthouserc.js`** moved under **`dev/`**; SQLite evidence pack files moved to **`docs/project/database/`** (update bookmarks from old `database/` paths).
+- Hygiene **`find`** in **`quality-lib.sh`** now skips **`node_modules`** so local `npm ci` does not trip the `* 2.md` duplicate-name check.
+
 - Removed root **`AGENTS.md`** and **`.cursor/rules/`** from the tracked tree; added **`.cursor/`** and **`AGENTS.md`** to **`.gitignore`** so they stay local if you use them. Maintainer workflow and layout notes live in **`.github/CONTRIBUTING.md`**.
 
 ### CI, quality scripts, and repository hygiene

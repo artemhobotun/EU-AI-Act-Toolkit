@@ -163,9 +163,9 @@ Supports programmatic scoring, validation, and tool integration. See [src/README
 
 Optional evidence pack database structure for tracking AI systems, risk screenings, vendors, and incidents.
 
-**Location:** [database/](database/)
+**Location:** [docs/project/database/](docs/project/database/)
 
-Use this schema if you want to manage toolkit data in a structured database. Supports queries for audit trails, compliance documentation, and risk management workflows. See [database/README.md](database/README.md) for schema documentation.
+Use this schema if you want to manage toolkit data in a structured database. Supports queries for audit trails, compliance documentation, and risk management workflows. See [docs/project/database/README.md](docs/project/database/README.md) for schema documentation.
 
 </details>
 
@@ -402,11 +402,16 @@ Contributors are listed in [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) an
 README.md
 LICENSE
 CITATION.cff
-.github/          (contributing, conduct, security policy, CI, Node toolchain)
-docker/           (site container image)
-docs/             (Pages site, disclaimer, project notes)
-data/ schemas/ src/ database/
-toolkit/ scripts/ tools/
+.github/          contributing, workflows, Node toolchain
+dev/              VERSION + html-validate / Lighthouse config
+docker/           site container image
+docs/             Pages site, disclaimer, project notes (includes database SQL)
+data/
+schemas/
+src/
+toolkit/
+tools/
+scripts/
 ```
 
 </details>

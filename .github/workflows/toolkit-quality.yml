@@ -40,7 +40,7 @@ jobs:
         with:
           node-version: "22"
       - name: Validate Pages HTML
-        run: npx --yes html-validate@10.15.0 "docs/*.html"
+        run: npx --yes html-validate@10.15.0 --config dev/htmlvalidate.json "docs/*.html"
 
   typescript:
     runs-on: ubuntu-latest

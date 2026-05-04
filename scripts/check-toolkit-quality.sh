@@ -16,10 +16,10 @@ while IFS= read -r file || [[ -n "${file:-}" ]]; do
   check_file "$file"
 done < "$REQUIRED_FILES_LIST"
 
-if grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$' "$ROOT_DIR/VERSION" 2>/dev/null; then
-  pass "VERSION is a single-line semver (e.g. 1.5.0)"
+if grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$' "$ROOT_DIR/dev/VERSION" 2>/dev/null; then
+  pass "dev/VERSION is a single-line semver (e.g. 1.5.0)"
 else
-  fail "VERSION must be a single semver line (major.minor.patch)"
+  fail "dev/VERSION must be a single semver line (major.minor.patch)"
 fi
 
 check_contains "README.md" "not legal advice"
@@ -338,7 +338,7 @@ else
 fi
 
 # SQL evidence schema
-if grep -q "CREATE TABLE.*ai_systems" "$ROOT_DIR/database/evidence-pack-schema.sql"; then
+if grep -q "CREATE TABLE.*ai_systems" "$ROOT_DIR/docs/project/database/evidence-pack-schema.sql"; then
   pass "AI systems table found in evidence-pack-schema.sql"
 else
   fail "AI systems table missing in evidence-pack-schema.sql"

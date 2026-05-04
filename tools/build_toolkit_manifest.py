@@ -18,8 +18,8 @@ def get_repo_root():
 
 
 def read_version(repo_root: Path) -> str:
-    """Single-line semver from VERSION at repository root."""
-    path = repo_root / "VERSION"
+    """Single-line semver from dev/VERSION (keeps repo root listing short)."""
+    path = repo_root / "dev" / "VERSION"
     if not path.is_file():
         return "0.0.0"
     text = path.read_text(encoding="utf-8").strip()

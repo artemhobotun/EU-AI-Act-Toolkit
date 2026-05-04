@@ -6,7 +6,7 @@ docs/assets/**/*.js -linguist-documentation
 
 # Structured data layer as project source (not documentation).
 src/**/*.ts -linguist-documentation
-database/**/*.sql -linguist-documentation
+docs/project/database/**/*.sql -linguist-documentation
 data/**/*.yml -linguist-documentation
 schemas/**/*.json -linguist-documentation
 

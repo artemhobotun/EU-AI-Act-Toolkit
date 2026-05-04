@@ -11,7 +11,7 @@ on:
     paths:
       - docker/Dockerfile
       - docs/**
-      - VERSION
+      - dev/VERSION
   workflow_dispatch:
 
 permissions:
@@ -30,7 +30,7 @@ jobs:
         run: |
           OWNER_LC="$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')"
           echo "image=ghcr.io/${OWNER_LC}/eu-ai-act-toolkit-site" >> "$GITHUB_OUTPUT"
-          ver="$(tr -d '\r\n\t ' < VERSION | head -c 64)"
+          ver="$(tr -d '\r\n\t ' < dev/VERSION | head -c 64)"
           echo "version=${ver}" >> "$GITHUB_OUTPUT"
 
       - name: Trivy Dockerfile scan

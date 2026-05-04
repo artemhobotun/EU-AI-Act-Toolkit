@@ -1,5 +1,7 @@
 README.md
-VERSION
+dev/VERSION
+dev/htmlvalidate.json
+dev/lighthouserc.js
 .editorconfig
 docker/Dockerfile
 docker/.dockerignore
@@ -113,8 +115,8 @@ scripts/build-starter-pack.sh
 .github/ISSUE_TEMPLATE/question.yml
 src/quiz-engine.ts
 src/README.md
-database/evidence-pack-schema.sql
-database/README.md
+docs/project/database/evidence-pack-schema.sql
+docs/project/database/README.md
 data/toolkit-registry.yml
 data/official-sources.yml
 data/use-cases.yml
@@ -142,7 +144,5 @@ tools/verify_toolkit_manifest_sync.py
 tools/check_json_files_parse.py
 scripts/quality-lib.sh
 scripts/required-toolkit-files.txt
-.htmlvalidate.json
 .github/workflows/lighthouse.yml
-lighthouserc.js
 .github/dependabot.yml
