@@ -8,4 +8,5 @@ toolkit/examples/progress-notes/**/toolkit-progress-note-*.md
 
 # IDE / local agent notes — not part of the published toolkit tree on GitHub
 .cursor/
+.antigravity/
 AGENTS.md
