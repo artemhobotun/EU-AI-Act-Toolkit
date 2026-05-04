@@ -145,5 +145,4 @@ scripts/required-toolkit-files.txt
 .htmlvalidate.json
 .github/workflows/lighthouse.yml
 lighthouserc.js
-AGENTS.md
 .github/dependabot.yml

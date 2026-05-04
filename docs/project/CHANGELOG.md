@@ -6,6 +6,10 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ## Unreleased
 
+### Repository layout
+
+- Removed root **`AGENTS.md`** and **`.cursor/rules/`** from the tracked tree; added **`.cursor/`** and **`AGENTS.md`** to **`.gitignore`** so they stay local if you use them. Maintainer workflow and layout notes live in **`.github/CONTRIBUTING.md`**.
+
 ### CI, quality scripts, and repository hygiene
 
 - Pinned third-party GitHub Actions to full commit SHAs (checkout, setup-node, setup-python, docker/login, docker/build-push, trivy-action) for reproducible CI.
@@ -15,7 +19,7 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 - **Publish site container:** Trivy config scan on `./docker` now uses **`exit-code: "1"`** so misconfigurations at CRITICAL/HIGH severity fail the workflow.
 - Added **`html-validate`** job (recommended rules; inline `style` allowed) and **`lighthouserc.js`** + **`lighthouse.yml`** workflow for static runs against `docs/`.
 - Added **`tools/check_json_files_parse.py`** and **`scripts/required-toolkit-files.txt`** so required-file lists and JSON parse checks are easier to maintain.
-- Added root **`AGENTS.md`**, **`engines.node`** in `.github/node-toolchain/package.json`, **SECURITY** row on Dependabot alerts, and **docs/packages.md** fork/GHCR note.
+- Added **`engines.node`** in `.github/node-toolchain/package.json`, **SECURITY** row on Dependabot alerts, and **docs/packages.md** fork/GHCR note (root `AGENTS.md` / `.cursor/` were later removed from the default tree; see Unreleased).
 - Refactored **`scripts/check-common-links.sh`** to source **`quality-lib.sh`**. Fixed bare **`&`** in several **`docs/*.html`** headings and **`type="button"`** on quiz navigation buttons for standards-compliant markup.
 
 - Added `tools/verify_toolkit_manifest_sync.py`: CI compares the committed `docs/assets/toolkit-manifest.json` to `build_toolkit_manifest.py` output with **`generated` ignored**, so the manifest does not need rewriting every run.
