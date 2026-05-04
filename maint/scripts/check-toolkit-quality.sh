@@ -1,25 +1,25 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 # shellcheck source=quality-lib.sh
 source "$(dirname "${BASH_SOURCE[0]}")/quality-lib.sh"
 
 old_readme_title="# 🇪🇺 EU AI Act Toolkit"" for SMEs"
 old_maintainer_name="Artem ""Hobotun"
 
-REQUIRED_FILES_LIST="$ROOT_DIR/scripts/required-toolkit-files.txt"
-check_file "scripts/required-toolkit-files.txt"
+REQUIRED_FILES_LIST="$ROOT_DIR/maint/scripts/required-toolkit-files.txt"
+check_file "maint/scripts/required-toolkit-files.txt"
 while IFS= read -r file || [[ -n "${file:-}" ]]; do
   file="${file//$'\r'/}"
   [[ -z "${file// }" || "$file" =~ ^# ]] && continue
   check_file "$file"
 done < "$REQUIRED_FILES_LIST"
 
-if grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$' "$ROOT_DIR/dev/VERSION" 2>/dev/null; then
-  pass "dev/VERSION is a single-line semver (e.g. 1.5.0)"
+if grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$' "$ROOT_DIR/maint/dev/VERSION" 2>/dev/null; then
+  pass "maint/dev/VERSION is a single-line semver (e.g. 1.5.0)"
 else
-  fail "dev/VERSION must be a single semver line (major.minor.patch)"
+  fail "maint/dev/VERSION must be a single semver line (major.minor.patch)"
 fi
 
 check_contains "README.md" "not legal advice"
@@ -70,11 +70,11 @@ check_not_contains_file "README.md" "## 📦 Package"
 check_contains "docs/packages.md" "ghcr.io/artemhobotun/eu-ai-act-toolkit-site"
 check_contains "docs/packages.md" "docker run"
 check_contains "docs/packages.md" "Forks and GHCR"
-check_contains "docker/Dockerfile" "nginxinc/nginx-unprivileged"
-check_contains "docker/Dockerfile" "COPY docs/"
+check_contains "maint/docker/Dockerfile" "nginxinc/nginx-unprivileged"
+check_contains "maint/docker/Dockerfile" "COPY docs/"
 check_contains ".github/workflows/publish-site-container.yml" "eu-ai-act-toolkit-site"
 check_contains ".github/workflows/publish-site-container.yml" "ghcr.io"
-check_contains ".github/workflows/publish-site-container.yml" "docker/Dockerfile"
+check_contains ".github/workflows/publish-site-container.yml" "maint/docker/Dockerfile"
 check_contains ".github/workflows/publish-site-container.yml" "aquasecurity/trivy-action@"
 check_contains "README.md" "## 📊 Structured technical layer"
 check_contains "README.md" "🧠 TypeScript quiz engine"
@@ -311,13 +311,13 @@ else
   pass "No committed ZIP files under dist/"
 fi
 
-if [[ -f "$ROOT_DIR/scripts/check-common-links.sh" ]]; then
+if [[ -f "$ROOT_DIR/maint/scripts/check-common-links.sh" ]]; then
   pass "Link audit script present"
 else
   fail "Link audit script missing"
 fi
 
-if [[ -x "$ROOT_DIR/scripts/check-common-links.sh" ]]; then
+if [[ -x "$ROOT_DIR/maint/scripts/check-common-links.sh" ]]; then
   pass "Link audit script is executable"
 else
   fail "Link audit script is not executable"
@@ -345,19 +345,19 @@ else
 fi
 
 # YAML registries validation (check for expected keys without requiring PyYAML)
-if grep -q "^  - id:" "$ROOT_DIR/data/toolkit-registry.yml"; then
+if grep -q "^  - id:" "$ROOT_DIR/registry/data/toolkit-registry.yml"; then
   pass "toolkit-registry.yml has expected structure (id: entries)"
 else
   fail "toolkit-registry.yml missing expected structure"
 fi
 
-if grep -q "^  - id:" "$ROOT_DIR/data/official-sources.yml"; then
+if grep -q "^  - id:" "$ROOT_DIR/registry/data/official-sources.yml"; then
   pass "official-sources.yml has expected structure (id: entries)"
 else
   fail "official-sources.yml missing expected structure"
 fi
 
-if grep -q "^  - id:" "$ROOT_DIR/data/use-cases.yml"; then
+if grep -q "^  - id:" "$ROOT_DIR/registry/data/use-cases.yml"; then
   pass "use-cases.yml has expected structure (id: entries)"
 else
   fail "use-cases.yml missing expected structure"
@@ -365,7 +365,7 @@ fi
 
 # JSON Schema and sample files (parse as JSON)
 if command -v python3 &> /dev/null; then
-  if python3 "$ROOT_DIR/tools/check_json_files_parse.py"; then
+  if python3 "$ROOT_DIR/maint/tools/check_json_files_parse.py"; then
     pass "Schema and sample JSON files parse as valid JSON"
   else
     fail "One or more schema/sample JSON files failed JSON parse"
@@ -385,30 +385,30 @@ else
   fail "Site interactivity script missing: docs/assets/site.js"
 fi
 
-if [[ -f "$ROOT_DIR/tools/validate_site_links.py" ]]; then
-  pass "Link validation tool present: tools/validate_site_links.py"
+if [[ -f "$ROOT_DIR/maint/tools/validate_site_links.py" ]]; then
+  pass "Link validation tool present: maint/tools/validate_site_links.py"
 else
-  fail "Link validation tool missing: tools/validate_site_links.py"
+  fail "Link validation tool missing: maint/tools/validate_site_links.py"
 fi
 
-if [[ -f "$ROOT_DIR/tools/build_toolkit_manifest.py" ]]; then
-  pass "Toolkit manifest builder present: tools/build_toolkit_manifest.py"
+if [[ -f "$ROOT_DIR/maint/tools/build_toolkit_manifest.py" ]]; then
+  pass "Toolkit manifest builder present: maint/tools/build_toolkit_manifest.py"
 else
-  fail "Toolkit manifest builder missing: tools/build_toolkit_manifest.py"
+  fail "Toolkit manifest builder missing: maint/tools/build_toolkit_manifest.py"
 fi
 
 # Run Python quality tools if available
 if command -v python3 &> /dev/null; then
-  if python3 "$ROOT_DIR/tools/validate_site_links.py"; then
+  if python3 "$ROOT_DIR/maint/tools/validate_site_links.py"; then
     pass "Site link validation passed"
   else
     fail "Site link validation failed"
   fi
 
-  if python3 "$ROOT_DIR/tools/verify_toolkit_manifest_sync.py"; then
+  if python3 "$ROOT_DIR/maint/tools/verify_toolkit_manifest_sync.py"; then
     pass "Toolkit manifest matches build_toolkit_manifest.py (generated timestamp ignored)"
   else
-    fail "Toolkit manifest out of sync; run: python3 tools/build_toolkit_manifest.py && git add docs/assets/toolkit-manifest.json"
+    fail "Toolkit manifest out of sync; run: python3 maint/tools/build_toolkit_manifest.py && git add docs/assets/toolkit-manifest.json"
   fi
 else
   pass "Python3 not available (link validation and manifest generation skipped)"
@@ -417,17 +417,17 @@ fi
 # Data registry YAML vs JSON Schema (optional locally if PyYAML + jsonschema installed)
 if command -v python3 &> /dev/null; then
   if python3 -c "import yaml, jsonschema" 2>/dev/null; then
-    if python3 "$ROOT_DIR/tools/validate_data_registries.py"; then
+    if python3 "$ROOT_DIR/maint/tools/validate_data_registries.py"; then
       pass "Data registries validated against document JSON Schemas"
     else
       fail "Data registry validation failed"
     fi
   else
-    pass "PyYAML/jsonschema not installed (install tools/requirements-ci.txt to validate data registries locally)"
+    pass "PyYAML/jsonschema not installed (install maint/tools/requirements-ci.txt to validate data registries locally)"
   fi
 
   if python3 -c "import jsonschema" 2>/dev/null; then
-    if python3 "$ROOT_DIR/tools/validate_schema_samples.py"; then
+    if python3 "$ROOT_DIR/maint/tools/validate_schema_samples.py"; then
       pass "JSON Schema samples validated against instance schemas"
     else
       fail "JSON Schema sample validation failed"

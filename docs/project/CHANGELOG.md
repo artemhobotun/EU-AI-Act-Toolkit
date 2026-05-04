@@ -8,7 +8,8 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ### Repository layout
 
-- Shorter GitHub root listing: **`VERSION`**, **`.htmlvalidate.json`**, and **`lighthouserc.js`** moved under **`dev/`**; SQLite evidence pack files moved to **`docs/project/database/`** (update bookmarks from old `database/` paths).
+- Consolidated root folders: **`dev/`**, **`scripts/`**, **`tools/`**, **`docker/`** → **`maint/`** (subfolders unchanged); **`data/`** and **`schemas/`** → **`registry/data/`** and **`registry/schemas/`**. Quality checks run via **`./maint/scripts/check-toolkit-quality.sh`**; Python validators live under **`maint/tools/`**.
+- Shorter GitHub root listing (before **`maint/`**): **`VERSION`**, **`.htmlvalidate.json`**, and **`lighthouserc.js`** lived under **`dev/`** (now **`maint/dev/`**); SQLite evidence pack files are under **`docs/project/database/`** (update bookmarks from old `database/` paths).
 - Hygiene **`find`** in **`quality-lib.sh`** now skips **`node_modules`** so local `npm ci` does not trip the `* 2.md` duplicate-name check.
 
 - Removed root **`AGENTS.md`** and **`.cursor/rules/`** from the tracked tree; added **`.cursor/`** and **`AGENTS.md`** to **`.gitignore`** so they stay local if you use them. Maintainer workflow and layout notes live in **`.github/CONTRIBUTING.md`**.

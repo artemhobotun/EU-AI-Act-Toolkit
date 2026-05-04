@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 ZIP_PATH="$ROOT_DIR/dist/eu-ai-act-sme-starter-pack.zip"
 
 mkdir -p "$ROOT_DIR/dist"

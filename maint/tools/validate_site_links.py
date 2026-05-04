@@ -15,8 +15,7 @@ from pathlib import Path
 
 def get_docs_path():
     """Get the path to the docs directory."""
-    script_dir = Path(__file__).parent
-    repo_root = script_dir.parent
+    repo_root = Path(__file__).resolve().parent.parent.parent
     return repo_root / 'docs'
 
 

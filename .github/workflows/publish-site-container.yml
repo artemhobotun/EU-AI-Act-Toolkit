@@ -9,9 +9,9 @@ on:
     branches:
       - main
     paths:
-      - docker/Dockerfile
+      - maint/docker/Dockerfile
       - docs/**
-      - dev/VERSION
+      - maint/dev/VERSION
   workflow_dispatch:
 
 permissions:
@@ -30,14 +30,14 @@ jobs:
         run: |
           OWNER_LC="$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')"
           echo "image=ghcr.io/${OWNER_LC}/eu-ai-act-toolkit-site" >> "$GITHUB_OUTPUT"
-          ver="$(tr -d '\r\n\t ' < dev/VERSION | head -c 64)"
+          ver="$(tr -d '\r\n\t ' < maint/dev/VERSION | head -c 64)"
           echo "version=${ver}" >> "$GITHUB_OUTPUT"
 
       - name: Trivy Dockerfile scan
         uses: aquasecurity/trivy-action@a9c7b0f06e461e9d4b4d1711f154ee024b8d7ab8
         with:
           scan-type: config
-          scan-ref: ./docker
+          scan-ref: ./maint/docker
           severity: CRITICAL,HIGH
           exit-code: "1"
 
@@ -52,7 +52,7 @@ jobs:
         uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8
         with:
           context: .
-          file: docker/Dockerfile
+          file: maint/docker/Dockerfile
           push: true
           tags: |
             ${{ steps.meta.outputs.image }}:latest

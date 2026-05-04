@@ -10,7 +10,7 @@ on:
       - main
     paths:
       - "docs/**"
-      - "dev/lighthouserc.js"
+      - "maint/dev/lighthouserc.js"
       - ".github/workflows/lighthouse.yml"
   workflow_dispatch:
 
@@ -33,4 +33,4 @@ jobs:
       - name: Run Lighthouse CI (collect only, no assert)
         run: |
           npm install -g @lhci/cli@0.15.1
-          lhci collect --config=./dev/lighthouserc.js
+          lhci collect --config=./maint/dev/lighthouserc.js

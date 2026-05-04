@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate minimal JSON samples against instance JSON Schemas in schemas/."""
+"""Validate minimal JSON samples against instance JSON Schemas in registry/schemas/."""
 
 from __future__ import annotations
 
@@ -9,12 +9,12 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 
 PAIRS: tuple[tuple[str, str], ...] = (
-    ("schemas/samples/ai-system-inventory.sample.json", "schemas/ai-system-inventory.schema.json"),
-    ("schemas/samples/risk-screening.sample.json", "schemas/risk-screening.schema.json"),
-    ("schemas/samples/vendor-review.sample.json", "schemas/vendor-review.schema.json"),
+    ("registry/schemas/samples/ai-system-inventory.sample.json", "registry/schemas/ai-system-inventory.schema.json"),
+    ("registry/schemas/samples/risk-screening.sample.json", "registry/schemas/risk-screening.schema.json"),
+    ("registry/schemas/samples/vendor-review.sample.json", "registry/schemas/vendor-review.schema.json"),
 )
 
 

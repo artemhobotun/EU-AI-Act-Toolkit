@@ -7,8 +7,8 @@ docs/assets/**/*.js -linguist-documentation
 # Structured data layer as project source (not documentation).
 src/**/*.ts -linguist-documentation
 docs/project/database/**/*.sql -linguist-documentation
-data/**/*.yml -linguist-documentation
-schemas/**/*.json -linguist-documentation
+registry/data/**/*.yml -linguist-documentation
+registry/schemas/**/*.json -linguist-documentation
 
 # Treat release/build outputs as generated.
 dist/** linguist-generated

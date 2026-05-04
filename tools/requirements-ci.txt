@@ -1,3 +1,0 @@
-# Used by CI and optional local runs: data/*.yml registry validation
-PyYAML==6.0.2
-jsonschema==4.23.0

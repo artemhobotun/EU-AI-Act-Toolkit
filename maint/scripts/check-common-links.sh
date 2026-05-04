@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 # shellcheck source=quality-lib.sh
 source "$(dirname "${BASH_SOURCE[0]}")/quality-lib.sh"
 
@@ -38,8 +38,8 @@ check_file "docs/23-faq.md"
 
 # Scripts
 echo "=== Checking scripts ==="
-check_file "scripts/check-toolkit-quality.sh"
-if [[ -x "$ROOT_DIR/scripts/check-toolkit-quality.sh" ]]; then
+check_file "maint/scripts/check-toolkit-quality.sh"
+if [[ -x "$ROOT_DIR/maint/scripts/check-toolkit-quality.sh" ]]; then
   pass "check-toolkit-quality.sh executable"
 else
   fail "check-toolkit-quality.sh not executable"

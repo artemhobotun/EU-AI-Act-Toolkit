@@ -174,9 +174,9 @@ Use this schema if you want to manage toolkit data in a structured database. Sup
 
 Machine-readable toolkit resource inventory, official EU sources, and use-case scenarios.
 
-**Location:** [data/](data/)
+**Location:** [registry/data/](registry/data/)
 
-Includes toolkit registry, official EU AI Act sources, and compliance readiness use cases. Useful for automation, site generation, and tool integration. See [data/README.md](data/README.md) for details.
+Includes toolkit registry, official EU AI Act sources, and compliance readiness use cases. Useful for automation, site generation, and tool integration. See [registry/data/README.md](registry/data/README.md) for details.
 
 </details>
 
@@ -185,9 +185,9 @@ Includes toolkit registry, official EU AI Act sources, and compliance readiness 
 
 Validation schemas for AI system inventory, risk screening, and vendor assessment data.
 
-**Location:** [schemas/](schemas/)
+**Location:** [registry/schemas/](registry/schemas/)
 
-Use these schemas to validate structured data, integrate with third-party tools, or build custom automation. See [schemas/README.md](schemas/README.md) for schema details and examples.
+Use these schemas to validate structured data, integrate with third-party tools, or build custom automation. See [registry/schemas/README.md](registry/schemas/README.md) for schema details and examples.
 
 </details>
 
@@ -298,7 +298,7 @@ Use the templates as a practical starting point, then adapt them to your sector,
 Build the ZIP locally:
 
 ```bash
-./scripts/build-starter-pack.sh
+./maint/scripts/build-starter-pack.sh
 ```
 
 The generated ZIP is for internal use. Completed documents should not be uploaded to public GitHub issues.
@@ -370,8 +370,8 @@ This toolkit is based on Regulation (EU) 2024/1689 and keeps the guidance intent
 Run local quality checks:
 
 ```bash
-./scripts/check-toolkit-quality.sh
-./scripts/check-common-links.sh
+./maint/scripts/check-toolkit-quality.sh
+./maint/scripts/check-common-links.sh
 ```
 
 See also: [roadmap](docs/project/roadmap.md)
@@ -403,15 +403,11 @@ README.md
 LICENSE
 CITATION.cff
 .github/          contributing, workflows, Node toolchain
-dev/              VERSION + html-validate / Lighthouse config
-docker/           site container image
 docs/             Pages site, disclaimer, project notes (includes database SQL)
-data/
-schemas/
+maint/            dev config, docker image, Python tools, shell scripts
+registry/         YAML registries (data/) and JSON Schemas (schemas/)
 src/
 toolkit/
-tools/
-scripts/
 ```
 
 </details>
