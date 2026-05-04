@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 /** Site quiz thresholds must stay aligned with .github/tools/quiz-engine/quiz-engine.ts (getReadinessLevel). */
 describe('docs/assets/site.js quiz thresholds', () => {
-  const siteJsPath = resolve(__dirname, '../../docs/assets/site.js');
+  const siteJsPath = resolve(__dirname, '../../../docs/assets/site.js');
   const src = readFileSync(siteJsPath, 'utf8');
 
   it('uses inclusive 33% and 66% boundaries like the TypeScript engine', () => {
