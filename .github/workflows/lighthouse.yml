@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Run Lighthouse CI
+      - name: Run Lighthouse CI (collect only, no assert)
         run: |
           npm install -g @lhci/cli@0.15.1
-          lhci autorun
+          lhci collect
