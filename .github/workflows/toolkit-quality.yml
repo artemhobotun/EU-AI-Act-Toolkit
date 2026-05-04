@@ -65,6 +65,6 @@ jobs:
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: "3.12"
-      - run: pip install -r .github/tools/requirements-ci.txt
-      - run: python3 .github/tools/validate_data_registries.py
-      - run: python3 .github/tools/validate_schema_samples.py
+      - run: pip install -r .github/tools/tools/requirements-ci.txt
+      - run: python3 .github/tools/tools/validate_data_registries.py
+      - run: python3 .github/tools/tools/validate_schema_samples.py
