@@ -38,14 +38,14 @@
     let readinessLevel = '';
     let recommendedResources = [];
 
-    if (percentage < 33) {
+    if (percentage <= 33) {
       readinessLevel = 'Low Readiness';
       recommendedResources = [
         { href: 'packs.html', text: 'Starter Pack', title: 'Begin your EU AI Act readiness journey' },
         { href: 'resources.html', text: 'FAQ', title: 'Common questions answered' },
         { href: 'official-sources.html', text: 'Official Sources', title: 'Authoritative EU AI Act resources' }
       ];
-    } else if (percentage < 66) {
+    } else if (percentage <= 66) {
       readinessLevel = 'Moderate Readiness';
       recommendedResources = [
         { href: 'packs.html', text: 'Vendor Assessment Pack', title: 'Assess your vendor AI practices' },
@@ -66,9 +66,9 @@
     resultsHtml += '<p><strong>' + readinessLevel + '</strong></p>';
     resultsHtml += '<p class="readiness-description">';
 
-    if (percentage < 33) {
+    if (percentage <= 33) {
       resultsHtml += 'You\'re just getting started. Focus on understanding your current AI inventory and initial risk screening.';
-    } else if (percentage < 66) {
+    } else if (percentage <= 66) {
       resultsHtml += 'You\'ve made good progress. Now assess your vendors and deepen your governance practices.';
     } else {
       resultsHtml += 'You\'re well-prepared. Consider sharing your practices and supporting others.';

@@ -74,6 +74,10 @@ They are separate from the instance schemas above (inventory / screening / vendo
 
 **Validate in CI or locally:** see [data/README.md](../data/README.md) and run `python3 tools/validate_data_registries.py` after installing [tools/requirements-ci.txt](../tools/requirements-ci.txt).
 
+### Sample JSON instances (`schemas/samples/`)
+
+Minimal valid examples for each instance schema live under `schemas/samples/`. They are checked in CI with `python3 tools/validate_schema_samples.py` so breaking changes to a schema surface immediately.
+
 ## How to Use
 
 ### Validation

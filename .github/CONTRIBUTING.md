@@ -41,6 +41,13 @@ This repository is practical, SME-friendly, source-aware, and not legal advice. 
 </details>
 
 <details>
+<summary><strong>🏷️ Issues and labels</strong></summary>
+
+When GitHub labels are enabled on this repository, look for **`good first issue`** for small, well-scoped tasks. Maintainer triage uses standard labels such as `documentation`, `bug`, and `enhancement`; if you are unsure where a change belongs, open an issue first.
+
+</details>
+
+<details>
 <summary><strong>🔄 Contribution workflow</strong></summary>
 
 1. Open an issue if you are unsure.

@@ -1,7 +1,7 @@
 # 🇪🇺 EU AI Act Toolkit
 
 <p align="center">
-  <img src="docs/assets/branding/test.png" alt="EU AI Act Toolkit" width="100%">
+  <img src="docs/assets/branding/readme-hero-banner.png" alt="EU AI Act Toolkit" width="100%">
 </p>
 
 Practical templates, checklists, and documentation tools for SMEs working toward EU AI Act readiness.
@@ -392,6 +392,7 @@ Community resources are maintained outside the main README body to keep the proj
 - Maintainers: [docs/project/maintainers.md](docs/project/maintainers.md)
 - License: [LICENSE](LICENSE)
 - License notes: [docs/project/license-notes.md](docs/project/license-notes.md)
+- Changelog: [docs/project/CHANGELOG.md](docs/project/CHANGELOG.md)
 
 Contributors are listed in [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) and [docs/project/maintainers.md](docs/project/maintainers.md).
 
