@@ -8,155 +8,13 @@ source "$(dirname "${BASH_SOURCE[0]}")/quality-lib.sh"
 old_readme_title="# 🇪🇺 EU AI Act Toolkit"" for SMEs"
 old_maintainer_name="Artem ""Hobotun"
 
-required_files=(
-  "README.md"
-  "VERSION"
-  ".editorconfig"
-  "docker/Dockerfile"
-  "docker/.dockerignore"
-  ".github/workflows/publish-site-container.yml"
-  "docs/packages.md"
-  "docs/DISCLAIMER.md"
-  "LICENSE"
-  "docs/project/CONTRIBUTORS.md"
-  "docs/project/CHANGELOG.md"
-  ".github/SECURITY.md"
-  ".github/CODE_OF_CONDUCT.md"
-  ".github/CONTRIBUTING.md"
-  ".github/SUPPORT.md"
-  "docs/project/README.md"
-  "docs/project/credentials.md"
-  "docs/project/governance.md"
-  "docs/project/license-notes.md"
-  "docs/project/maintainers.md"
-  "docs/project/roadmap.md"
-  "toolkit/README.md"
-  "toolkit/starter-pack/README.md"
-  "toolkit/starter-pack/START-HERE.md"
-  "toolkit/starter-pack/starter-pack-index.csv"
-  "toolkit/starter-pack/printable/30-minute-readiness-self-assessment.md"
-  "toolkit/starter-pack/printable/one-page-executive-checklist.md"
-  "toolkit/starter-pack/printable/ai-tool-inventory-starter.md"
-  "toolkit/starter-pack/printable/basic-risk-screening-starter.md"
-  "toolkit/starter-pack/printable/vendor-review-starter.md"
-  "toolkit/starter-pack/printable/evidence-folder-structure.md"
-  "toolkit/starter-pack/internal-rollout/internal-ai-use-announcement-email.md"
-  "toolkit/starter-pack/internal-rollout/employee-ai-use-quick-guide.md"
-  "toolkit/starter-pack/internal-rollout/ai-literacy-session-outline.md"
-  "toolkit/starter-pack/management/management-briefing-template.md"
-  "toolkit/starter-pack/management/ai-governance-owner-role.md"
-  "toolkit/starter-pack/management/quarterly-ai-review-agenda.md"
-  "toolkit/sector-packs/README.md"
-  "toolkit/sector-packs/internal-productivity-and-genai.md"
-  "toolkit/sector-packs/customer-support-chatbots.md"
-  "toolkit/sector-packs/hr-and-recruitment.md"
-  "toolkit/sector-packs/marketing-and-sales.md"
-  "toolkit/sector-packs/vendor-procurement-and-saas.md"
-  "toolkit/sector-packs/legal-and-document-review.md"
-  "toolkit/vendor-pack/README.md"
-  "toolkit/vendor-pack/templates/vendor-ai-due-diligence-questionnaire.md"
-  "toolkit/vendor-pack/templates/vendor-comparison-matrix.csv"
-  "toolkit/vendor-pack/templates/vendor-risk-register.md"
-  "toolkit/vendor-pack/templates/vendor-decision-record.md"
-  "toolkit/vendor-pack/templates/vendor-document-request-list.md"
-  "toolkit/vendor-pack/templates/vendor-contract-review-notes.md"
-  "toolkit/vendor-pack/templates/vendor-scoring-worksheet.md"
-  "toolkit/vendor-pack/templates/vendor-scoring-worksheet.csv"
-  "toolkit/vendor-pack/checklists/vendor-red-flags-checklist.md"
-  "toolkit/vendor-pack/checklists/vendor-procurement-workflow.md"
-  "toolkit/vendor-pack/checklists/vendor-meeting-checklist.md"
-  "toolkit/vendor-pack/checklists/vendor-approval-checklist.md"
-  "toolkit/vendor-pack/email-templates/vendor-document-request-email.md"
-  "toolkit/vendor-pack/email-templates/vendor-follow-up-email.md"
-  "toolkit/vendor-pack/email-templates/internal-vendor-review-request.md"
-  "toolkit/vendor-pack/email-templates/vendor-approval-summary-email.md"
-  "toolkit/vendor-pack/examples/example-vendor-review-ai-crm.md"
-  "toolkit/vendor-pack/examples/example-vendor-review-support-chatbot.md"
-  "toolkit/vendor-pack/examples/example-vendor-review-internal-copilot.md"
-  "toolkit/vendor-pack/decision-records/README.md"
-  "toolkit/vendor-pack/decision-records/decision-status-guide.md"
-  "docs/index.html"
-  "docs/packs.html"
-  "docs/use-cases.html"
-  "docs/resources.html"
-  "docs/maintainer.html"
-  "docs/community.html"
-  "docs/quiz.html"
-  "docs/official-sources.html"
-  "docs/assets/site.css"
-  "docs/10-source-notes.md"
-  "docs/13-evidence-pack-index.md"
-  "docs/18-glossary.md"
-  "docs/19-sme-decision-tree.md"
-  "docs/20-sme-implementation-playbook.md"
-  "docs/21-common-mistakes.md"
-  "docs/22-maintainer-content-style-guide.md"
-  "docs/23-faq.md"
-  "docs/assets/branding/readme-hero.svg"
-  "docs/assets/branding/readme-hero-bg.png"
-  "docs/assets/branding/readme-hero-banner.png"
-  "docs/assets/profile-icons/github.svg"
-  "docs/assets/profile-icons/linkedin.svg"
-  "docs/assets/profile-icons/credly.svg"
-  "docs/assets/profile-icons/orcid.svg"
-  "docs/assets/credentials/credly/ai-literacy.png"
-  "docs/assets/credentials/credly/ai-skills-passport.png"
-  "docs/assets/credentials/credly/ai-fundamentals-with-ibm-skillsbuild.png"
-  "docs/assets/credentials/credly/google-ai-professional-certificate.png"
-  "docs/assets/credentials/credly/legal-ai-leader.png"
-  "toolkit/templates/ai-system-inventory.csv"
-  "toolkit/templates/ai-risk-screening-form.md"
-  "toolkit/templates/vendor-ai-questionnaire.md"
-  "toolkit/checklists/sme-ai-act-readiness-checklist.md"
-  "toolkit/checklists/ai-tool-owner-checklist.md"
-  "toolkit/examples/sample-evidence-pack/README.md"
-  "toolkit/templates/README.md"
-  "toolkit/checklists/README.md"
-  "toolkit/examples/README.md"
-  "toolkit/examples/progress-notes/README.md"
-  "toolkit/examples/progress-notes/EXAMPLE_PROGRESS_NOTE.md"
-  "scripts/build-starter-pack.sh"
-  ".github/PULL_REQUEST_TEMPLATE.md"
-  ".github/ISSUE_TEMPLATE/template-request.yml"
-  ".github/ISSUE_TEMPLATE/source-update.yml"
-  ".github/ISSUE_TEMPLATE/use-case-example.yml"
-  ".github/ISSUE_TEMPLATE/documentation-improvement.yml"
-  ".github/ISSUE_TEMPLATE/question.yml"
-  "src/quiz-engine.ts"
-  "src/README.md"
-  "database/evidence-pack-schema.sql"
-  "database/README.md"
-  "data/toolkit-registry.yml"
-  "data/official-sources.yml"
-  "data/use-cases.yml"
-  "data/README.md"
-  "schemas/ai-system-inventory.schema.json"
-  "schemas/risk-screening.schema.json"
-  "schemas/vendor-review.schema.json"
-  "schemas/README.md"
-  "schemas/toolkit-registry.document.schema.json"
-  "schemas/official-sources.document.schema.json"
-  "schemas/use-cases.document.schema.json"
-  "schemas/samples/ai-system-inventory.sample.json"
-  "schemas/samples/risk-screening.sample.json"
-  "schemas/samples/vendor-review.sample.json"
-  ".github/node-toolchain/README.md"
-  ".github/node-toolchain/package.json"
-  ".github/node-toolchain/package-lock.json"
-  ".github/node-toolchain/tsconfig.json"
-  ".github/node-toolchain/vitest.config.ts"
-  "src/quiz-engine.test.ts"
-  "tools/validate_data_registries.py"
-  "tools/validate_schema_samples.py"
-  "tools/requirements-ci.txt"
-  "tools/verify_toolkit_manifest_sync.py"
-  "scripts/quality-lib.sh"
-  ".github/dependabot.yml"
-)
-
-for file in "${required_files[@]}"; do
+REQUIRED_FILES_LIST="$ROOT_DIR/scripts/required-toolkit-files.txt"
+check_file "scripts/required-toolkit-files.txt"
+while IFS= read -r file || [[ -n "${file:-}" ]]; do
+  file="${file//$'\r'/}"
+  [[ -z "${file// }" || "$file" =~ ^# ]] && continue
   check_file "$file"
-done
+done < "$REQUIRED_FILES_LIST"
 
 if grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$' "$ROOT_DIR/VERSION" 2>/dev/null; then
   pass "VERSION is a single-line semver (e.g. 1.5.0)"
@@ -211,11 +69,13 @@ check_contains "README.md" "docs/packages.md"
 check_not_contains_file "README.md" "## 📦 Package"
 check_contains "docs/packages.md" "ghcr.io/artemhobotun/eu-ai-act-toolkit-site"
 check_contains "docs/packages.md" "docker run"
+check_contains "docs/packages.md" "Forks and GHCR"
 check_contains "docker/Dockerfile" "nginx:alpine"
 check_contains "docker/Dockerfile" "COPY docs/"
 check_contains ".github/workflows/publish-site-container.yml" "eu-ai-act-toolkit-site"
 check_contains ".github/workflows/publish-site-container.yml" "ghcr.io"
 check_contains ".github/workflows/publish-site-container.yml" "docker/Dockerfile"
+check_contains ".github/workflows/publish-site-container.yml" "aquasecurity/trivy-action@"
 check_contains "README.md" "## 📊 Structured technical layer"
 check_contains "README.md" "🧠 TypeScript quiz engine"
 check_contains "README.md" "🗄 SQLite schema"
@@ -503,60 +363,12 @@ else
   fail "use-cases.yml missing expected structure"
 fi
 
-# JSON Schema validation (parse as JSON)
+# JSON Schema and sample files (parse as JSON)
 if command -v python3 &> /dev/null; then
-  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/ai-system-inventory.schema.json'))" 2>/dev/null; then
-    pass "ai-system-inventory.schema.json is valid JSON"
+  if python3 "$ROOT_DIR/tools/check_json_files_parse.py"; then
+    pass "Schema and sample JSON files parse as valid JSON"
   else
-    fail "ai-system-inventory.schema.json is not valid JSON"
-  fi
-
-  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/risk-screening.schema.json'))" 2>/dev/null; then
-    pass "risk-screening.schema.json is valid JSON"
-  else
-    fail "risk-screening.schema.json is not valid JSON"
-  fi
-
-  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/vendor-review.schema.json'))" 2>/dev/null; then
-    pass "vendor-review.schema.json is valid JSON"
-  else
-    fail "vendor-review.schema.json is not valid JSON"
-  fi
-
-  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/toolkit-registry.document.schema.json'))" 2>/dev/null; then
-    pass "toolkit-registry.document.schema.json is valid JSON"
-  else
-    fail "toolkit-registry.document.schema.json is not valid JSON"
-  fi
-
-  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/official-sources.document.schema.json'))" 2>/dev/null; then
-    pass "official-sources.document.schema.json is valid JSON"
-  else
-    fail "official-sources.document.schema.json is not valid JSON"
-  fi
-
-  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/use-cases.document.schema.json'))" 2>/dev/null; then
-    pass "use-cases.document.schema.json is valid JSON"
-  else
-    fail "use-cases.document.schema.json is not valid JSON"
-  fi
-
-  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/samples/ai-system-inventory.sample.json'))" 2>/dev/null; then
-    pass "ai-system-inventory.sample.json is valid JSON"
-  else
-    fail "ai-system-inventory.sample.json is not valid JSON"
-  fi
-
-  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/samples/risk-screening.sample.json'))" 2>/dev/null; then
-    pass "risk-screening.sample.json is valid JSON"
-  else
-    fail "risk-screening.sample.json is not valid JSON"
-  fi
-
-  if python3 -c "import json; json.load(open('$ROOT_DIR/schemas/samples/vendor-review.sample.json'))" 2>/dev/null; then
-    pass "vendor-review.sample.json is valid JSON"
-  else
-    fail "vendor-review.sample.json is not valid JSON"
+    fail "One or more schema/sample JSON files failed JSON parse"
   fi
 fi
 

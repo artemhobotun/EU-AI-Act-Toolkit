@@ -8,11 +8,18 @@ The project follows a lightweight approach to versioning while the toolkit stabi
 
 ### CI, quality scripts, and repository hygiene
 
+- Pinned third-party GitHub Actions to full commit SHAs (checkout, setup-node, setup-python, docker/login, docker/build-push, trivy-action) for reproducible CI.
+- **Publish site container:** Trivy config scan on `./docker` now uses **`exit-code: "1"`** so misconfigurations at CRITICAL/HIGH severity fail the workflow.
+- Added **`html-validate`** job (recommended rules; inline `style` allowed) and **`lighthouserc.js`** + **`lighthouse.yml`** workflow for static runs against `docs/`.
+- Added **`tools/check_json_files_parse.py`** and **`scripts/required-toolkit-files.txt`** so required-file lists and JSON parse checks are easier to maintain.
+- Added root **`AGENTS.md`**, **`engines.node`** in `.github/node-toolchain/package.json`, **SECURITY** row on Dependabot alerts, and **docs/packages.md** fork/GHCR note.
+- Refactored **`scripts/check-common-links.sh`** to source **`quality-lib.sh`**. Fixed bare **`&`** in several **`docs/*.html`** headings and **`type="button"`** on quiz navigation buttons for standards-compliant markup.
+
 - Added `tools/verify_toolkit_manifest_sync.py`: CI compares the committed `docs/assets/toolkit-manifest.json` to `build_toolkit_manifest.py` output with **`generated` ignored**, so the manifest does not need rewriting every run.
 - Split shared bash helpers into `scripts/quality-lib.sh` sourced by `check-toolkit-quality.sh`.
 - Added a **ShellCheck** job (`shellcheck -S error scripts/*.sh`) to Toolkit quality checks.
 - Added **concurrency** groups to cancel superseded workflow runs for quality checks and site container publish.
-- **Publish site container:** image tags now include `VERSION` from the repo root, registry path uses lowercase `github.repository_owner`, push triggers on `VERSION` changes, and **Trivy** config scan runs on `./docker` (non-blocking `exit-code: 0` for config findings).
+- **Publish site container:** image tags include `VERSION` from the repo root, registry path uses lowercase `github.repository_owner`, and push triggers on `VERSION` changes (see bullets above for Trivy).
 - Removed hundreds of committed `toolkit/examples/progress-notes/**/toolkit-progress-note-*.md` samples; added `README.md`, `EXAMPLE_PROGRESS_NOTE.md`, and `.gitignore` for local-only note filenames; Linguist override for that folder.
 - Documented maintainer dependency workflow (main-only bumps, Dependabot limit 0, security alerts, forks) in `.github/CONTRIBUTING.md`.
 

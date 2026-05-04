@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
 
       - name: Image name and VERSION tag
         id: meta
@@ -34,22 +34,22 @@ jobs:
           echo "version=${ver}" >> "$GITHUB_OUTPUT"
 
       - name: Trivy Dockerfile scan
-        uses: aquasecurity/trivy-action@v0.36.0
+        uses: aquasecurity/trivy-action@a9c7b0f06e461e9d4b4d1711f154ee024b8d7ab8
         with:
           scan-type: config
           scan-ref: ./docker
           severity: CRITICAL,HIGH
-          exit-code: "0"
+          exit-code: "1"
 
       - name: Log in to GHCR
-        uses: docker/login-action@v3
+        uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8
         with:
           context: .
           file: docker/Dockerfile

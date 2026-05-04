@@ -2,6 +2,9 @@
   "name": "eu-ai-act-toolkit",
   "private": true,
   "description": "Dev tooling for the TypeScript quiz engine in this repository",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "vitest run"

@@ -15,14 +15,14 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
       - name: Run toolkit quality checks
         run: ./scripts/check-toolkit-quality.sh
 
   shellcheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
       - name: Install ShellCheck
         run: |
           sudo apt-get update -qq
@@ -32,11 +32,21 @@ jobs:
           shellcheck -S error -x scripts/check-toolkit-quality.sh
           shellcheck -S error scripts/check-common-links.sh scripts/build-starter-pack.sh
 
+  html-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "22"
+      - name: Validate Pages HTML
+        run: npx --yes html-validate@10.15.0 "docs/*.html"
+
   typescript:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: "22"
           cache: npm
@@ -51,8 +61,8 @@ jobs:
   data-registries:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: "3.12"
       - run: pip install -r tools/requirements-ci.txt

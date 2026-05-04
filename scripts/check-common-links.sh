@@ -2,54 +2,54 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-FAILURES=0
-
-pass() {
-  printf 'PASS: %s\n' "$1"
-}
-
-fail() {
-  printf 'FAIL: %s\n' "$1"
-  FAILURES=$((FAILURES + 1))
-}
+# shellcheck source=quality-lib.sh
+source "$(dirname "${BASH_SOURCE[0]}")/quality-lib.sh"
 
 # Core files
 echo "=== Checking core project files ==="
-test -f "$ROOT_DIR/README.md" && pass "README.md" || fail "README.md missing"
-test -f "$ROOT_DIR/docs/DISCLAIMER.md" && pass "docs/DISCLAIMER.md" || fail "docs/DISCLAIMER.md missing"
-test -f "$ROOT_DIR/.github/SECURITY.md" && pass ".github/SECURITY.md" || fail ".github/SECURITY.md missing"
-test -f "$ROOT_DIR/LICENSE" && pass "LICENSE" || fail "LICENSE missing"
+check_file "README.md"
+check_file "docs/DISCLAIMER.md"
+check_file ".github/SECURITY.md"
+check_file "LICENSE"
 
 # HTML pages
 echo "=== Checking GitHub Pages files ==="
-test -f "$ROOT_DIR/docs/index.html" && pass "docs/index.html" || fail "docs/index.html missing"
-test -f "$ROOT_DIR/docs/community.html" && pass "docs/community.html" || fail "docs/community.html missing"
+check_file "docs/index.html"
+check_file "docs/community.html"
 
 # Toolkit structure
 echo "=== Checking toolkit structure ==="
-test -d "$ROOT_DIR/toolkit" && pass "toolkit/ directory" || fail "toolkit/ directory missing"
-test -f "$ROOT_DIR/toolkit/README.md" && pass "toolkit/README.md" || fail "toolkit/README.md missing"
-test -f "$ROOT_DIR/toolkit/starter-pack/README.md" && pass "toolkit/starter-pack/README.md" || fail "toolkit/starter-pack/README.md missing"
-test -f "$ROOT_DIR/toolkit/starter-pack/START-HERE.md" && pass "toolkit/starter-pack/START-HERE.md" || fail "toolkit/starter-pack/START-HERE.md missing"
-test -f "$ROOT_DIR/toolkit/vendor-pack/README.md" && pass "toolkit/vendor-pack/README.md" || fail "toolkit/vendor-pack/README.md missing"
-test -f "$ROOT_DIR/toolkit/templates/README.md" && pass "toolkit/templates/README.md" || fail "toolkit/templates/README.md missing"
-test -f "$ROOT_DIR/toolkit/checklists/README.md" && pass "toolkit/checklists/README.md" || fail "toolkit/checklists/README.md missing"
+if [[ -d "$ROOT_DIR/toolkit" ]]; then
+  pass "toolkit/ directory"
+else
+  fail "toolkit/ directory missing"
+fi
+check_file "toolkit/README.md"
+check_file "toolkit/starter-pack/README.md"
+check_file "toolkit/starter-pack/START-HERE.md"
+check_file "toolkit/vendor-pack/README.md"
+check_file "toolkit/templates/README.md"
+check_file "toolkit/checklists/README.md"
 
 # Documentation
 echo "=== Checking documentation files ==="
-test -f "$ROOT_DIR/docs/project/credentials.md" && pass "docs/project/credentials.md" || fail "docs/project/credentials.md missing"
-test -f "$ROOT_DIR/docs/23-faq.md" && pass "docs/23-faq.md" || fail "docs/23-faq.md missing"
+check_file "docs/project/credentials.md"
+check_file "docs/23-faq.md"
 
 # Scripts
 echo "=== Checking scripts ==="
-test -f "$ROOT_DIR/scripts/check-toolkit-quality.sh" && pass "check-toolkit-quality.sh" || fail "check-toolkit-quality.sh missing"
-test -x "$ROOT_DIR/scripts/check-toolkit-quality.sh" && pass "check-toolkit-quality.sh executable" || fail "check-toolkit-quality.sh not executable"
+check_file "scripts/check-toolkit-quality.sh"
+if [[ -x "$ROOT_DIR/scripts/check-toolkit-quality.sh" ]]; then
+  pass "check-toolkit-quality.sh executable"
+else
+  fail "check-toolkit-quality.sh not executable"
+fi
 
 # GitHub community files
 echo "=== Checking GitHub community files ==="
-test -f "$ROOT_DIR/.github/CODE_OF_CONDUCT.md" && pass ".github/CODE_OF_CONDUCT.md" || fail ".github/CODE_OF_CONDUCT.md missing"
-test -f "$ROOT_DIR/.github/CONTRIBUTING.md" && pass ".github/CONTRIBUTING.md" || fail ".github/CONTRIBUTING.md missing"
-test -f "$ROOT_DIR/.github/SUPPORT.md" && pass ".github/SUPPORT.md" || fail ".github/SUPPORT.md missing"
+check_file ".github/CODE_OF_CONDUCT.md"
+check_file ".github/CONTRIBUTING.md"
+check_file ".github/SUPPORT.md"
 
 # Summary
 echo "=== Link audit complete ==="

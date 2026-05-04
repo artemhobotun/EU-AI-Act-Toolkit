@@ -27,7 +27,11 @@ Then open: **http://localhost:8080**
 
 ## When the image is published
 
-The container is rebuilt automatically on every push to `main` that changes `docker/Dockerfile` or any file under `docs/`. It can also be triggered manually via the GitHub Actions workflow dispatch.
+The container is rebuilt automatically on every push to `main` that changes `docker/Dockerfile`, the root `VERSION` file, or any file under `docs/`. It can also be triggered manually via the GitHub Actions workflow dispatch.
+
+## Forks and GHCR
+
+The publish workflow tags the image as `ghcr.io/<lowercase-github-username>/eu-ai-act-toolkit-site`. If you fork this repository and enable Actions publishing, that image name applies to **your** account. Adjust the workflow or disable **Publish site container** if you do not want a public package under your namespace.
 
 ## Disclaimer
 

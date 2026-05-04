@@ -57,13 +57,11 @@ When GitHub labels are enabled on this repository, look for **`good first issue`
 5. Open a pull request.
 6. Respond to review.
 
+GitHub Actions also runs **Node.js** checks (`npm ci`, `npm run typecheck`, `npm test`) for the TypeScript quiz engine, **ShellCheck** on the quality/link/packaging shell scripts, **html-validate** on `docs/*.html` (see `.htmlvalidate.json`), **Lighthouse CI** on pushes to `main` that touch the site (`.github/workflows/lighthouse.yml`), and **Python** validation of `data/*.yml` against JSON Schema. To mirror that locally:
+
 ```bash
+npx --yes html-validate@10.15.0 "docs/*.html"
 ./scripts/check-toolkit-quality.sh
-```
-
-GitHub Actions also runs **Node.js** checks (`npm ci`, `npm run typecheck`, `npm test`) for the TypeScript quiz engine, and **Python** validation of `data/*.yml` against JSON Schema. To mirror that locally:
-
-```bash
 cd .github/node-toolchain
 npm ci
 npm run typecheck

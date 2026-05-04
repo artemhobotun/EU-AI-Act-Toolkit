@@ -1,0 +1,36 @@
+name: Lighthouse (static site)
+
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "lighthouserc.js"
+      - ".github/workflows/lighthouse.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lhci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "22"
+
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.14.1
+          lhci autorun

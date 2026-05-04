@@ -8,6 +8,7 @@
 | ⛔ Don't store here | Compliance documents, confidential business data, personal data |
 | 🔒 Report privately | Security/privacy concerns — no public issue details |
 | 📋 Supported versions | v0.2.x (current), v0.1.x (limited) |
+| 🔔 Dependency alerts | In repository **Settings → Code security**, enable **Dependabot alerts** (and optional Dependabot security updates). Automated *version-update* PRs are turned off in `.github/dependabot.yml` (`open-pull-requests-limit: 0`); bumps land on `main` as normal commits. |
 
 <details>
 <summary><strong>✅ What this repository is</strong></summary>
